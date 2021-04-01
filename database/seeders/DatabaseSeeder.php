@@ -545,7 +545,7 @@ class DatabaseSeeder extends Seeder
                 'r_check_out'=>null,
             ],
         ]);
-        DB::table('hotel_comments')->insert([
+        DB::table('hotel_comment')->insert([
             [
                 'hotel_id'=>1,
                 'customer_id'=>1,
