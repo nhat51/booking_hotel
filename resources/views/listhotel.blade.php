@@ -1,5 +1,5 @@
 
-@extends('front.layout.master')
+@extends('layout.master')
 
 @section('title', 'List Hotel')
 
