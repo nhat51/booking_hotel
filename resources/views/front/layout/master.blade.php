@@ -51,12 +51,11 @@
                         <div class="collapse navbar-collapse" id="navbarTheme">
                             <ul class="navbar-nav align-items-start align-items-lg-center">
                                 <li class="active"><a class="nav-link" href="index-2.html">Home</a></li>
-                                <li><a class="nav-link" href="about.html">About Us</a></li>
+                                <li><a class="nav-link" href="blog.html">Blog</a></li>
                                 <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdown02"> <a class="dropdown-item" href="destinations.html">Destinations</a> <a class="dropdown-item" href="destination-detail.html">Destination Detail</a> </div>
                                 </li>
-                                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdown04"> <a class="dropdown-item" href="blog.html">Blog</a> <a class="dropdown-item" href="blog-single.html">Blog Singal</a> </div>
+                                <li class="nav-item"> <a class="nav-link " href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
                                 </li>
                                 <li><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                             </ul>
