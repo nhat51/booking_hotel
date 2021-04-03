@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 
 Route::get('/register',function (){
-   return view('blog');
+   return view('register');
 });
