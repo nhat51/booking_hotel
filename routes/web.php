@@ -12,42 +12,42 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Home
+//Home-Nhật
 Route::get('/', function () {
     return view('index');
 });
 
-//Destination
+//Destination-Nhật
 Route::get('/destination',function (){
     return view('destinations');
 });
 
-//Register
+//Register-Nhật
 Route::get('/register',function (){
    return view('register');
 });
 
-//Sign In
+//Sign In-Nhật
 Route::get('/signin',function (){
     return view('signin');
 });
 
-//About
+//About-Nhật
 Route::get('/about', function (){
     return view('about');
 });
 
-//Contact
+//Contact-Nhật
 Route::get('/contact',function (){
     return view('contact-us');
 });
 
-//Blog
+//Blog-Nhật
 Route::get('/blog',function (){
     return view('blog');
 });
 
-//List Hotel
+//List Hotel-Nhật
 Route::get('/listhotel',function (){
     return view('listhotel');
 });
