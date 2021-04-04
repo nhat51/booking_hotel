@@ -52,12 +52,12 @@ Route::get('/listhotel',function (){
     return view('listhotel');
 });
 
-//Payment Information
+//Payment Information-Nhật
 Route::get('/payment-information',function (){
     return view('payment-information');
 });
 
-//Traveler information
+//Traveler information-Nhật
 Route::get('/traveler-information',function (){
     return view('traveler-information');
 });

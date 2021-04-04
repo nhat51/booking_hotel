@@ -67,8 +67,8 @@
                     <!-- header right link -->
                     <div class="header-right-link">
                         <ul>
-                            <li><a href="signin.html"><i class="fas fa-chevron-right"></i> Sign in</a></li>
-                            <li><a href="register.html"><i class="fas fa-chevron-right"></i> Register</a></li>
+                            <li class="{{ (request()->segment(1)== 'signin') ? 'active' : '' }}" ><a href="./signin"><i class="fas fa-chevron-right"></i> Sign in</a></li>
+                            <li class="{{ (request()->segment(1)== 'register') ? 'active' : '' }}"><a  href="./register"><i class="fas fa-chevron-right"></i> Register</a></li>
                             <li><a href="contact-us.html" class="header-request">Request a Quote</a></li>
                         </ul>
                     </div>
