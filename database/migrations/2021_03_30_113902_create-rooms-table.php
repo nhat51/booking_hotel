@@ -17,13 +17,11 @@ class CreateRoomsTable extends Migration
             $table->id();
 
             $table->integer('hotel_id');
-            $table->string('r_room_type');
-            $table->text('r_description')->nullable();
-            $table->double('r_price');
-            $table->integer('r_discount')->nullable();
-            $table->boolean('r_is_available');
-            $table->boolean('r_check_in')->nullable();
-            $table->boolean('r_check_out')->nullable();
+            $table->string('room_type');
+            $table->text('description')->nullable();
+            $table->double('price');
+            $table->integer('discount')->nullable();
+            $table->boolean('is_available');
 
             $table->timestamps();
         });

@@ -21,562 +21,789 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        DB::table('customers')->insert([
+        DB::table('users')->insert([
             [
                 'id'=>1,
-                'first_name'=>'Hoang',
-                'last_name'=>'Minh Vuong',
-                'birth_of_date'=>Carbon::parse('1993-06-16'),
-                'gender'=>1,
-                'email'=>'vuongpt93@gmail.com',
-                'email_verified_at'=>Carbon::parse('2021-03-30'),
-                'phone'=>'0866858676',
+                'name'=>'Admin',
+                'email'=>'stetho@gmail.com',
                 'password'=>Hash::make('123456'),
-                'address'=>'241-Kham Thien',
-                'district'=>'Dong Da',
-                'city'=>'Ha Noi',
-                'zipcode'=>'100000',
+                'security_question'=>'null',
+                'question_answer'=>'null',
                 'avatar'=>'default-avatar.jpg',
-                'level'=>0,
                 'description'=>Str::random(200),
+                'level'=>0,
+
             ],
             [
                 'id'=>2,
-                'first_name'=>'admin',
-                'last_name'=>'admin',
-                'birth_of_date'=>null,
-                'gender'=>1,
-                'email'=>'admin@gmail.com',
-                'email_verified_at'=>null,
-                'phone'=>null,
+                'name'=>'Shane Lynch',
+                'email'=>'ShaneLynch@gmail.com',
                 'password'=>Hash::make('123456'),
-                'address'=>null,
-                'district'=>null,
-                'city'=>null,
-                'zipcode'=>null,
-                'avatar'=>'default-avatar.jpg',
-                'level'=>0,
+                'security_question'=>'null',
+                'question_answer'=>'null',
+                'avatar'=>'avatar-0.png',
                 'description'=>Str::random(200),
+                'level'=>1,
+
             ],
             [
                 'id'=>3,
-                'first_name'=>'Shane',
-                'last_name'=>'Lynch',
-                'birth_of_date'=>null,
-                'gender'=>1,
-                'email'=>'ShaneLynch@gmail.com',
-                'email_verified_at'=>null,
-                'phone'=>null,
-                'password'=>Hash::make('123456'),
-                'address'=>null,
-                'district'=>null,
-                'city'=>null,
-                'zipcode'=>null,
-                'avatar'=>'avatar-0.png',
-                'level'=>1,
-                'description'=>Str::random(200),
-            ],
-            [
-                'id'=>4,
-                'first_name'=>'Brandon',
-                'last_name'=>'Kelley',
-                'birth_of_date'=>null,
-                'gender'=>2,
+                'name'=>'Brandon Kelley',
                 'email'=>'BrandonKelley@gmail.com',
-                'email_verified_at'=>null,
-                'phone'=>null,
                 'password'=>Hash::make('123456'),
-                'address'=>null,
-                'district'=>null,
-                'city'=>null,
-                'zipcode'=>null,
+                'security_question'=>'null',
+                'question_answer'=>'null',
                 'avatar'=>'avatar-1.png',
-                'level'=>1,
                 'description'=>Str::random(200),
+                'level'=>1,
+
             ],
             [
-                'id'=>5,
-                'first_name'=>'Roy',
-                'last_name'=>'Banks',
-                'birth_of_date'=>null,
-                'gender'=>2,
+                'id'=>3,
+                'name'=>'Roy Banks',
                 'email'=>'RoyBanks@gmail.com',
-                'email_verified_at'=>null,
-                'phone'=>null,
                 'password'=>Hash::make('123456'),
-                'address'=>null,
-                'district'=>null,
-                'city'=>null,
-                'zipcode'=>null,
+                'security_question'=>'null',
+                'question_answer'=>'null',
                 'avatar'=>'avatar-2.png',
-                'level'=>1,
                 'description'=>Str::random(200),
-            ],
+                'level'=>2,
+
+            ]
         ]);
         DB::table('hotels')->insert([
             [
-               'id'=>'1',
-               'htl_name'=>'Khách Sạn Melia Hà Nội',
-               'htl_address'=>' 44B Lý Thường Kiệt',
-               'district'=>'Hoàn Kiếm',
-               'city'=>'Hà Nội',
-               'star_ranking'=>5,
-               'htl_ameneties_parking'=>1,
-               'htl_ameneties_work'=>1,
-               'htl_ameneties_elevator'=>1,
-               'htl_ameneties_wifi'=>1,
-               'htl_ameneties_laundry'=>1,
-               'htl_ameneties_landscape'=>1,
-               'htl_ameneties_dinner'=>1,
-               'htl_ameneties_reception'=>1,
-               'htl_ameneties_bus'=>1,
-               'htl_ameneties_dumbbell'=>1,
-               'htl_ameneties_platter'=>0,
-               'htl_ameneties_events_planning'=>0,
-               'htl_ameneties_motorbike'=>0,
-               'htl_ameneties_atm'=>0,
-               'description'=>' Nằm ở Trung tâm Thành phố Hà Nội, Melia Hanoi cách Hồ Hoàn Kiếm và Nhà hát Múa rối Nước Thăng Long 650 m. Khách sạn có sòng bạc, hồ bơi ngoài trời và spa. Khách được đỗ xe miễn phí.',
+                'destination_id'=>1,
+                'name'=>'Resort Terra Paraiso',
+                'address'=>'Gauravaddo, Opp Lane Of Pizza Hut',
+                'district'=>'Calangute',
+                'city'=>'Bardez Goa',
+                'star_ranking'=>5,
+                'description'=>Str::random(200),
            ],
             [
-                'id'=>'2',
-                'htl_name'=>'Khách Sạn Daewoo Hà Nội',
-                'htl_address'=>'360 Kim Mã',
-                'district'=>'Ba Đình',
-                'city'=>'Hà Nội',
+                'destination_id'=>1,
+                'name'=>'Hotel Sunstar Grand',
+                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
+                'district'=>'Calangute',
+                'city'=>'Bardez Goa',
                 'star_ranking'=>5,
-                'htl_ameneties_parking'=>1,
-                'htl_ameneties_work'=>1,
-                'htl_ameneties_elevator'=>1,
-                'htl_ameneties_wifi'=>1,
-                'htl_ameneties_laundry'=>1,
-                'htl_ameneties_landscape'=>1,
-                'htl_ameneties_dinner'=>1,
-                'htl_ameneties_reception'=>1,
-                'htl_ameneties_bus'=>1,
-                'htl_ameneties_dumbbell'=>1,
-                'htl_ameneties_platter'=>0,
-                'htl_ameneties_events_planning'=>0,
-                'htl_ameneties_motorbike'=>0,
-                'htl_ameneties_atm'=>0,
-                'description'=>'Khách Sạn Daewoo Hà Nội tọa lạc tại trung tâm kinh tế - chính trị của Hà Nội, được đưa vào hoạt động năm 2016. Khách sạn từng là địa điểm đon tiếp nhiều vị chính khách quốc tế cao cấp như: Tổng thống Nga, Tổng thống Mỹ, Chủ tịch Trung Quốc, Tổng thống Brasil. Đây cũng là khách sạn chính thức của hội nghị APEC 2006 và Cuộc thi Hoa hậu Hoàn vũ Việt Nam 2008. Là một trong những khách sạn 5 sao tại thành phố Hà Nội có số lượng phòng lớn nhất. Với 411 phòng nghỉ, tất cả phòng tại khách sạn đều được thiết kế sang trọng. Trong đó có 33 phòng Suite, trong đó hạng phòng cao cấp nhất là phòng tổng thống và phòng Suite Hoàng Gia. Các phòng nghỉ tại khách sạn được thiết kế hiện đại, theo phong cách Á Đông, với ban công hoặc cửa sổ hường phố, trong các phòng đều có truyền hình vệ tinh, bàn làm việc, dụng cụ pha trà và cà phê, ghế sofa giường nệm cao cấp, két an toàn, tủ lạnh, TV, điện thoại kết nối quốc tế, máy vi tính, WiFi tốc độ cao ...',
+                'description'=>Str::random(200),
             ],
             [
-                'id'=>'3',
-                'htl_name'=>'Khách Sạn Acoustic Hà Nội & Spa',
-                'htl_address'=>'39 Thợ Nhuộm',
-                'district'=>'Hoàn kiếm',
-                'city'=>'Hà Nội',
+                'destination_id'=>1,
+                'name'=>'Treebo Natraj Yes Please',
+                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
+                'district'=>'Calangute',
+                'city'=>'Bardez Goa',
                 'star_ranking'=>4,
-                'htl_ameneties_parking'=>0,
-                'htl_ameneties_work'=>0,
-                'htl_ameneties_elevator'=>1,
-                'htl_ameneties_wifi'=>1,
-                'htl_ameneties_laundry'=>0,
-                'htl_ameneties_landscape'=>1,
-                'htl_ameneties_dinner'=>1,
-                'htl_ameneties_reception'=>1,
-                'htl_ameneties_bus'=>1,
-                'htl_ameneties_dumbbell'=>0,
-                'htl_ameneties_platter'=>1,
-                'htl_ameneties_events_planning'=>0,
-                'htl_ameneties_motorbike'=>1,
-                'htl_ameneties_atm'=>0,
-                'description'=>'Acoustic Hotel Hanoi tọa lạc tại trung tâm thành phố Hà Nôi, đến với khách sạn bạn sẽ được hòa mình vào bầu không khí thiên nhiên trong lành. Thư giãn cùng với các hoạt động vui chơi giải trí tại khách sạn để trút bỏ hết những muộn phiền và bộn bề của cuộc sống. Khách sạn được thiết kế sang trọng. Cùng với đầy đủ các hạng phòng và đầy đủ tiện nghi cao cấp chắc chắn sẽ làm bạn hài lòng.',
+                'description'=>Str::random(200),
             ],
             [
-                'id'=>'4',
-                'htl_name'=>'Khách Sạn Esplendor & Spa',
-                'htl_address'=>'78 Hàng Gà',
-                'district'=>'Hoàn Kiếm',
-                'city'=>'Hà Nội',
+                'destination_id'=>1,
+                'name'=>'Wood Castle Grand',
+                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
+                'district'=>'Calangute',
+                'city'=>'Bardez Goa',
                 'star_ranking'=>3,
-                'htl_ameneties_parking'=>1,
-                'htl_ameneties_work'=>0,
-                'htl_ameneties_elevator'=>1,
-                'htl_ameneties_wifi'=>1,
-                'htl_ameneties_laundry'=>1,
-                'htl_ameneties_landscape'=>1,
-                'htl_ameneties_dinner'=>1,
-                'htl_ameneties_reception'=>1,
-                'htl_ameneties_bus'=>1,
-                'htl_ameneties_dumbbell'=>0,
-                'htl_ameneties_platter'=>0,
-                'htl_ameneties_events_planning'=>0,
-                'htl_ameneties_motorbike'=>1,
-                'htl_ameneties_atm'=>1,
-                'description'=>'Tọa lạc trên 1 con phố sầm uất bậc nhất của trung tâm phố cổ - Hanoi Esplendor Hotel & Spa chính là lựa chọn số 1 cho những chuyến du lịch hay công tác của bạn tại Hà Nội. Khách sạn Hanoi Esplendor Hotel & spa mới xây dựng và đón khách từ tháng 5 năm 2019. Nói đến Hà Nội, du khách thường nghĩ ngay đến những điểm tham quan nổi tiếng Hồ Gươm, Nhà hát múa rối Thăng Long, Ô quan chưởng hay những món ăn truyền thống nhưng vô cùng tinh tế như: Bún chả, phở bò, bánh mì kẹp, bún ốc, chả cá Thăng Long,… Ai đến với Hà Nội cũng mong muốn tìm cho mình được 1 khách sạn sang trọng, sạch sẽ nhưng không quá đắt đỏ, gần những điểm tham quan nổi tiếng lại có thể lang thang thưởng thức ẩm thực Hà Thành. Hanoi Esplendor Hotel chính là điểm đến có thể đáp ứng được những yêu cầu này của quý khách. Từ khách sạn bạn chỉ mất chưa đầy 5 phút tản bộ để đến các nhà hàng truyền thống nổi tiếng như: bún chả cửa đông, bún chả hàng Mành, chả cá Thăng Long, phở Bát Đàn,…. Khách sạn Hanoi Esplendor tuy quy mô không lớn như khách sạn 5 sao nhưng được khách hàng đánh giá có dịch vụ và trang thiết bị, nội thất đạt tiêu chuẩn 5 sao. Khách sạn được thiết kế theo phong cách hiện đại pha chút cổ điển, phòng được trang bị đầy đủ tiện nghi như: điều hòa trung tâm 2 chiều, tủ mát, bàn làm việc, tivi màn hình LCD được đăng ký kênh Netflix, cân sức khỏe, sàn gỗ,… Khách sạn phục vụ ăn sáng tại nhà hàng trên tầng thượng. Tại đây quý khách vừa thưởng thức bữa sáng và ngắm nhìn thành phố, đón chào ngày mới tràn đầy năng lượng. Hãy đến với chúng tôi để kỳ nghỉ của quý khách được trao gửi niềm tin đúng chỗ, được phục vụ tận tình và chu đáo!',
+                'description'=>Str::random(200),
             ],
             [
-                'id'=>'5',
-                'htl_name'=>'Khách Sạn Sofitel Saigon Plaza',
-                'htl_address'=>'17 Đại lộ Lê Duẩn',
-                'district'=>'Quận 1',
-                'city'=>'Hồ Chí Minh',
-                'star_ranking'=>5,
-                'htl_ameneties_parking'=>1,
-                'htl_ameneties_work'=>1,
-                'htl_ameneties_elevator'=>1,
-                'htl_ameneties_wifi'=>1,
-                'htl_ameneties_laundry'=>1,
-                'htl_ameneties_landscape'=>1,
-                'htl_ameneties_dinner'=>1,
-                'htl_ameneties_reception'=>1,
-                'htl_ameneties_bus'=>1,
-                'htl_ameneties_dumbbell'=>1,
-                'htl_ameneties_platter'=>0,
-                'htl_ameneties_events_planning'=>0,
-                'htl_ameneties_motorbike'=>0,
-                'htl_ameneties_atm'=>0,
-                'description'=>'Khách Sạn Sofitel Saigon Plaza nằm gần trung tâm Quận 1, thuận tiện tham quan Thảo Cầm Viên. Khách sạn sang trọng, tiện nghi và dịch vụ cao cấp. Đội ngũ nhân viên khách sạn phục vụ thân thiện và nhiệt tình.',
-            ],
-            [
-                'id'=>'6',
-                'htl_name'=>'Khách Sạn Mường Thanh Luxury Sài Gòn',
-                'htl_address'=>'261C Nguyễn Văn Trỗi',
+                'destination_id'=>2,
+                'name'=>'Khách Sạn Mường Thanh Luxury Sài Gòn',
+                'address'=>'261C Nguyễn Văn Trỗi',
                 'district'=>'Phường 10, Phú Nhuận',
                 'city'=>'Hồ Chí Minh',
                 'star_ranking'=>5,
-                'htl_ameneties_parking'=>1,
-                'htl_ameneties_work'=>1,
-                'htl_ameneties_elevator'=>1,
-                'htl_ameneties_wifi'=>1,
-                'htl_ameneties_laundry'=>1,
-                'htl_ameneties_landscape'=>0,
-                'htl_ameneties_dinner'=>1,
-                'htl_ameneties_reception'=>1,
-                'htl_ameneties_bus'=>1,
-                'htl_ameneties_dumbbell'=>0,
-                'htl_ameneties_platter'=>0,
-                'htl_ameneties_events_planning'=>0,
-                'htl_ameneties_motorbike'=>0,
-                'htl_ameneties_atm'=>0,
                 'description'=>'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
             ]
         ]);
         DB::table('rooms')->insert([
             [
-               'hotel_id'=>1,
-               'r_room_type'=>'Deluxe',
-               'r_description'=>null,
-               'r_price'=>4931000.00,
-               'r_discount'=>45,
-               'r_is_available'=>1,
-               'r_check_in'=>null,
-               'r_check_out'=>null,
-           ],
-            [
                 'hotel_id'=>1,
-                'r_room_type'=>'Premium',
-                'r_description'=>null,
-                'r_price'=>5257000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe',
+                'description'=>null,
+                'price'=>4931000.00,
+                'discount'=>45,
+                'is_available'=>1,
             ],
             [
                 'hotel_id'=>1,
-                'r_room_type'=>'Grand Premium',
-                'r_description'=>null,
-                'r_price'=>6399000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Premium',
+                'description'=>null,
+                'price'=>5257000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>1,
-                'r_room_type'=>'The Level Premium',
-                'r_description'=>null,
-                'r_price'=>7704000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Grand Premium',
+                'description'=>null,
+                'price'=>6399000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>1,
-                'r_room_type'=>'The Level Executive Suite',
-                'r_description'=>null,
-                'r_price'=>8846000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'The Level Premium',
+                'description'=>null,
+                'price'=>7704000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
+            ],
+            [
+                'hotel_id'=>1,
+                'room_type'=>'The Level Executive Suite',
+                'description'=>null,
+                'price'=>8846000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>2,
-                'r_room_type'=>'Deluxe',
-                'r_description'=>null,
-                'r_price'=>3125000.00,
-                'r_discount'=>49,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe',
+                'description'=>null,
+                'price'=>3125000.00,
+                'discount'=>49,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>2,
-                'r_room_type'=>'Grand Deluxe',
-                'r_description'=>null,
-                'r_price'=>3454000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Grand Deluxe',
+                'description'=>null,
+                'price'=>3454000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>2,
-                'r_room_type'=>'Club',
-                'r_description'=>null,
-                'r_price'=>5099000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Club',
+                'description'=>null,
+                'price'=>5099000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>2,
-                'r_room_type'=>'Deluxe Suite',
-                'r_description'=>null,
-                'r_price'=>6580000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe Suite',
+                'description'=>null,
+                'price'=>6580000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>2,
-                'r_room_type'=>'Club Suite',
-                'r_description'=>null,
-                'r_price'=>8225000.00,
-                'r_discount'=>0,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Club Suite',
+                'description'=>null,
+                'price'=>8225000.00,
+                'discount'=>0,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Deluxe',
-                'r_description'=>null,
-                'r_price'=>3227000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe',
+                'description'=>null,
+                'price'=>3227000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Senior Deluxe',
-                'r_description'=>null,
-                'r_price'=>3920000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Senior Deluxe',
+                'description'=>null,
+                'price'=>3920000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Premier Deluxe',
-                'r_description'=>null,
-                'r_price'=>4443000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Premier Deluxe',
+                'description'=>null,
+                'price'=>4443000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Junior Suite',
-                'r_description'=>null,
-                'r_price'=>4965000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Junior Suite',
+                'description'=>null,
+                'price'=>4965000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Executive',
-                'r_description'=>null,
-                'r_price'=>5488000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Executive',
+                'description'=>null,
+                'price'=>5488000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Premier Deluxe',
-                'r_description'=>null,
-                'r_price'=>5750000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Premier Deluxe',
+                'description'=>null,
+                'price'=>5750000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>3,
-                'r_room_type'=>'Acoustic Suite',
-                'r_description'=>null,
-                'r_price'=>7579000.00,
-                'r_discount'=>83,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Acoustic Suite',
+                'description'=>null,
+                'price'=>7579000.00,
+                'discount'=>83,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>4,
-                'r_room_type'=>'Delxue cozy double room',
-                'r_description'=>null,
-                'r_price'=>1568000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Delxue cozy double room',
+                'description'=>null,
+                'price'=>1568000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>4,
-                'r_room_type'=>'Delxue double room',
-                'r_description'=>null,
-                'r_price'=>1948000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Delxue double room',
+                'description'=>null,
+                'price'=>1948000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>4,
-                'r_room_type'=>'Junior suite double or twin',
-                'r_description'=>null,
-                'r_price'=>2435000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Junior suite double or twin',
+                'description'=>null,
+                'price'=>2435000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>4,
-                'r_room_type'=>'Junior triple',
-                'r_description'=>null,
-                'r_price'=>2979000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Junior triple',
+                'description'=>null,
+                'price'=>2979000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>4,
-                'r_room_type'=>'Family room',
-                'r_description'=>null,
-                'r_price'=>3659000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Family room',
+                'description'=>null,
+                'price'=>3659000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>5,
-                'r_room_type'=>'Superior',
-                'r_description'=>null,
-                'r_price'=>5672000.00,
-                'r_discount'=>73,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Superior',
+                'description'=>null,
+                'price'=>5672000.00,
+                'discount'=>73,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>5,
-                'r_room_type'=>'Luxury',
-                'r_description'=>null,
-                'r_price'=>6444000.00,
-                'r_discount'=>67,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Luxury',
+                'description'=>null,
+                'price'=>6444000.00,
+                'discount'=>67,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>5,
-                'r_room_type'=>'Superior Club',
-                'r_description'=>null,
-                'r_price'=>8345000.00,
-                'r_discount'=>57,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Superior Club',
+                'description'=>null,
+                'price'=>8345000.00,
+                'discount'=>57,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>6,
-                'r_room_type'=>'Deluxe',
-                'r_description'=>null,
-                'r_price'=>1480000.00,
-                'r_discount'=>39,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe',
+                'description'=>null,
+                'price'=>1480000.00,
+                'discount'=>39,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>6,
-                'r_room_type'=>'Deluxe Double',
-                'r_description'=>null,
-                'r_price'=>1480000.00,
-                'r_discount'=>39,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe Double',
+                'description'=>null,
+                'price'=>1480000.00,
+                'discount'=>39,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>6,
-                'r_room_type'=>'Deluxe Triple',
-                'r_description'=>null,
-                'r_price'=>2097000.00,
-                'r_discount'=>40,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Deluxe Triple',
+                'description'=>null,
+                'price'=>2097000.00,
+                'discount'=>40,
+                'is_available'=>1,
+
             ],
             [
                 'hotel_id'=>6,
-                'r_room_type'=>'Executive Suite',
-                'r_description'=>null,
-                'r_price'=>2961000.00,
-                'r_discount'=>44,
-                'r_is_available'=>1,
-                'r_check_in'=>null,
-                'r_check_out'=>null,
+                'room_type'=>'Executive Suite',
+                'description'=>null,
+                'price'=>2961000.00,
+                'discount'=>44,
+                'is_available'=>1,
+
+            ],
+        ]);
+        DB::table('room_images')->insert([
+            [
+                'room_id'=>1,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>1,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>1,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>1,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'room_id'=>2,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>2,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>2,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>2,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'room_id'=>3,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>3,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>3,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>3,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'room_id'=>4,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>4,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>4,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>4,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'room_id'=>5,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>5,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>5,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>5,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'room_id'=>6,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'room_id'=>6,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'room_id'=>6,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'room_id'=>6,
+                'path'=>'img-big-04.jpg'
             ],
         ]);
         DB::table('hotel_comment')->insert([
             [
                 'hotel_id'=>1,
-                'customer_id'=>1,
-                'hc_rating_location'=>10,
-                'hc_rating_service'=>10,
-                'hc_rating_facilities'=>10,
-                'hc_rating_cost'=>10,
-                'hc_rating_cleanliness'=>10,
-                'hc_messages'=>Str::random(200),
+                'user_id'=>1,
+                'messages'=>Str::random(200),
+                'rating'=>4
             ],
             [
                 'hotel_id'=>1,
-                'customer_id'=>2,
-                'hc_rating_location'=>7,
-                'hc_rating_service'=>9,
-                'hc_rating_facilities'=>4,
-                'hc_rating_cost'=>8,
-                'hc_rating_cleanliness'=>9,
-                'hc_messages'=>Str::random(200),
+                'user_id'=>2,
+                'messages'=>Str::random(200),
+                'rating'=>5
             ],
             [
                 'hotel_id'=>1,
-                'customer_id'=>5,
-                'hc_rating_location'=>10,
-                'hc_rating_service'=>10,
-                'hc_rating_facilities'=>10,
-                'hc_rating_cost'=>10,
-                'hc_rating_cleanliness'=>10,
-                'hc_messages'=>Str::random(200),
+                'user_id'=>5,
+                'messages'=>Str::random(200),
+                'rating'=>3
             ],
         ]);
+        DB::table('hotel_amenities')->insert([
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Free Wi-Fi',
+                'code'=>'wifi'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'2 Signal Beads',
+                'code'=>'bed'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Shower and Bathtub',
+                'code'=>'shower'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Pet Friendly',
+                'code'=>'paw'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Wheelchair Friendly',
+                'code'=>'wheelchair'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Fitness Center',
+                'code'=>'dumbbell'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Hot Water',
+                'code'=>'hot-tub'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Swimming Pool',
+                'code'=>'swimmer'
+            ],
+            [
+                'hotel_id'=>1,
+                'amenities_name'=>'Security Cameras',
+                'code'=>'camera-retro'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Free Wi-Fi',
+                'code'=>'wifi'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'2 Signal Beads',
+                'code'=>'bed'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Shower and Bathtub',
+                'code'=>'shower'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Wheelchair Friendly',
+                'code'=>'wheelchair'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Fitness Center',
+                'code'=>'dumbbell'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Hot Water',
+                'code'=>'hot-tub'
+            ],
+            [
+                'hotel_id'=>2,
+                'amenities_name'=>'Security Cameras',
+                'code'=>'camera-retro'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Free Wi-Fi',
+                'code'=>'wifi'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'2 Signal Beads',
+                'code'=>'bed'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Shower and Bathtub',
+                'code'=>'shower'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Pet Friendly',
+                'code'=>'paw'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Wheelchair Friendly',
+                'code'=>'wheelchair'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Fitness Center',
+                'code'=>'dumbbell'
+            ],
+            [
+                'hotel_id'=>3,
+                'amenities_name'=>'Security Cameras',
+                'code'=>'camera-retro'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Free Wi-Fi',
+                'code'=>'wifi'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'2 Signal Beads',
+                'code'=>'bed'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Shower and Bathtub',
+                'code'=>'shower'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Pet Friendly',
+                'code'=>'paw'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Wheelchair Friendly',
+                'code'=>'wheelchair'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Fitness Center',
+                'code'=>'dumbbell'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Hot Water',
+                'code'=>'hot-tub'
+            ],
+            [
+                'hotel_id'=>4,
+                'amenities_name'=>'Swimming Pool',
+                'code'=>'swimmer'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Free Wi-Fi',
+                'code'=>'wifi'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'2 Signal Beads',
+                'code'=>'bed'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Shower and Bathtub',
+                'code'=>'shower'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Pet Friendly',
+                'code'=>'paw'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Wheelchair Friendly',
+                'code'=>'wheelchair'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Fitness Center',
+                'code'=>'dumbbell'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Hot Water',
+                'code'=>'hot-tub'
+            ],
+            [
+                'hotel_id'=>5,
+                'amenities_name'=>'Swimming Pool',
+                'code'=>'swimmer'
+            ],
+        ]);
+        DB::table('hotel_images')->insert([
+            [
+                'hotel_id'=>1,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'hotel_id'=>1,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'hotel_id'=>1,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'hotel_id'=>1,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'hotel_id'=>2,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'hotel_id'=>2,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'hotel_id'=>2,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'hotel_id'=>2,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'hotel_id'=>3,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'hotel_id'=>3,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'hotel_id'=>3,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'hotel_id'=>3,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'hotel_id'=>4,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'hotel_id'=>4,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'hotel_id'=>4,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'hotel_id'=>4,
+                'path'=>'img-big-04.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'img-big-01.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'img-big-02.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'img-big-03.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'img-big-04.jpg'
+            ],
+        ]);
+        DB::table('destinations')->insert([
+            [
+                'name'=>'Orlando',
+                'image_path'=>'1.jpg',
+            ],
+            [
+                'name'=>'Miami',
+                'image_path'=>'2.jpg',
+            ],
+            [
+                'name'=>'Los Angerles',
+                'image_path'=>'3.jpg',
+            ],
+            [
+                'name'=>'San Diego',
+                'image_path'=>'4.jpg',
+            ],
+            [
+                'name'=>'Houston',
+                'image_path'=>'5.jpg',
+            ],
+            [
+                'name'=>'New York',
+                'image_path'=>'6.jpg',
+            ],
+        ]);
+
 
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHotelImagesTable extends Migration
+class CreateBlogCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,15 @@ class CreateHotelImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('hotel_images', function (Blueprint $table) {
+        Schema::create('blog_comments', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('hotel_id');
-            $table->text('path');
+            $table->integer('blog_id');
+            $table->integer('user_id')->nullable();
+            $table->string('email');
+            $table->string('name');
+            $table->text('messages');
+            $table->integer('rating');
 
             $table->timestamps();
         });
@@ -30,6 +34,6 @@ class CreateHotelImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hotel_images');
+        Schema::dropIfExists('blog_comments');
     }
 }
