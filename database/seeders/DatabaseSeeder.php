@@ -59,7 +59,7 @@ class DatabaseSeeder extends Seeder
 
             ],
             [
-                'id'=>3,
+                'id'=>4,
                 'name'=>'Roy Banks',
                 'email'=>'RoyBanks@gmail.com',
                 'password'=>Hash::make('123456'),
@@ -478,7 +478,7 @@ class DatabaseSeeder extends Seeder
                 'path'=>'img-big-04.jpg'
             ],
         ]);
-        DB::table('hotel_comment')->insert([
+        DB::table('hotel_comments')->insert([
             [
                 'hotel_id'=>1,
                 'user_id'=>1,
@@ -781,29 +781,33 @@ class DatabaseSeeder extends Seeder
             [
                 'name'=>'Orlando',
                 'image_path'=>'1.jpg',
+                'description'=>Str::random(200)
             ],
             [
                 'name'=>'Miami',
                 'image_path'=>'2.jpg',
+                'description'=>Str::random(200)
             ],
             [
                 'name'=>'Los Angerles',
                 'image_path'=>'3.jpg',
+                'description'=>Str::random(200)
             ],
             [
                 'name'=>'San Diego',
                 'image_path'=>'4.jpg',
+                'description'=>Str::random(200)
             ],
             [
                 'name'=>'Houston',
                 'image_path'=>'5.jpg',
+                'description'=>Str::random(200)
             ],
             [
                 'name'=>'New York',
                 'image_path'=>'6.jpg',
+                'description'=>Str::random(200)
             ],
         ]);
-
-
     }
 }
