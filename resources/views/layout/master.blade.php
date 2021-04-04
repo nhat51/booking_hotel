@@ -50,14 +50,13 @@
                         <!-- top Menu -->
                         <div class="collapse navbar-collapse" id="navbarTheme">
                             <ul class="navbar-nav align-items-start align-items-lg-center">
-                                <li class="active"><a class="nav-link" href="index-2.html">Home</a></li>
-                                <li class="nav-item "> <a class="nav-link " href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Destinations</a>
-
+                                <li class="active {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
+                                <li class="nav-item "> <a class="nav-link {{ (request()->segment(1)== 'destinations') ? 'active' : '' }}" href="./destination" id="dropdown02" aria-haspopup="true" aria-expanded="false">Destinations</a>
                                 </li>
-                                <li><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"> <a class="nav-link " href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <li><a class="nav-link {{ (request()->segment(1)== 'blog') ? 'active' : '' }} " href="./blog">Blog</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"> <a class="nav-link " href="./about">About Us</a>
                                 </li>
-                                <li><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                                <li><a class="nav-link {{ (request()->segment(1)== 'contact-us') ? 'active' : '' }}" href="./contact">Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- top menu end -->
