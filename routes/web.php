@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Front\HomeController::class,'index']);
+Route::get('/', function (){
+    return view('front.index');
+});
 
 
 Route::get('/register',function (){
