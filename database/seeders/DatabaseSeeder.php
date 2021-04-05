@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
                 'description'=>Str::random(200),
            ],
             [
-                'destination_id'=>1,
+                'destination_id'=>4,
                 'name'=>'Hotel Sunstar Grand',
                 'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
                 'district'=>'Calangute',
@@ -91,7 +91,7 @@ class DatabaseSeeder extends Seeder
                 'description'=>Str::random(200),
             ],
             [
-                'destination_id'=>1,
+                'destination_id'=>5,
                 'name'=>'Treebo Natraj Yes Please',
                 'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
                 'district'=>'Calangute',
@@ -100,7 +100,7 @@ class DatabaseSeeder extends Seeder
                 'description'=>Str::random(200),
             ],
             [
-                'destination_id'=>1,
+                'destination_id'=>3,
                 'name'=>'Wood Castle Grand',
                 'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
                 'district'=>'Calangute',
