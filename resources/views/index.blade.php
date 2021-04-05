@@ -132,7 +132,7 @@
         <div class="popular-hotel-box">
           <div class="imege mb-10"><img src="front/img/popular-hotel/{{$popularhotel->hotel_images[0]->path}}" alt="">
             <div class="black-bg">
-                <a href="#"><i class="fas fa-map-marker-alt"></i> {{$popularhotel->city}}</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> {{$popularhotel->destinations->name}}</a>
             </div>
           </div>
           <div class="rating">
@@ -169,84 +169,22 @@
       <span class="dashed-border"></span> </div>
     <!-- section title -->
     <div class="row">
+
+        @foreach($populardestinations as $populardestination)
       <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
         <!-- popular destination box -->
         <div class="popular-destination-box">
           <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/1.jpg" alt=""></div>
+            <div class="img-holder"><img src="front/img/popular-destination/{{$populardestination->image_path}}" alt=""></div>
             <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
           </div>
           <div class="title">
-            <h3><a href="#">Orlando</a></h3>
+            <h3><a href="#">{{$populardestination->name}}</a></h3>
           </div>
         </div>
         <!-- popular destination box end -->
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/2.jpg" alt=""></div>
-            <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
-          </div>
-          <div class="title">
-            <h3><a href="#">Miami</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/3.jpg" alt=""></div>
-            <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
-          </div>
-          <div class="title">
-            <h3><a href="#">Los Angeles</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/4.jpg" alt=""></div>
-            <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
-          </div>
-          <div class="title">
-            <h3><a href="#">San Diego</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/5.jpg" alt=""></div>
-            <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
-          </div>
-          <div class="title">
-            <h3><a href="#">Houston</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/6.jpg" alt=""></div>
-            <div class="overlay"><a href="#"><i class="fas fa-share"></i></a></div>
-          </div>
-          <div class="title">
-            <h3><a href="#">New York</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
+        @endforeach
     </div>
   </div>
 </div>
