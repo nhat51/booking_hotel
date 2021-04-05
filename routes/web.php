@@ -18,9 +18,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/', [Front\HomeController::class, 'index']);
 
 //Destination-Nhật
-    Route::get('/destination', function () {
-        return view('destinations');
-    });
+    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 
 //Register-Nhật
     Route::get('/register', function () {

@@ -797,47 +797,47 @@ class DatabaseSeeder extends Seeder
                 'path'=>'img-big-04.jpg'
             ],
             [
-                'hotel_id'=>5,
+                'hotel_id'=>6,
                 'path'=>'Herriot-Hotel-6.jpg'
             ],
             [
-                'hotel_id'=>5,
+                'hotel_id'=>6,
                 'path'=>'KK-Hotel-4.jpg'
             ],
             [
-                'hotel_id'=>5,
+                'hotel_id'=>6,
                 'path'=>'MaiThang-Hotel-2.jpg'
             ],
         ]);
         DB::table('destinations')->insert([
             [
-                'name'=>'Orlando',
-                'image_path'=>'1.jpg',
+                'name'=>'Nha Trang',
+                'image_path'=>'nha-trang.jpg',
                 'description'=>Str::random(200)
             ],
             [
-                'name'=>'Miami',
-                'image_path'=>'2.jpg',
+                'name'=>'Hà Nội',
+                'image_path'=>'ha-noi.jpg',
                 'description'=>Str::random(200)
             ],
             [
-                'name'=>'Los Angerles',
-                'image_path'=>'3.jpg',
+                'name'=>'Sapa',
+                'image_path'=>'sapa.jpg',
                 'description'=>Str::random(200)
             ],
             [
-                'name'=>'San Diego',
-                'image_path'=>'4.jpg',
+                'name'=>'Đà Lạt',
+                'image_path'=>'da-lat.jpg',
                 'description'=>Str::random(200)
             ],
             [
-                'name'=>'Houston',
-                'image_path'=>'5.jpg',
+                'name'=>'Đà Nẵng',
+                'image_path'=>'da-nang.jpg',
                 'description'=>Str::random(200)
             ],
             [
-                'name'=>'New York',
-                'image_path'=>'6.jpg',
+                'name'=>'Vịnh Hạ Long',
+                'image_path'=>'ha-long.jpg',
                 'description'=>Str::random(200)
             ],
         ]);

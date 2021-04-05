@@ -50,8 +50,8 @@
                         <!-- top Menu -->
                         <div class="collapse navbar-collapse" id="navbarTheme">
                             <ul class="navbar-nav align-items-start align-items-lg-center">
-                                <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="">Home</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'destination') ? 'active' : '' }}"><a class="nav-link " href="./destination">Destinations</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'destinations') ? 'active' : '' }}"><a class="nav-link " href="./destinations">Destinations</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link " href="./blog">Blog</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a class="nav-link " href="./about">About Us</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a class="nav-link" href="./contact">Contact Us</a></li>
