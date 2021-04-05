@@ -57,7 +57,7 @@ Route::get('/payment-information',function (){
     return view('payment-information');
 });
 
-//Traveler information-Nhật
+//Traveler information
 Route::get('/traveler-information',function (){
     return view('traveler-information');
 });
