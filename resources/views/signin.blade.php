@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('front.layout.master')
 @section('title','Sign In')
 @section('body')
 <!-- ================ Inner banner ================ -->

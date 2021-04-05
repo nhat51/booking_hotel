@@ -796,6 +796,18 @@ class DatabaseSeeder extends Seeder
                 'hotel_id'=>5,
                 'path'=>'img-big-04.jpg'
             ],
+            [
+                'hotel_id'=>5,
+                'path'=>'Herriot-Hotel-6.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'KK-Hotel-4.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'MaiThang-Hotel-2.jpg'
+            ],
         ]);
         DB::table('destinations')->insert([
             [

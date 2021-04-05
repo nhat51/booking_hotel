@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('front.layout.master')
 @section('title','Blog Single')
 @section('body')
 
