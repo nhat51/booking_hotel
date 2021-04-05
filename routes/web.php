@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-    Route::get('/', function () {
-        return view('front.index');
-    });
+    Route::get('/', [Front\HomeController::class, 'index']);
 
 //Destination-Nhật
     Route::get('/destination', function () {

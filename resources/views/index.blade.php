@@ -125,66 +125,34 @@
   <div class="container-fluid">
     <!-- popular hotel carousel -->
     <div class="popular-hotel-carousel owl-carousel owl-theme">
-      <div class="item">
+
+        @foreach($popularhotels as $popularhotel)
+        <div class="item">
         <!-- popular hotel box -->
         <div class="popular-hotel-box">
-          <div class="imege mb-10"><img src="front/img/popular-hotel/1.jpg" alt="">
-            <div class="black-bg"> <a href="#"><i class="fas fa-map-marker-alt"></i> Thailand</a> </div>
+          <div class="imege mb-10"><img src="front/img/popular-hotel/{{$popularhotel->hotel_images[0]->path}}" alt="">
+            <div class="black-bg">
+                <a href="#"><i class="fas fa-map-marker-alt"></i> {{$popularhotel->city}}</a>
+            </div>
           </div>
-          <div class="reting"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> </div>
-          <h4><a href="#">Ansan Hotel</a></h4>
-          <div class="price">$100.00 / <span>Per night</span></div>
+          <div class="rating">
+
+              @for($i=1; $i<=5; $i++)
+                  @if($i<=$popularhotel->star_ranking)
+                      <i class="fas fa-star"></i>
+                  @else
+                      <i class="far fa-star"></i>
+                  @endif
+              @endfor
+
+          </div>
+          <h4><a href="#">{{$popularhotel->name}}</a></h4>
+          <div class="price">₫ {{$popularhotel->rooms[0]->price}} / <span>Per night</span></div>
         </div>
         <!-- popular hotel box end -->
       </div>
-      <div class="item">
-        <!-- popular hotel box -->
-        <div class="popular-hotel-box">
-          <div class="imege mb-10"><img src="front/img/popular-hotel/2.jpg" alt="">
-            <div class="black-bg"> <a href="#"><i class="fas fa-map-marker-alt"></i> Vietnam</a> </div>
-          </div>
-          <div class="reting"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> </div>
-          <h4><a href="#">Fawlty Towers</a></h4>
-          <div class="price">$200.00 / <span>Per night</span></div>
-        </div>
-        <!-- popular hotel box end -->
-      </div>
-      <div class="item">
-        <!-- popular hotel box -->
-        <div class="popular-hotel-box">
-          <div class="imege mb-10"><img src="front/img/popular-hotel/3.jpg" alt="">
-            <div class="black-bg"> <a href="#"><i class="fas fa-map-marker-alt"></i> Italy</a> </div>
-          </div>
-          <div class="reting"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> </div>
-          <h4><a href="#">Hotel Valle</a></h4>
-          <div class="price">$300.00 / <span>Per night</span></div>
-        </div>
-        <!-- popular hotel box end -->
-      </div>
-      <div class="item">
-        <!-- popular hotel box -->
-        <div class="popular-hotel-box">
-          <div class="imege mb-10"><img src="front/img/popular-hotel/4.jpg" alt="">
-            <div class="black-bg"> <a href="#"><i class="fas fa-map-marker-alt"></i> Mexico</a> </div>
-          </div>
-          <div class="reting"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> </div>
-          <h4><a href="#">Hotel Las Trojes</a></h4>
-          <div class="price">$400.00 / <span>Per night</span></div>
-        </div>
-        <!-- popular hotel box end -->
-      </div>
-      <div class="item">
-        <!-- popular hotel box -->
-        <div class="popular-hotel-box">
-          <div class="imege mb-10"><img src="front/img/popular-hotel/5.jpg" alt="">
-            <div class="black-bg"> <a href="#"><i class="fas fa-map-marker-alt"></i> United States</a> </div>
-          </div>
-          <div class="reting"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> </div>
-          <h4><a href="#">Rosen Shingle Creek</a></h4>
-          <div class="price">$500.00 / <span>Per night</span></div>
-        </div>
-        <!-- popular hotel box end -->
-      </div>
+        @endforeach
+
     </div>
     <!-- popular hotel carousel end -->
   </div>

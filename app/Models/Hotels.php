@@ -20,7 +20,7 @@ class Hotels extends Model
         return $this->hasMany(HotelImages::class,'hotel_id','id');
     }
 
-    public function hotel_amenieies(){
+    public function hotel_amenities(){
         return $this->hasMany(HotelImages::class,'hotel_id','id');
     }
 

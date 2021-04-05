@@ -698,6 +698,10 @@ class DatabaseSeeder extends Seeder
         DB::table('hotel_images')->insert([
             [
                 'hotel_id'=>1,
+                'path'=>'1.jpg'
+            ],
+            [
+                'hotel_id'=>1,
                 'path'=>'img-big-01.jpg'
             ],
             [
@@ -714,6 +718,10 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>2,
+                'path'=>'2.jpg'
+            ],
+            [
+                'hotel_id'=>2,
                 'path'=>'img-big-01.jpg'
             ],
             [
@@ -730,6 +738,10 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>3,
+                'path'=>'3.jpg'
+            ],
+            [
+                'hotel_id'=>3,
                 'path'=>'img-big-01.jpg'
             ],
             [
@@ -746,6 +758,10 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>4,
+                'path'=>'4.jpg'
+            ],
+            [
+                'hotel_id'=>4,
                 'path'=>'img-big-01.jpg'
             ],
             [
@@ -759,6 +775,10 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>4,
                 'path'=>'img-big-04.jpg'
+            ],
+            [
+                'hotel_id'=>5,
+                'path'=>'5.jpg'
             ],
             [
                 'hotel_id'=>5,

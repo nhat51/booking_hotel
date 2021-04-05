@@ -15,8 +15,6 @@ class HomeController extends Controller
         $popularhotels = Hotels::all();
         $populardestinations = Destinations::all();
 
-
-
         return view('.index',compact('popularhotels','populardestinations'));
     }
 }
