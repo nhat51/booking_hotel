@@ -79,7 +79,7 @@ class DatabaseSeeder extends Seeder
                 'district'=>'Lộc Thọ',
                 'city'=>'Nha Trang',
                 'star_ranking'=>5,
-                'description'=>Str::random(200),
+                'description'=>'Với hồ bơi ngoài trời và trung tâm thể dục rộng rãi, Muong Thanh Nha Trang nằm cách Bến Xe Nha Trang chỉ 500 m. Truy cập Wi-Fi miễn phí có sẵn ở tất cả các khu vực. Các phòng được bài trí sang trọng tại đây đặc trưng với sàn trải thảm toàn bộ, truyền hình cáp màn hình phẳng, tiện nghi pha trà/cà phê và khu vực tiếp khách. Phòng tắm riêng đi kèm bồn tắm và áo choàng tắm mềm mại. Du khách có thể tận hưởng các liệu pháp spa và mát-xa xoa dịu cũng như tận dụng dịch vụ cho thuê xe hơi cùng trung tâm dịch vụ doanh nhân. Các tiện nghi khác bao gồm lễ tân 24 giờ và chỗ giữ hành lý. Muong Thanh Nha Trang Hotel nằm cách trung tâm thành phố Nha Trang và Ga Nha Trang 5 km. Sân bay Cam Ranh cách nơi nghỉ này 50 km và tại đây có dịch vụ đưa đón sân bay kèm phụ phí. Khách sạn trang nhã này có 2 nhà hàng – Ngoc Thao Restaurant phục vụ ẩm thực Châu Á và Phương Tây suốt 24 giờ trong khi Yang Bay Restaurant được dành cho các buổi yến tiệc cũng như sự kiện. Các lựa chọn ăn uống trong phòng cũng được cung cấp.',
            ],
             [
                 'destination_id'=>4,
@@ -88,7 +88,7 @@ class DatabaseSeeder extends Seeder
                 'district'=>'Lộc Thọ',
                 'city'=>'Nha Trang',
                 'star_ranking'=>5,
-                'description'=>Str::random(200),
+                'description'=>'Với sân hiên phơi nắng và tầm nhìn ra biển, New Sun Hotel nằm ở thành phố Nha Trang thuộc Tỉnh Khánh Hòa và cách Tháp Trầm Hương 4 phút đi bộ. Khách có thể dùng bữa ở nhà hàng tại nơi nghỉ. Bãi đỗ xe riêng có sẵn miễn phí ngay trong khuôn viên. Mỗi phòng tại khách sạn này đều được trang bị máy lạnh và truyền hình vệ tinh màn hình phẳng. Ấm đun nước có sẵn trong phòng. Tất cả các phòng còn đi kèm phòng tắm riêng. Những tiện nghi khác bao gồm dép, đồ vệ sinh cá nhân miễn phí cùng máy sấy tóc. New Sun Hotel cung cấp Wi-Fi miễn phí trong toàn khuôn viên. Khách sạn có lễ tân làm việc 24 giờ. Khách sạn cung cấp dịch vụ cho thuê xe hơi. Quảng trường 2/4 Square cách New Sun Hotel 4 phút đi bộ trong khi Bãi biển Nha Trang cách đó 5 phút đi bộ. Sân bay gần nhất là Sân bay Quốc tế Cam Ranh, cách nơi nghỉ 30 km. Đây là khu vực ở Nha Trang mà khách yêu thích, theo các đánh giá độc lập. Các cặp đôi đặc biệt thích địa điểm này — họ cho điểm 8,9 cho kỳ nghỉ dành cho 2 người.',
             ],
             [
                 'destination_id'=>5,
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
                 'district'=>'Lộc Thọ',
                 'city'=>'Nha Trang',
                 'star_ranking'=>4,
-                'description'=>Str::random(200),
+                'description'=>'Nằm trong khu vực Lộc Thọ, Khách sạn V Nha Trang tọa lạc tại vị trí chủ chốt gần các danh lam thắng cảnh, cho khách yêu thích du lịch biển, cho du khách yêu thích ẩm thực ở Nha Trang. Trung tâm thành phố náo nhiệt chỉ cách bạn khoảng 0.5 km. Chỗ nghỉ có vị trí rất thuận tiện, du khách có thể thoải mái tham quan, khám phá các điểm du lịch nổi tiếng. Các tiện nghi và dịch vụ do Khách sạn V Nha Trang cung cấp đảm bảo sẽ mang lại cho du khách một kỳ nghỉ vừa ý nhất. Chỗ nghỉ này được trang bị nhiều tiện nghi đa dạng, hứa hẹn sẽ làm hài lòng ngay cả những khách hàng khó tính nhất. Du khách có thể chọn lựa trong số 100 phòng với không gian yên bình, thư giãn. Bên cạnh đó, các khu vực vui chơi giải trí như phòng thể dục, hồ bơi ngoài trời, spa, massage cũng là nơi thư giãn tuyệt vời. Khách sạn V Nha Trang là điểm đến cung cấp chỗ nghỉ chất lượng cao tại Nha Trang.',
             ],
             [
                 'destination_id'=>3,
@@ -106,7 +106,7 @@ class DatabaseSeeder extends Seeder
                 'district'=>'Quận Hoàn Kiếm',
                 'city'=>'Hà Nội',
                 'star_ranking'=>3,
-                'description'=>Str::random(200),
+                'description'=>'Nằm trong khu vực Quận Hoàn Kiếm, Khách sạn Hai Bảy tọa lạc tại vị trí chủ chốt gần các danh lam thắng cảnh, gần nhiều nơi mua sắm, để khám phá nét đẹp văn hóa ở Hà Nội. Cách thành phố nhộn nhịp khoảng 0.1 km, chỗ nghỉ4 sao này có vị trí vô cùng thuận lợi để đi đến các điểm nóng du lịch trong thành phố. Chỗ nghỉ có vị trí rất thuận tiện, du khách có thể thoải mái tham quan, khám phá các điểm du lịch nổi tiếng. Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Chỗ nghỉ cung cấp các tiện nghi như Wifi miễn phí cho mọi phòng, bảo vệ 24 giờ, dọn phòng hằng ngày, dịch vụ bưu điện, nhận/trả phòng riêng, đảm bảo mang đến cho du khách sự thoải mái tối đa. Mọi phòng nghỉ đều được trang bị tiện nghi chu đáo, mang đến cho du khách cảm giác thoải mái không gì sánh được. Cho dù là một tín đồ thể thao hay chỉ muốn thư giãn sau một ngày dài bận rộn, bạn sẽ được tiêu khiển với các hoạt động vui chơi giải trí nhưspa, massage. Hãy khám phá sự kết hợp hoàn hảo giữa cung cách phục vụ chuyên nghiệp và vô số tiện nghi đa dạng ở Khách sạn Hai Bảy.',
             ],
             [
                 'destination_id'=>2,
@@ -122,6 +122,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>4931000.00,
                 'discount'=>45,
@@ -130,6 +131,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'Premium',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>5257000.00,
                 'discount'=>0,
@@ -139,6 +141,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'Grand Premium',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>6399000.00,
                 'discount'=>0,
@@ -148,6 +151,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'The Level Premium',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>7704000.00,
                 'discount'=>0,
@@ -157,6 +161,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'The Level Executive Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>8846000.00,
                 'discount'=>0,
@@ -166,6 +171,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>2,
                 'room_type'=>'Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>3125000.00,
                 'discount'=>49,
@@ -175,6 +181,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>2,
                 'room_type'=>'Grand Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>3454000.00,
                 'discount'=>0,
@@ -184,6 +191,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>2,
                 'room_type'=>'Club',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>5099000.00,
                 'discount'=>0,
@@ -193,6 +201,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>2,
                 'room_type'=>'Deluxe Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>6580000.00,
                 'discount'=>0,
@@ -202,6 +211,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>2,
                 'room_type'=>'Club Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>8225000.00,
                 'discount'=>0,
@@ -211,6 +221,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>3227000.00,
                 'discount'=>83,
@@ -220,6 +231,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Senior Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>3920000.00,
                 'discount'=>83,
@@ -229,6 +241,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Premier Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>4443000.00,
                 'discount'=>83,
@@ -238,6 +251,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Junior Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>4965000.00,
                 'discount'=>83,
@@ -247,6 +261,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Executive',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>5488000.00,
                 'discount'=>83,
@@ -256,6 +271,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Premier Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>5750000.00,
                 'discount'=>83,
@@ -265,6 +281,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>3,
                 'room_type'=>'Acoustic Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>7579000.00,
                 'discount'=>83,
@@ -273,7 +290,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>4,
-                'room_type'=>'Delxue cozy double room',
+                'room_type'=>'Delxue cozy double',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>1568000.00,
                 'discount'=>67,
@@ -282,7 +300,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>4,
-                'room_type'=>'Delxue double room',
+                'room_type'=>'Delxue double',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>1948000.00,
                 'discount'=>67,
@@ -292,6 +311,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>4,
                 'room_type'=>'Junior suite double or twin',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>2435000.00,
                 'discount'=>67,
@@ -301,6 +321,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>4,
                 'room_type'=>'Junior triple',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>2979000.00,
                 'discount'=>67,
@@ -309,7 +330,8 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id'=>4,
-                'room_type'=>'Family room',
+                'room_type'=>'Family',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>3659000.00,
                 'discount'=>67,
@@ -319,6 +341,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>5,
                 'room_type'=>'Superior',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>5672000.00,
                 'discount'=>73,
@@ -328,6 +351,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>5,
                 'room_type'=>'Luxury',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>6444000.00,
                 'discount'=>67,
@@ -337,6 +361,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>5,
                 'room_type'=>'Superior Club',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>8345000.00,
                 'discount'=>57,
@@ -346,6 +371,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>6,
                 'room_type'=>'Deluxe',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>1480000.00,
                 'discount'=>39,
@@ -355,6 +381,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>6,
                 'room_type'=>'Deluxe Double',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>1480000.00,
                 'discount'=>39,
@@ -364,6 +391,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>6,
                 'room_type'=>'Deluxe Triple',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>2097000.00,
                 'discount'=>40,
@@ -373,6 +401,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>6,
                 'room_type'=>'Executive Suite',
+                'thumb'=>'img-thum-01.jpg',
                 'description'=>null,
                 'price'=>2961000.00,
                 'discount'=>44,

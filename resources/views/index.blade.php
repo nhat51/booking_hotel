@@ -13,42 +13,42 @@
           <div class="center-search">
             <h1 class="text-white">Enjoy Your Holiday</h1>
             <p class="text-white">Search and Book Hotel</p>
-            <form class="form-style-1">
+            <form class="form-style-1" action="hotel">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search City">
+                <input name="searchCity" type="text" class="form-control" placeholder="Search City">
               </div>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="check-in" placeholder="Check In">
+                    <input name="checkin" type="text" class="form-control" id="check-in" placeholder="Check In">
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="check-out" placeholder="Check Out">
+                    <input name="checkout" type="text" class="form-control" id="check-out" placeholder="Check Out">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="form-group">
-                    <select class="form-control">
+                    <select name="adult" class="form-control">
                       <option>Adult(s)(18+)</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="form-group">
-                    <select class="form-control">
+                    <select name="child" class="form-control">
                       <option>Children(0-17)</option>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
                   </div>
                 </div>
@@ -56,10 +56,10 @@
               <div class="form-group">
                 <select class="form-control">
                   <option>Rooms</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
                 </select>
               </div>
               <button type="submit" class="btn-style-1 w-100">Search</button>
