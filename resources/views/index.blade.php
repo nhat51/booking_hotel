@@ -147,7 +147,7 @@
 
           </div>
           <h4><a href="#">{{$popularhotel->name}}</a></h4>
-          <div class="price">₫ {{$popularhotel->rooms[0]->price}} / <span>Per night</span></div>
+          <div class="price">₫ {{number_format($popularhotel->rooms[0]->price)}} / <span>Per night</span></div>
         </div>
         <!-- popular hotel box end -->
       </div>
