@@ -56,9 +56,7 @@ use Illuminate\Support\Facades\Route;
     });
 
 //List Hotel-Nhật
-    Route::get('/listhotel', function () {
-        return view('listhotel');
-    });
+    Route::get('/listhotel',[Front\HomeController::class,'listhotel']);
 
 //Payment Information-Nhật
     Route::get('/payment', function () {

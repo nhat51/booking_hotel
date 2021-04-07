@@ -196,112 +196,34 @@
       <div class="col-lg-9">
         <!-- hotel results list -->
         <div class="hotel-results-list">
-          <!-- list box -->
-          <div class="list-box mb-30">
-            <div class="owl-carousel list-box-carousel">
-              <figure class="item"> <img src="front/img/listing/featured-img/img-01.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-02.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-03.jpg" alt="img description"> </figure>
-            </div>
-            <div class="list-box-content">
-              <div class="list-box-title">
-                <h3>Resort Terra Paraiso <span>$240 <em>/ night</em></span></h3>
-                <address>
-                <i class="fas fa-map-marker-alt"></i> Gauravaddo, Opp Lane Of Pizza Hut , Calangute, Bardez Goa
-                </address>
+            @foreach($hotels as $hotel)
+              <!-- list box -->
+              <div class="list-box mb-30">
+                <div class="owl-carousel list-box-carousel">
+                  <figure class="item"> <img src="front/img/hotel-image/{{ $hotel->hotel_images[0]->path }}" alt="img description"> </figure>
+                </div>
+                <div class="list-box-content">
+                  <div class="list-box-title">
+                    <h3> {{ $hotel->name }} <span>$240 <em>/ night</em></span></h3>
+                    <address>
+                    <i class="fas fa-map-marker-alt"></i> {{ $hotel->description }}
+                    </address>
+                  </div>
+                  <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
+                  <ul class="hotel-featured">
+                    <li><span><i class="fas fa-car"></i> {{ $hotel->hotel_amenities[0]->amenities_name }} </span></li>
+                  </ul>
+                  <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="./hotel/{{ $hotel->id }}">View Details</a> <a class="book-now-btn ml-6" href="./traveler">Book Now</a> </div>
+                </div>
               </div>
-              <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
-              <ul class="hotel-featured">
-                <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span></li>
-              </ul>
-              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="hotel-detail.html">View Details</a> <a class="book-now-btn ml-6" href="./traveler">Book Now</a> </div>
-            </div>
-          </div>
-          <!-- list box end -->
-          <!-- list box -->
-          <div class="list-box mb-30">
-            <div class="owl-carousel list-box-carousel">
-              <figure class="item"> <img src="front/img/listing/featured-img/img-04.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-05.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-06.jpg" alt="img description"> </figure>
-            </div>
-            <div class="list-box-content">
-              <div class="list-box-title">
-                <h3>Hotel Sunstar Grand <span>$340 <em>/ night</em></span></h3>
-                <address>
-                <i class="fas fa-map-marker-alt"></i> Gauravaddo, Opp Lane Of Pizza Hut , Calangute, Bardez Goa
-                </address>
-              </div>
-              <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
-              <ul class="hotel-featured">
-                <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span></li>
-              </ul>
-              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="#">View Details</a> <a class="book-now-btn ml-6" href="#">Book Now</a> </div>
-            </div>
-          </div>
-          <!-- list box end -->
-          <!-- list box -->
-          <div class="list-box mb-30">
-            <div class="owl-carousel list-box-carousel">
-              <figure class="item"> <img src="front/img/listing/featured-img/img-07.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-08.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-09.jpg" alt="img description"> </figure>
-            </div>
-            <div class="list-box-content">
-              <div class="list-box-title">
-                <h3>Treebo Natraj Yes Please <span>$440 <em>/ night</em></span></h3>
-                <address>
-                <i class="fas fa-map-marker-alt"></i> Gauravaddo, Opp Lane Of Pizza Hut , Calangute, Bardez Goa
-                </address>
-              </div>
-              <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
-              <ul class="hotel-featured">
-                <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span></li>
-              </ul>
-              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="#">View Details</a> <a class="book-now-btn ml-6" href="#">Book Now</a> </div>
-            </div>
-          </div>
-          <!-- list box end -->
-          <!-- list box -->
-          <div class="list-box mb-30">
-            <div class="owl-carousel list-box-carousel">
-              <figure class="item"> <img src="front/img/listing/featured-img/img-01.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-02.jpg" alt="img description"> </figure>
-              <figure class="item"><img src="front/img/listing/featured-img/img-03.jpg" alt="img description"> </figure>
-            </div>
-            <div class="list-box-content">
-              <div class="list-box-title">
-                <h3>Wood Castle Grand <span>$540 <em>/ night</em></span></h3>
-                <address>
-                <i class="fas fa-map-marker-alt"></i> Gauravaddo, Opp Lane Of Pizza Hut , Calangute, Bardez Goa
-                </address>
-              </div>
-              <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
-              <ul class="hotel-featured">
-                <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span></li>
-              </ul>
-              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="#">View Details</a> <a class="book-now-btn ml-6" href="#">Book Now</a> </div>
-            </div>
-          </div>
-          <!-- list box end -->
+              <!-- list box end -->
+            @endforeach
         </div>
         <!-- hotel results list end -->
         <!-- pagination -->
         <ul class="pagination pagination-box mb-30">
           <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active"><a class="page-link" href="">1</a></li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>

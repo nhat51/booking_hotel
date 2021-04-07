@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Destinations;
 use App\Models\Hotels;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,5 +17,12 @@ class HomeController extends Controller
         $populardestinations = Destinations::all();
 
         return view('index',compact('popularhotels','populardestinations'));
+    }
+    public function listhotel()
+    {
+        $hotels = Hotels::all();
+
+
+        return view('listhotel',compact('hotels'));
     }
 }
