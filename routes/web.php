@@ -70,3 +70,6 @@ use Illuminate\Support\Facades\Route;
         return view('traveler-information');
     });
 
+    //vuong routes
+    Route::get('/hotel/{id}', [Front\HotelController::class, 'list']);
+

@@ -18,6 +18,7 @@ class CreateRoomsTable extends Migration
 
             $table->integer('hotel_id');
             $table->string('room_type');
+            $table->text('thumb');
             $table->text('description')->nullable();
             $table->double('price');
             $table->integer('discount')->nullable();
