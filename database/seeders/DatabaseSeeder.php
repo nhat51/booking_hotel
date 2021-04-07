@@ -74,49 +74,49 @@ class DatabaseSeeder extends Seeder
         DB::table('hotels')->insert([
             [
                 'destination_id'=>1,
-                'name'=>'Resort Terra Paraiso',
-                'address'=>'Gauravaddo, Opp Lane Of Pizza Hut',
-                'district'=>'Calangute',
-                'city'=>'Bardez Goa',
+                'name'=>'Mường Thanh Hotel',
+                'address'=>'60 Trần Phú',
+                'district'=>'Lộc Thọ',
+                'city'=>'Nha Trang',
                 'star_ranking'=>5,
                 'description'=>Str::random(200),
            ],
             [
                 'destination_id'=>4,
-                'name'=>'Hotel Sunstar Grand',
-                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
-                'district'=>'Calangute',
-                'city'=>'Bardez Goa',
+                'name'=>'New Sun Hotel',
+                'address'=>'2/3 Hùng Vương',
+                'district'=>'Lộc Thọ',
+                'city'=>'Nha Trang',
                 'star_ranking'=>5,
                 'description'=>Str::random(200),
             ],
             [
                 'destination_id'=>5,
-                'name'=>'Treebo Natraj Yes Please',
-                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
-                'district'=>'Calangute',
-                'city'=>'Bardez Goa',
+                'name'=>'V Hotel',
+                'address'=>'8 Hùng Vương',
+                'district'=>'Lộc Thọ',
+                'city'=>'Nha Trang',
                 'star_ranking'=>4,
                 'description'=>Str::random(200),
             ],
             [
                 'destination_id'=>3,
-                'name'=>'Wood Castle Grand',
-                'address'=>' Gauravaddo, Opp Lane Of Pizza Hut',
-                'district'=>'Calangute',
-                'city'=>'Bardez Goa',
+                'name'=>'Hai Bảy Hotel',
+                'address'=>'27 Hàng Bông',
+                'district'=>'Quận Hoàn Kiếm',
+                'city'=>'Hà Nội',
                 'star_ranking'=>3,
                 'description'=>Str::random(200),
             ],
             [
                 'destination_id'=>2,
-                'name'=>'Khách Sạn Mường Thanh Luxury Sài Gòn',
+                'name'=>'Mường Thanh Luxury Sài Gòn',
                 'address'=>'261C Nguyễn Văn Trỗi',
                 'district'=>'Phường 10, Phú Nhuận',
                 'city'=>'Hồ Chí Minh',
                 'star_ranking'=>5,
                 'description'=>'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
-            ]
+            ],
         ]);
         DB::table('rooms')->insert([
             [
@@ -698,115 +698,59 @@ class DatabaseSeeder extends Seeder
         DB::table('hotel_images')->insert([
             [
                 'hotel_id'=>1,
-                'path'=>'1.jpg'
-            ],
-            [
-                'hotel_id'=>1,
-                'path'=>'img-big-01.jpg'
-            ],
-            [
-                'hotel_id'=>1,
-                'path'=>'img-big-02.jpg'
-            ],
-            [
-                'hotel_id'=>1,
-                'path'=>'img-big-03.jpg'
-            ],
-            [
-                'hotel_id'=>1,
-                'path'=>'img-big-04.jpg'
+                'path'=>'MuongThanh-Hotel-1.jpg'
             ],
             [
                 'hotel_id'=>2,
-                'path'=>'2.jpg'
-            ],
-            [
-                'hotel_id'=>2,
-                'path'=>'img-big-01.jpg'
-            ],
-            [
-                'hotel_id'=>2,
-                'path'=>'img-big-02.jpg'
-            ],
-            [
-                'hotel_id'=>2,
-                'path'=>'img-big-03.jpg'
-            ],
-            [
-                'hotel_id'=>2,
-                'path'=>'img-big-04.jpg'
+                'path'=>'NewSun-Hotel-2.jpg'
             ],
             [
                 'hotel_id'=>3,
-                'path'=>'3.jpg'
-            ],
-            [
-                'hotel_id'=>3,
-                'path'=>'img-big-01.jpg'
-            ],
-            [
-                'hotel_id'=>3,
-                'path'=>'img-big-02.jpg'
-            ],
-            [
-                'hotel_id'=>3,
-                'path'=>'img-big-03.jpg'
-            ],
-            [
-                'hotel_id'=>3,
-                'path'=>'img-big-04.jpg'
+                'path'=>'V-Hotel-2.jpg'
             ],
             [
                 'hotel_id'=>4,
-                'path'=>'4.jpg'
-            ],
-            [
-                'hotel_id'=>4,
-                'path'=>'img-big-01.jpg'
-            ],
-            [
-                'hotel_id'=>4,
-                'path'=>'img-big-02.jpg'
-            ],
-            [
-                'hotel_id'=>4,
-                'path'=>'img-big-03.jpg'
-            ],
-            [
-                'hotel_id'=>4,
-                'path'=>'img-big-04.jpg'
+                'path'=>'HaiBay-Hotel.jpg'
             ],
             [
                 'hotel_id'=>5,
-                'path'=>'5.jpg'
-            ],
-            [
-                'hotel_id'=>5,
-                'path'=>'img-big-01.jpg'
-            ],
-            [
-                'hotel_id'=>5,
-                'path'=>'img-big-02.jpg'
-            ],
-            [
-                'hotel_id'=>5,
-                'path'=>'img-big-03.jpg'
-            ],
-            [
-                'hotel_id'=>5,
-                'path'=>'img-big-04.jpg'
+                'path'=>'Helios-Hotel-1.jpg'
             ],
             [
                 'hotel_id'=>6,
-                'path'=>'Herriot-Hotel-6.jpg'
+                'path'=>'RisingDragon-Hotel-1.jpg'
             ],
             [
-                'hotel_id'=>6,
+                'hotel_id'=>7,
+                'path'=>'ChauLong-Hotel-1.jpg'
+            ],
+            [
+                'hotel_id'=>8,
                 'path'=>'KK-Hotel-4.jpg'
             ],
             [
-                'hotel_id'=>6,
+                'hotel_id'=>9,
+                'path'=>'Unique-Hotel-5.jpg'
+            ],
+            [
+                'hotel_id'=>10,
                 'path'=>'MaiThang-Hotel-2.jpg'
+            ],
+            [
+                'hotel_id'=>11,
+                'path'=>'NewLife-Hotel-3.jpg'
+            ],
+            [
+                'hotel_id'=>12,
+                'path'=>'TheKiMoi-Hotel-1.jpg'
+            ],
+            [
+                'hotel_id'=>13,
+                'path'=>'Herriot-Hotel-5.jpg'
+            ],
+            [
+                'hotel_id'=>14,
+                'path'=>'Marina-Hotel-5.jpg'
             ],
         ]);
         DB::table('destinations')->insert([
