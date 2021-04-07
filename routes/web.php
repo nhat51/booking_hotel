@@ -20,6 +20,16 @@ use Illuminate\Support\Facades\Route;
 //Destination-Nhật
     Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 
+//Destination-detail
+    Route::get('/destination-detail',function (){
+        return view('destination-detail');
+    });
+
+//Traveler Information
+    Route::get('/traveler',function (){
+        return view('traveler-information');
+    });
+
 //Register-Nhật
     Route::get('/register', function () {
         return view('register');
@@ -51,8 +61,8 @@ use Illuminate\Support\Facades\Route;
     });
 
 //Payment Information-Nhật
-    Route::get('/payment-information', function () {
-        return view('payment-information');
+    Route::get('/payment', function () {
+        return view('payment');
     });
 
 //Traveler information

@@ -101,7 +101,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn-style-1">Continue with payment</button>
+          <a href="./payment" class="btn-style-1">Continue with payment</a>
         </form>
       </div>
       <div class="col-lg-4 col-md-4">

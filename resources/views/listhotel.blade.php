@@ -217,7 +217,7 @@
                 <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
                 <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span></li>
               </ul>
-              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="hotel-detail.html">View Details</a> <a class="book-now-btn ml-6" href="payment-information.html">Book Now</a> </div>
+              <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="hotel-detail.html">View Details</a> <a class="book-now-btn ml-6" href="./traveler">Book Now</a> </div>
             </div>
           </div>
           <!-- list box end -->
