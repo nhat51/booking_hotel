@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 //Destination-Nhật
     Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 
-<<<<<<< Updated upstream
 //Destination-detail
     Route::get('/destination-detail',function (){
         return view('destination-detail');
@@ -40,7 +39,6 @@ use Illuminate\Support\Facades\Route;
     Route::get('/signin', function () {
         return view('signin');
     });
-=======
 ////Register-Nhật
 //    Route::get('/register', function () {
 //        return view('register');
@@ -50,7 +48,6 @@ use Illuminate\Support\Facades\Route;
 //    Route::get('/signin', function () {
 //        return view('login');
 //    });
->>>>>>> Stashed changes
 
 //About-Nhật
     Route::get('/about', function () {

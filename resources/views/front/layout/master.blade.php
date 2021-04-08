@@ -12,7 +12,7 @@
     <!-- page title -->
     <title>Stetho - @yield('title')</title>
     <!-- favicon -->
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="front/favicon.ico" />
     <!-- bootstrap core CSS -->
     <link rel="stylesheet" href="front/css/bootstrap.min.css">
     <!-- font awesome -->
@@ -68,7 +68,7 @@
                     <!-- header right link -->
                     <div class="header-right-link">
                         <ul>
-                            <li class="{{ (request()->segment(1)== 'signin') ? 'active' : '' }}" ><a href="./signin"><i class="fas fa-chevron-right"></i> Sign in</a></li>
+                            <li class="{{ (request()->segment(1)== 'signin') ? 'active' : '' }}" ><a href="./login"><i class="fas fa-chevron-right"></i> Sign in</a></li>
                             <li class="{{ (request()->segment(1)== 'register') ? 'active' : '' }}"><a  href="./register"><i class="fas fa-chevron-right"></i> Register</a></li>
                             <li><a href="contact-us.html" class="header-request">Request a Quote</a></li>
                         </ul>
