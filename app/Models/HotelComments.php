@@ -15,4 +15,7 @@ class HotelComments extends Model
     public function hotels(){
         return $this->belongsTo(Hotels::class,'hotel_id','id');
     }
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

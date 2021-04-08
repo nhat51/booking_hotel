@@ -150,47 +150,65 @@
                             </div>
                             <div class="tab-pane fade p-15" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                                 <!-- reviews -->
-                                <h4 class="mb-6">Reviews</h4>
+                                <h4 class="mb-6">{{count($hotel->hotel_comments)}} Reviews</h4>
                                 <div class="reviews-wrapper">
                                     <!-- review item -->
-                                    <div class="media review-item"><img src="front/img/Review/1.jpg" class="mr-3"
-                                                                        alt="...">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">John Doe <span>January 01, 2020 - <a
-                                                        href="#">Reply</a></span></h5>
-                                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet
-                                                consectetur piscing elit amet consectetur adipiscing elit sed et eletum
-                                                nulla eu placerat felis etiam tincidunt orci lacus id varius dolor
-                                                fermum sit amet.</p>
+                                    @foreach($hotel->hotel_comments as $hotelComment)
+                                        <div class="media review-item avatar-pic"><img src="front/img/user/{{ $hotelComment->user->avatar ?? 'default-avatar.jpg' }}" class="mr-3" alt="...">
+                                            <div class="media-body">
+                                                <div class="at-rating">
+                                                    @for($i = 1; $i <= 5; $i++)
+                                                        @if($i <= $hotelComment->rating)
+                                                            <i class="fa fa-star"></i>
+                                                        @else
+                                                            <i class="far fa-star"></i>
+                                                        @endif
+                                                    @endfor
+                                                </div>
+                                                <h5 class="mt-0">{{ $hotelComment->user->name }}<span>{{ date('M d, Y', strtotime($hotelComment->created_at)) }}</span></h5>
+                                                <p class="mb-0">{{ $hotelComment->messages }}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @endforeach
                                     <!-- review item end -->
-                                    <!-- review item -->
-                                    <div class="media review-item"><img src="front/img/Review/2.jpg" class="mr-3"
-                                                                        alt="...">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">John Doe <span>January 01, 2020 - <a
-                                                        href="#">Reply</a></span></h5>
-                                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet
-                                                consectetur piscing elit amet consectetur adipiscing elit sed et eletum
-                                                nulla eu placerat felis etiam tincidunt orci lacus id varius dolor
-                                                fermum sit amet.</p>
+                                </div>
+                                <div class="leave-comment mt-5">
+                                    <h4>Leave A Comment</h4>
+                                    <form action="" method="post" class="comment-form">
+                                        @csrf
+                                        <input type="hidden" name="hotel_id" value="{{ $hotel->id }}">
+                                        <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id ?? null }}">
+
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <input class="form-control" type="text" placeholder="Name" name="name">
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <input class="form-control" type="text" placeholder="Email" name="email">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <textarea class="form-control mt-2" rows="5" placeholder="Messages" name="messages"></textarea>
+
+                                                <div class="personal-rating mt-5">
+                                                    <h6>Your Rating</h6>
+                                                    <div class="rate">
+                                                        <input type="radio" id="star5" name="rating" value="5" />
+                                                        <label for="star5" title="text">5 stars</label>
+                                                        <input type="radio" id="star4" name="rating" value="4" />
+                                                        <label for="star4" title="text">4 stars</label>
+                                                        <input type="radio" id="star3" name="rating" value="3" />
+                                                        <label for="star3" title="text">3 stars</label>
+                                                        <input type="radio" id="star2" name="rating" value="2" />
+                                                        <label for="star2" title="text">2 stars</label>
+                                                        <input type="radio" id="star1" name="rating" value="1" />
+                                                        <label for="star1" title="text">1 star</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button type="submit" class="btn-style-1">Send message</button>
                                         </div>
-                                    </div>
-                                    <!-- review item end -->
-                                    <!-- review item -->
-                                    <div class="media review-item"><img src="front/img/Review/3.jpg" class="mr-3"
-                                                                        alt="...">
-                                        <div class="media-body">
-                                            <h5 class="mt-0">John Doe <span>January 01, 2020 - <a
-                                                        href="#">Reply</a></span></h5>
-                                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet
-                                                consectetur piscing elit amet consectetur adipiscing elit sed et eletum
-                                                nulla eu placerat felis etiam tincidunt orci lacus id varius dolor
-                                                fermum sit amet.</p>
-                                        </div>
-                                    </div>
-                                    <!-- review item end -->
+                                    </form>
                                 </div>
                                 <!-- reviews end -->
                             </div>

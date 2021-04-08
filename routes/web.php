@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 //Destination-Nhật
     Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 
+<<<<<<< Updated upstream
 //Destination-detail
     Route::get('/destination-detail',function (){
         return view('destination-detail');
@@ -39,6 +40,17 @@ use Illuminate\Support\Facades\Route;
     Route::get('/signin', function () {
         return view('signin');
     });
+=======
+////Register-Nhật
+//    Route::get('/register', function () {
+//        return view('register');
+//    });
+//
+////Sign In-Nhật
+//    Route::get('/signin', function () {
+//        return view('login');
+//    });
+>>>>>>> Stashed changes
 
 //About-Nhật
     Route::get('/about', function () {
@@ -69,5 +81,14 @@ use Illuminate\Support\Facades\Route;
     });
 
     //vuong routes
-    Route::get('/hotel/{id}', [Front\HotelController::class, 'list']);
+    Route::get('/hotel/{id}', [Front\HotelController::class, 'hotel']);
+    Route::post('/hotel/{id}', [Front\HotelController::class, 'postComment']);
+//resgister - vuong
+    Route::get('/register', 'Auth\RegisterController@getRegister');
+    Route::post('/register', 'Auth\RegisterController@postRegister');
+// Login - vuong
+Route::get('/login', [ 'as' => 'login', 'user' => 'Auth\LoginController@getLogin']);
+Route::post('/login', [ 'as' => 'login', 'user' => 'Auth\LoginController@postLogin']);
 
+// logout - vuong
+Route::get('logout', [ 'as' => 'logout', 'uses' => 'Auth\LogoutController@getLogout']);
