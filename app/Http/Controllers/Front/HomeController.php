@@ -18,11 +18,11 @@ class HomeController extends Controller
 
         return view('index',compact('popularhotels','populardestinations'));
     }
-    public function listhotel()
+    public function listhotel($id)
     {
         $hotels = Hotels::all();
+        $destinations = Hotels::where('destination_id',$id)->get();
 
-
-        return view('listhotel',compact('hotels'));
+        return view('listhotel',compact('hotels','destinations'));
     }
 }

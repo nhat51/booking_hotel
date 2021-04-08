@@ -204,7 +204,7 @@
                 </div>
                 <div class="list-box-content">
                   <div class="list-box-title">
-                    <h3> {{ $hotel->name }} <span>$240 <em>/ night</em></span></h3>
+                    <h3> {{ $hotel->name }} <span> {{ $hotel->rooms[0]->price }} <em>/ night</em></span></h3>
                     <address>
                     <i class="fas fa-map-marker-alt"></i> {{ $hotel->description }}
                     </address>

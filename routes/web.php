@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
     Route::get('/', [Front\HomeController::class, 'index']);
 
 //Destination-Nhật
-    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
+    Route::get('/destinations/', [Front\DestinationController::class, 'destinations']);
+//List Hotel-Nhật
+Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
 
 //Destination-detail
     Route::get('/destination-detail',function (){
@@ -55,8 +57,7 @@ use Illuminate\Support\Facades\Route;
         return view('blog');
     });
 
-//List Hotel-Nhật
-    Route::get('/listhotel',[Front\HomeController::class,'listhotel']);
+
 
 //Payment Information-Nhật
     Route::get('/payment', function () {
