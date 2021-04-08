@@ -41,6 +41,15 @@ Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
     Route::get('/signin', function () {
         return view('signin');
     });
+////Register-Nhật
+//    Route::get('/register', function () {
+//        return view('register');
+//    });
+//
+////Sign In-Nhật
+    Route::get('/signin', function () {
+        return view('login');
+    });
 
 //About-Nhật
     Route::get('/about', function () {
@@ -70,5 +79,6 @@ Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
     });
 
     //vuong routes
-    Route::get('/hotel/{id}', [Front\HotelController::class, 'list']);
+    Route::get('/hotel/{id}', [Front\HotelController::class, 'hotel']);
+    Route::post('/hotel/{id}', [Front\HotelController::class, 'postComment']);
 

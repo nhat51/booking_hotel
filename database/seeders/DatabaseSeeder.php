@@ -23,53 +23,50 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         DB::table('users')->insert([
             [
-                'id'=>1,
-                'name'=>'Admin',
-                'email'=>'stetho@gmail.com',
-                'password'=>Hash::make('123456'),
-                'security_question'=>'null',
-                'question_answer'=>'null',
-                'avatar'=>'default-avatar.jpg',
-                'description'=>Str::random(200),
-                'level'=>0,
-
+                'id' => 1,
+                'name' => 'Admin',
+                'email' => 'Stetho@gmail.com',
+                'password' => Hash::make('123456'),
+                'avatar' => null,
+                'level' => 0,
+                'description' => null,
             ],
             [
-                'id'=>2,
-                'name'=>'Shane Lynch',
-                'email'=>'ShaneLynch@gmail.com',
-                'password'=>Hash::make('123456'),
-                'security_question'=>'null',
-                'question_answer'=>'null',
-                'avatar'=>'avatar-0.png',
-                'description'=>Str::random(200),
-                'level'=>1,
-
+                'id' => 2,
+                'name' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => Hash::make('123456'),
+                'avatar' => null,
+                'level' => 0,
+                'description' => null,
             ],
             [
-                'id'=>3,
-                'name'=>'Brandon Kelley',
-                'email'=>'BrandonKelley@gmail.com',
-                'password'=>Hash::make('123456'),
-                'security_question'=>'null',
-                'question_answer'=>'null',
-                'avatar'=>'avatar-1.png',
-                'description'=>Str::random(200),
-                'level'=>1,
-
+                'id' => 3,
+                'name' => 'Shane Lynch',
+                'email' => 'ShaneLynch@gmail.com',
+                'password' => Hash::make('123456'),
+                'avatar' => 'avatar-0.png',
+                'level' => 1,
+                'description' => 'Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum bore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amodo'
             ],
             [
-                'id'=>4,
-                'name'=>'Roy Banks',
-                'email'=>'RoyBanks@gmail.com',
-                'password'=>Hash::make('123456'),
-                'security_question'=>'null',
-                'question_answer'=>'null',
-                'avatar'=>'avatar-2.png',
-                'description'=>Str::random(200),
-                'level'=>2,
-
-            ]
+                'id' => 4,
+                'name' => 'Brandon Kelley',
+                'email' => 'BrandonKelley@gmail.com',
+                'password' => Hash::make('123456'),
+                'avatar' => 'avatar-1.png',
+                'level' => 1,
+                'description' => null,
+            ],
+            [
+                'id' => 5,
+                'name' => 'Roy Banks',
+                'email' => 'RoyBanks@gmail.com',
+                'password' => Hash::make('123456'),
+                'avatar' => 'avatar-2.png',
+                'level' => 1,
+                'description' => null,
+            ],
         ]);
         DB::table('hotels')->insert([
             [
@@ -511,19 +508,19 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'user_id'=>1,
-                'messages'=>Str::random(200),
+                'messages'=>'Tôi đã chọn Mường Thanh Grand hotel cho chuyến nghĩ dưỡng vừa rồi trong 5 ngày. Tôi đặt loại phòng deluxe nhưng vì do chính sách đặt trong Agoda nên phòng tôi đc up lên Vip room. Tất cả mọi thứ đều tốt tại ks này. Tôi rất hài lòng. Có dịp trở lại Nha Trang du lịch. Tôi sẽ tiếp tục chọn Mường Thanh Grand Hotel',
                 'rating'=>4
             ],
             [
                 'hotel_id'=>1,
                 'user_id'=>2,
-                'messages'=>Str::random(200),
+                'messages'=>'Hai đứa mình book phòng Deluxe Ocean View nhưng được up free lên Executive Suite !! Các chị lễ tân ai cũng thân thiện hết nè. View biển quá đẹp nhưng hơi xa bên khu đông đúc Trần Phú, việc đi taxi sẽ hơi tốn kém đôi chút. Buffet sáng đầy đủ món, tối t7 mình ở có seafood buffet 280k/người. Điều duy nhất mình không hài lòng là đa số khách đều là người Trung nên lúc nào cũng ồn ào bừa bộn và lộn xộn vô cùng, nhân viên cũng phải chạy liên tục để dọn bàn. Nếu có quay lại Nha Trang mình vẫn chọn Mường Thanh Grand Nha Trang nhé !',
                 'rating'=>5
             ],
             [
                 'hotel_id'=>1,
                 'user_id'=>5,
-                'messages'=>Str::random(200),
+                'messages'=>'Tháng 6 vừa rồi tôi đã có chuyến nghỉ dưỡng thật tuyệt vời nhờ Mường Thanh Grand. Đầu tiền thì khi tôi vào là phòng tôi đặt đang hư máy lạnh nên đã đc đổi cho 1 căn khác bự hơn tốt hơn, view nhìn ra biển như tôi muốn. Rất đẹp! Vừa bước vào nhân viên đã rất nhiệt tình từ chị quản lí và có 1 anh hướng dẫn cho tôi. Anh ấy thật sự rất nhiệt tình chỉ tôi chỗ nào có thể đi ăn hải sản ngon, và dặn rất kĩ về tài xế taxi. Thật sự rất thích từ cách bài biện trang trí của phòng ngủ, phòng khách, phòng tắm toàn bộ đều có thể nhìn ra biển rất thích. Đặc biệt trong phòng có két nên an tâm để vật dụng cá nhân quan trọng vào đấy và đi chơi thỏa thích. Rất hài lòng và sẽ quay lại Mường Thanh Grand Nha Trang vào 1 dịp không xa.',
                 'rating'=>3
             ],
         ]);
