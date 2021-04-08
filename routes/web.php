@@ -45,9 +45,9 @@ use Illuminate\Support\Facades\Route;
 //    });
 //
 ////Sign In-Nhật
-//    Route::get('/signin', function () {
-//        return view('login');
-//    });
+    Route::get('/signin', function () {
+        return view('login');
+    });
 
 //About-Nhật
     Route::get('/about', function () {
@@ -80,12 +80,4 @@ use Illuminate\Support\Facades\Route;
     //vuong routes
     Route::get('/hotel/{id}', [Front\HotelController::class, 'hotel']);
     Route::post('/hotel/{id}', [Front\HotelController::class, 'postComment']);
-//resgister - vuong
-    Route::get('/register', 'Auth\RegisterController@getRegister');
-    Route::post('/register', 'Auth\RegisterController@postRegister');
-// Login - vuong
-Route::get('/login', [ 'as' => 'login', 'user' => 'Auth\LoginController@getLogin']);
-Route::post('/login', [ 'as' => 'login', 'user' => 'Auth\LoginController@postLogin']);
 
-// logout - vuong
-Route::get('logout', [ 'as' => 'logout', 'uses' => 'Auth\LogoutController@getLogout']);
