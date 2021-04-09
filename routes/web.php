@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
     Route::get('/', [Front\HomeController::class, 'index']);
 
 //Destination-Nhật
-    Route::get('/destinations/', [Front\DestinationController::class, 'destinations']);
+    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 //List Hotel-Nhật
 Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
 
@@ -81,4 +81,8 @@ Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
     //vuong routes
     Route::get('/hotel/{id}', [Front\HotelController::class, 'hotel']);
     Route::post('/hotel/{id}', [Front\HotelController::class, 'postComment']);
+
+//    Route::get('listhotel/{id}', function ($id){
+//       return "listhotel ${id}";
+//    });
 

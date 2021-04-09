@@ -211,7 +211,9 @@
                   </div>
                   <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
                   <ul class="hotel-featured">
-                    <li><span><i class="fas fa-car"></i> {{ $hotel->hotel_amenities[0]->amenities_name }} </span></li>
+                      @foreach($hotel->hotel_amenities as $name)
+                        <li><span><i class="fas fa-car"></i> {{ $name->amenities_name }} </span></li>
+                      @endforeach
                   </ul>
                   <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="./hotel/{{ $hotel->id }}">View Details</a> <a class="book-now-btn ml-6" href="./traveler">Book Now</a> </div>
                 </div>

@@ -30,19 +30,19 @@
   <div class="container">
     <div class="row">
         @foreach($destinations as $destination)
-      <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
-        <!-- popular destination box -->
-        <div class="popular-destination-box">
-          <div class="img-holder-overlay">
-            <div class="img-holder"><img src="front/img/popular-destination/{{ $destination->image_path }}" alt=""></div>
-            <div class="overlay"><a href="./destination-detail"><i class="fas fa-share"></i></a></div>
+          <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
+            <!-- popular destination box -->
+            <div class="popular-destination-box">
+              <div class="img-holder-overlay">
+                <div class="img-holder"><img src="front/img/popular-destination/{{ $destination->image_path }}" alt=""></div>
+                <div class="overlay"><a href="./destination-detail"><i class="fas fa-share"></i></a></div>
+              </div>
+              <div class="title">
+                <h3><a href="./listhotel/{{ $destination->id }}">{{ $destination->name }}</a></h3>
+              </div>
+            </div>
+            <!-- popular destination box end -->
           </div>
-          <div class="title">
-            <h3><a href="./listhotel/{{ $destination->id }}">{{ $destination->name }}</a></h3>
-          </div>
-        </div>
-        <!-- popular destination box end -->
-      </div>
         @endforeach
     </div>
   </div>

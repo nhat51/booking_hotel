@@ -13,6 +13,8 @@ class DestinationController extends Controller
     public function destinations(){
 
        $destinations = Destinations::all();
-       return view('destinations',compact('destinations'));
+       $hotels = Hotels::all();
+
+       return view('destinations',compact('destinations','hotels'));
     }
 }
