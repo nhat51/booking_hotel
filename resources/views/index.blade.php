@@ -146,7 +146,7 @@
               @endfor
 
           </div>
-          <h4><a href="#">{{$popularhotel->name}}</a></h4>
+          <h4><a href="./hotel/{{ $popularhotel->id }}">{{$popularhotel->name}}</a></h4>
           <div class="price">From {{number_format($popularhotel->rooms[0]->price)}} <sup>₫</sup> / <span>Per night</span></div>
         </div>
         <!-- popular hotel box end -->
@@ -179,7 +179,7 @@
             <div class="overlay"><a href="./destination"><i class="fas fa-share"></i></a></div>
           </div>
           <div class="title">
-            <h3><a href="./listhotel">{{$populardestination->name}}</a></h3>
+            <h3><a href="./listhotel/{{ $populardestination->id }}">{{$populardestination->name}}</a></h3>
           </div>
         </div>
         <!-- popular destination box end -->

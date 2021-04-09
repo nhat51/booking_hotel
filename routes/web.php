@@ -82,7 +82,4 @@ Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
     Route::get('/hotel/{id}', [Front\HotelController::class, 'hotel']);
     Route::post('/hotel/{id}', [Front\HotelController::class, 'postComment']);
 
-//    Route::get('listhotel/{id}', function ($id){
-//       return "listhotel ${id}";
-//    });
 
