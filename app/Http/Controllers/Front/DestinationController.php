@@ -17,4 +17,15 @@ class DestinationController extends Controller
 
        return view('destinations',compact('destinations','hotels'));
     }
+    public function destinationDetail($id){
+        $destinationDetail = Destinations::findOrFail($id);
+
+        return view('front.destination.destination-detail', compact('destinationDetail'));
+    }
+    public function hotelInDestination($destinationId, Request $request){
+        $destinations = Destinations::all();
+        $hotel = Destinations::where('id', $destinationId)->first()->hotels->toQuery()->paginate();
+
+        return view('front.hotel.listhotel', compact('destinations', $hotel));
+    }
 }

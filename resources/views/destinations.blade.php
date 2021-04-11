@@ -35,7 +35,7 @@
             <div class="popular-destination-box">
               <div class="img-holder-overlay">
                 <div class="img-holder"><img src="front/img/popular-destination/{{ $destination->image_path }}" alt=""></div>
-                <div class="overlay"><a href="./destination-detail"><i class="fas fa-share"></i></a></div>
+                <div class="overlay"><a href="./destinations/{{$destination->id}}"><i class="fas fa-share"></i></a></div>
               </div>
               <div class="title">
                 <h3><a href="./listhotel/{{ $destination->id }}">{{ $destination->name }}</a></h3>

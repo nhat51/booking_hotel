@@ -783,32 +783,107 @@ class DatabaseSeeder extends Seeder
             [
                 'name'=>'Nha Trang',
                 'image_path'=>'nha-trang.jpg',
-                'description'=>Str::random(200)
+                'description'=>'<div class="row">
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+</div>
+<h4 class="mb-10">What is the Nha Trang?</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-2.jpg" alt=""> </div>
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-3.jpg" alt=""> </div>
+</div>
+<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+'
             ],
             [
                 'name'=>'Hà Nội',
                 'image_path'=>'ha-noi.jpg',
-                'description'=>Str::random(200)
+                'description'=>'<div class="row">
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+</div>
+<h4 class="mb-10">What is the Ha Noi?</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-2.jpg" alt=""> </div>
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-3.jpg" alt=""> </div>
+</div>
+<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+'
             ],
             [
                 'name'=>'Sapa',
                 'image_path'=>'sapa.jpg',
-                'description'=>Str::random(200)
+                'description'=>'<div class="row">
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+</div>
+<h4 class="mb-10">What is the Sapa?</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-2.jpg" alt=""> </div>
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-3.jpg" alt=""> </div>
+</div>
+<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+'
             ],
             [
                 'name'=>'Đà Lạt',
                 'image_path'=>'da-lat.jpg',
-                'description'=>Str::random(200)
+                'description'=>'<div class="row">
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+</div>
+<h4 class="mb-10">What is the Da Lat?</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-2.jpg" alt=""> </div>
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-3.jpg" alt=""> </div>
+</div>
+<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+'
             ],
             [
                 'name'=>'Đà Nẵng',
                 'image_path'=>'da-nang.jpg',
-                'description'=>Str::random(200)
+                'description'=>'Với vị trí là một trong ba trung tâm du lịch lớn trên bản đồ du lịch Việt Nam, Đà Nẵng thành phố biển xinh đẹp hiền hòa và mếm khách, nơi mà bạn có thể dễ dàng đến được bằng cả đường bộ, đường hàng không và đường thủy. Một dấu ấn địa lý và lịch sử, điểm trung chuyển tiện lợi đến các di sản văn hóa thế giới như Huế, Mỹ Sơn, Hội An và khu dự trữ sinh quyển thế giới Cù Lao Chàm. Qua năm tháng Đà Nẵng đang càng khẳng định là một điểm đến hấp dẫn và lý tưởng đối với bàn bè và du khách năm châu. Bạn sẽ đi từ ngạc nhiên này đến ngạc nhiên khác trong hành trình khám phá các di tích văn hóa, lịch sử, danh lam thắng cảnh, đèo Hải Vân – Thiên hạ đệ nhất hùng quang, Ngũ Hành Sơn thuyền thoại, đến dải bờ biển tuyệt đẹp được tôn vinh là một trong sáu bải biển đẹp nhất hành tinh. Hơn thế nữa Đà Nẵng là nơi bạn có thể thưởng thức dịch vụ nghỉ dưỡng đạt chuẩn quốc tế với các thương hiệu nổi tiếng thế giới như Intercontinental, Novotel, Crowne Plaza, Furama… Tham gia những hành trình khám phá thiên nhiên phong phú và cảm nhận sâu sắc về đời sống và văn hóa bản địa.'
             ],
             [
                 'name'=>'Vịnh Hạ Long',
                 'image_path'=>'ha-long.jpg',
-                'description'=>Str::random(200)
+                'description'=>'<div class="row">
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+    <div class="col-lg-6 mb-20">
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur cipsum dolor sit amet consectetur adipiscing elit amet consect piscing elit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit</p>
+    </div>
+</div>
+<h4 class="mb-10">What is the Ha Long?</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+<div class="row">
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-2.jpg" alt=""> </div>
+    <div class="col-lg-6 col-md-6 mb-20"> <img src="front/img/popular-destination/destination-detail-img-3.jpg" alt=""> </div>
+</div>
+<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum nulla eu placerat felis etiam tincidunt orci lacus id varius dolor fermum sit amet.</p>
+'
             ],
         ]);
     }
