@@ -26,4 +26,7 @@ class HomeController extends Controller
 
         return view('listhotel',compact('hotels','destination'));
     }
+    public function searchHotel(){
+
+    }
 }

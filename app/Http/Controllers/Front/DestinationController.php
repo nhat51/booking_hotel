@@ -15,7 +15,7 @@ class DestinationController extends Controller
        $destinations = Destinations::all();
        $hotels = Hotels::all();
 
-       return view('destinations',compact('destinations','hotels'));
+       return view('front.destination.destinations',compact('destinations','hotels'));
     }
     public function destinationDetail($id){
         $destinationDetail = Destinations::findOrFail($id);

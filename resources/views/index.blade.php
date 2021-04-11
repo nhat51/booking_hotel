@@ -15,7 +15,8 @@
             <p class="text-white">Search and Book Hotel</p>
             <form class="form-style-1" action="hotel">
               <div class="form-group">
-                <input name="searchCity" type="text" class="form-control" placeholder="Search City">
+                  <input type="hidden" name="available" value="1">
+                <input name="destination" type="text" class="form-control" placeholder="Search City">
               </div>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
