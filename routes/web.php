@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 ////Destination-Nhật
 //    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 //List Hotel-Nhật
-Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
+Route::get('/hotel',[Front\HotelController::class,'index']);
 
 //Destination-detail
     Route::get('/destination-detail',function (){

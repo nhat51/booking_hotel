@@ -37,6 +37,7 @@
           <!-- sidebar -->
           <div class="desktop-filter-sidebar">
             <!-- filter widget -->
+
             <div class="filter-widget mb-20">
               <div class="accordion filter-accordion" id="filter-widget-accordion4-d">
                 <div class="card">
@@ -50,17 +51,17 @@
                   <div id="collapseOne4-m" class="collapse show mt-10" aria-labelledby="headingOne4-d" data-parent="#filter-widget-accordion4-d">
                     <div class="card-body">
                       <ul class="list-inline select-all mb-10">
-                        <li class="list-inline-item">4 Hotels on screen</li>
+                        <li class="list-inline-item">{{ count($hotels) }} Hotels on screen</li>
                       </ul>
                       <div class="table-responsive">
                         <table class="table table-bordered bg-gray w-100 border-0">
                           <tr>
                             <td>Check In</td>
-                            <td>Jan 01, 2020 Wed</td>
+                            <td>{{ date('M d, y'),strtotime($booking) }}</td>
                           </tr>
                           <tr>
                             <td>Check Out</td>
-                            <td>Jan 01, 2020 Fri</td>
+                            <td>{{ date('M d, y'),strtotime($booking)}}</td>
                           </tr>
                           <tr>
                             <td>Room 1</td>
@@ -75,114 +76,116 @@
               </div>
             </div>
             <!-- filter widget end -->
-            <!-- filter widget -->
-            <div class="filter-widget mb-20">
-              <div class="accordion filter-accordion" id="filter-widget-accordion-d">
-                <div class="card">
-                  <div class="card-header" id="headingOne-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne-m" aria-expanded="true" aria-controls="collapseOne-m">
-                    <!-- title widget -->
-                    <div class="filter-title-widget">
-                      <h3>Price <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
-                    </div>
-                    <!-- title widget end -->
-                    </a> </div>
-                  <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
-                    <div class="card-body">
-                      <select class="form-control" >
-                        <option>$100 - $200</option>
-                        <option>$200 - $300</option>
-                        <option>$300 - $400</option>
-                        <option>$400 - $500</option>
-                        <option>$500 - $600</option>
-                      </select>
+                <!-- filter widget -->
+                <div class="filter-widget mb-20">
+                  <div class="accordion filter-accordion" id="filter-widget-accordion-d">
+                    <div class="card">
+                      <div class="card-header" id="headingOne-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne-m" aria-expanded="true" aria-controls="collapseOne-m">
+                        <!-- title widget -->
+                        <div class="filter-title-widget">
+                          <h3>Price <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
+                        </div>
+                        <!-- title widget end -->
+                        </a> </div>
+                      <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
+                        <div class="card-body">
+                            <select class="form-control" >
+                                <option {{ request('sortby') == 'range1' ? 'selected' : '' }}>1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
+                                <option {{ request('sortby') == 'range2' ? 'selected' : '' }}>2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
+                                <option {{ request('sortby') == 'range3' ? 'selected' : '' }}>3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
+                                <option {{ request('sortby') == 'range4' ? 'selected' : '' }}>4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
+                                <option {{ request('sortby') == 'range5' ? 'selected' : '' }}>5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
+                                <option {{ request('sortby') == 'range6' ? 'selected' : '' }}> >6.000.000<sup>₫</sup> </option>
+                            </select>
+                        </div>
+                          <div class="mt-1">
+                              <button type="submit" class="btn-style-1">Filter</button>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- filter widget end -->
-            <!-- filter widget -->
-            <div class="filter-widget mb-20">
-              <div class="accordion filter-accordion" id="filter-widget-accordion2-d">
-                <div class="card">
-                  <div class="card-header" id="headingOne2-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne2-m" aria-expanded="true" aria-controls="collapseOne2-m">
-                    <!-- title widget -->
-                    <div class="filter-title-widget">
-                      <h3>Star Rating <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
-                    </div>
-                    <!-- title widget end -->
-                    </a> </div>
-                  <div id="collapseOne2-m" class="collapse show mt-10" aria-labelledby="headingOne2-d" data-parent="#filter-widget-accordion2-d">
-                    <div class="card-body">
-                      <ul class="list-inline select-all mb-10">
-                        <li class="list-inline-item"> <a href="#">Select All</a> </li>
-                        <li class="list-inline-item"><a href="#">Clear</a></li>
-                      </ul>
-                      <div class="filter-checkbox-widget">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <small>(5)</small> </label>
+                <!-- filter widget end -->
+                <!-- filter widget -->
+                <div class="filter-widget mb-20">
+                  <div class="accordion filter-accordion" id="filter-widget-accordion2-d">
+                    <div class="card">
+                      <div class="card-header" id="headingOne2-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne2-m" aria-expanded="true" aria-controls="collapseOne2-m">
+                        <!-- title widget -->
+                        <div class="filter-title-widget">
+                          <h3>Star Rating <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
                         </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <small>(4)</small> </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(3)</small> </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(2)</small> </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(1)</small> </label>
+                        <!-- title widget end -->
+                        </a> </div>
+                      <div id="collapseOne2-m" class="collapse show mt-10" aria-labelledby="headingOne2-d" data-parent="#filter-widget-accordion2-d">
+                        <div class="card-body">
+                          <ul class="list-inline select-all mb-10">
+                            <li class="list-inline-item"> <a href="#">Select All</a> </li>
+                            <li class="list-inline-item"><a href="#">Clear</a></li>
+                          </ul>
+                          <div class="filter-checkbox-widget">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <small>(5)</small> </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <small>(4)</small> </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(3)</small> </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(2)</small> </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox">
+                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(1)</small> </label>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- filter widget end -->
-            <!-- filter widget -->
-            <div class="filter-widget mb-20">
-              <div class="accordion filter-accordion" id="filter-widget-accordion3-d">
-                <div class="card">
-                  <div class="card-header" id="headingOne3-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne3-m" aria-expanded="true" aria-controls="collapseOne3-m">
-                    <!-- title widget -->
-                    <div class="filter-title-widget">
-                      <h3>District <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
-                    </div>
-                    <!-- title widget end -->
-                    </a> </div>
-                  <div id="collapseOne3-m" class="collapse show mt-10" aria-labelledby="headingOne3-d" data-parent="#filter-widget-accordion3-d">
-                    <div class="card-body">
-                      <div class="filter-checkbox-widget">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> Ba Dinh <small>(2)</small> </label>
+                <!-- filter widget end -->
+                <!-- filter widget -->
+                <div class="filter-widget mb-20">
+                  <div class="accordion filter-accordion" id="filter-widget-accordion3-d">
+                    <div class="card">
+                      <div class="card-header" id="headingOne3-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne3-m" aria-expanded="true" aria-controls="collapseOne3-m">
+                        <!-- title widget -->
+                        <div class="filter-title-widget">
+                          <h3>Destination <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
                         </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> Hoan Kiem <small>(3)</small> </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> Long Bien <small>(1)</small> </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox">
-                          <label class="form-check-label"> Tay Ho <small>(2)</small> </label>
+                        <!-- title widget end -->
+                        </a> </div>
+                      <div id="collapseOne3-m" class="collapse show mt-10" aria-labelledby="headingOne3-d">
+                        <div class="card-body">
+                          <div class="filter-checkbox-widget">
+                              <form action="{{ request()->segment(2) == 'hotels' ? 'destinations' : '' }}">
+                              @foreach($destinations as $district)
+                                  <div class="bc-item">
+                                      <label for="bc-{{ $district->id }}">
+                                          <input type="checkbox"
+                                                 {{ (request("destinations")[$district->id]?? '') == 'on' ? 'checked' : '' }}
+                                                 id="bc-{{ $district->id }}"
+                                                 name="destinations[{{ $district->id }}]" onchange="this.form.submit();">
+                                          {{ $district->name }}
+                                          <span class="checkmark"></span>
+                                      </label>
+                                  </div>
+                              @endforeach
+                              </form>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <!-- filter widget end -->
+                <!-- filter widget end -->
             <!-- help us -->
             <div class="help-us mb-30">
               <h3>How can we help you?</h3>
