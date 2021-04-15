@@ -19,14 +19,5 @@ class HomeController extends Controller
 
         return view('index',compact('popularhotels','populardestinations'));
     }
-    public function listhotel($id)
-    {
-        $hotels = Hotels::all();
-        $destination = Hotels::where('destination_id',$id);
-
-        return view('listhotel',compact('hotels','destination'));
-    }
-    public function searchHotel(){
-
-    }
+    
 }
