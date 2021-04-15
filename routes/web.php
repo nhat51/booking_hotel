@@ -87,3 +87,13 @@ Route::get('/listhotel/{id}',[Front\HomeController::class,'listhotel']);
     Route::get('/destinations/{id}', [Front\DestinationController::class, 'destinationDetail']);
 
 
+//User Sign Up and Sign In
+Route::get('/user/login', [UserController::class, 'login'])->name('user.login');
+Route::get('/user/register', [UserController::class, 'register'])->name('user.register');
+Route::post('/user/save', [UserController::class, 'save'])->name('user.save');
+Route::post('/user/check', [UserController::class, 'check'])->name('user.check');
+
+// Chưa có temp
+Route::get('/admin/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+
+
