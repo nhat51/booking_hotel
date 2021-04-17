@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-header">List users</div>
                         <div class="card-body">
-                            <table class="table table-striped table-dark">
+                            <table class="table table-responsive table-striped table-dark">
                                 <thead>
                                 <tr>
                                     <th scope="col">Id</th>
@@ -57,7 +57,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ implode(',', $user->roles()->get()->pluck('name')->toArray()) }}</td>
-                                        <td>{{ $user->created_at }}</td>
+                                        <td>{{ date_format($user->created_at, 'd - M - Y')}}</td>
                                         <td>{{ $user->updated_at }}</td>
                                         @can('edit-users')
                                             <td>

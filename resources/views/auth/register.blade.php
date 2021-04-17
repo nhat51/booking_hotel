@@ -56,7 +56,9 @@
 {{--              Password input--}}
             <div class="form-group">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="new-password">
-
+                <small id="passwordHelpInline" class="text-muted">
+                    Must be 8-20 characters long.
+                </small>
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

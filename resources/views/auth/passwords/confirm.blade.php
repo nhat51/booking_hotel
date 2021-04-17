@@ -8,7 +8,7 @@
                 <div class="col-lg-8 col-md-8 mb-30">
                     <!-- page-title -->
                     <div class="page-title">
-                        <h1>{{ __('Confirm Password') }}</h1>
+                        <h1>Confirm Password</h1>
                     </div>
                     <!-- page-title end -->
                 </div>
@@ -16,7 +16,7 @@
                     <!-- breadcrumb -->
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">{{ __('Confirm Password') }}</li>
+                        <li class="breadcrumb-item active">Confirm Password</li>
                     </ol>
                     <!-- breadcrumb end -->
                 </div>

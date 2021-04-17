@@ -8,7 +8,7 @@
                 <div class="col-lg-8 col-md-8 mb-30">
                     <!-- page-title -->
                     <div class="page-title">
-                        <h1>{{ __('Reset Password') }}</h1>
+                        <h1>Reset Password</h1>
                     </div>
                     <!-- page-title end -->
                 </div>
@@ -16,7 +16,7 @@
                     <!-- breadcrumb -->
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">{{ __('Reset Password') }}</li>
+                        <li class="breadcrumb-item active">Reset Password</li>
                     </ol>
                     <!-- breadcrumb end -->
                 </div>
@@ -49,7 +49,7 @@
                                     </span>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn-style-1 w-100">{{ __('Send Password Reset Link') }}</button>
+                            <button type="submit" class="btn-style-1 w-100">Send Password Reset Link</button>
                         </form>
                     </div>
                     <!-- Reset Password box end -->
