@@ -174,7 +174,7 @@
                                     <!-- review item end -->
                                 </div>
                                     <div class="leave-comment mt-5">
-                                        <h4>Leave A Comment</h4>
+                                        <h4>Leave A Comment as {{ \Illuminate\Support\Facades\Auth::user()->name }}</h4>
                                         <form action="" method="post" class="comment-form">
                                             @csrf
                                             <input type="hidden" name="hotel_id" value="{{ $hotel->id }}">
