@@ -8,6 +8,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- page title -->
     <title>Stetho - @yield('title')</title>
@@ -69,9 +71,48 @@
                     <!-- header right link -->
                     <div class="header-right-link">
                         <ul>
-                            <li class="{{ (request()->segment(1)== 'signin') ? 'active' : '' }}" ><a href="./login"><i class="fas fa-chevron-right"></i> Sign in</a></li>
-                            <li class="{{ (request()->segment(1)== 'register') ? 'active' : '' }}"><a  href="./register"><i class="fas fa-chevron-right"></i> Register</a></li>
-                            <li><a href="contact-us.html" class="header-request">Request a Quote</a></li>
+                            <!-- Authentication Links -->
+                            @guest
+                                @if (Route::has('login'))
+                                    <li>
+                                        <a href="{{ route('login') }}"><i class="fas fa-chevron-right"></i> Login</a>
+                                    </li>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <li>
+                                        <a href="{{ route('register') }}"><i class="fas fa-chevron-right"></i> Register</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="dropdown">
+                                    <a style="text-transform: none" class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+                                    <div class="dropdown-menu bg-dark" aria-labelledby="userDropdown">
+                                        @can('manage-users')
+                                            <a class="dropdown-item" href="{{ route('admin.users.index') }}">
+                                                <span class="fas fa-users"></span>  User Management
+                                            </a>
+                                        @endcan
+                                        @can('manage-hotels')
+                                            <a class="dropdown-item" href="{{ route('admin.hotels.index') }}">
+                                                <span class="fas fa-hotel"></span>  Hotel Management
+                                            </a>
+                                        @endcan
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                <span class="fas fa-sign-out-alt"></span> Sign Out
+                                            </a>
+                                    </div>
+                                </li>
+                            @endguest
+                            <li class="nav-item">
+                                <a style="text-transform: none" href="contact-us.html" class="nav-link header-request">Request a Quote</a></li>
                         </ul>
                     </div>
                     <!-- header right link end -->
@@ -246,6 +287,9 @@
 <script src="front/js/datepicker.min.js"></script>
 <!-- script js -->
 <script src="front/js/custom.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+</script>
 </body>
 
 <!-- Mirrored from rainbowdesign.in/themes/Stetho/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 13:13:27 GMT -->

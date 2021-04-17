@@ -3,6 +3,7 @@
 @section('title', 'Home')
 
 @section('body')
+
 <!-- ================ Slider area ================ -->
 <div class="slider">
   <!-- search area -->
@@ -30,6 +31,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
                   <div class="form-group">
@@ -54,6 +56,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="form-group">
                 <select class="form-control">
                   <option>Rooms</option>
@@ -63,6 +66,7 @@
                   <option value="4">4</option>
                 </select>
               </div>
+
               <button type="submit" class="btn-style-1 w-100">Search</button>
             </form>
           </div>
