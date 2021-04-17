@@ -31,6 +31,8 @@ class HotelController extends Controller
         $booking = Bookings::all();
         $destinations = Destinations::all();
 
+
+
         $hotels = $this->filter($hotels,$request);
 
 
@@ -38,9 +40,17 @@ class HotelController extends Controller
     }
     public function filter($hotels,Request $request)
     {
+        //Destination filter
         $destinations = $request->destinations ?? [];
         $destination_id = array_keys($destinations);
         $hotels = $destination_id != null ? $hotels->whereIn('destination_id',$destination_id) : $hotels;
+
+        //Star ranking filter
+        $ranking = $request->ranking ;
+        $star_ranking = is_integer($ranking);
+        $hotels = $star_ranking != null ? $hotels->select('star_ranking',$star_ranking) : $hotels;
+
+
 
         return $hotels;
     }

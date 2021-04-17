@@ -77,6 +77,7 @@
             </div>
             <!-- filter widget end -->
                 <!-- filter widget -->
+              <form action="{{ request()->segment(2) == '' ? 'hotel' : '' }}">
                 <div class="filter-widget mb-20">
                   <div class="accordion filter-accordion" id="filter-widget-accordion-d">
                     <div class="card">
@@ -119,30 +120,28 @@
                         </a> </div>
                       <div id="collapseOne2-m" class="collapse show mt-10" aria-labelledby="headingOne2-d" data-parent="#filter-widget-accordion2-d">
                         <div class="card-body">
-                          <ul class="list-inline select-all mb-10">
-                            <li class="list-inline-item"> <a href="#">Select All</a> </li>
-                            <li class="list-inline-item"><a href="#">Clear</a></li>
-                          </ul>
                           <div class="filter-checkbox-widget">
                             <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <small>(5)</small> </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <small>(4)</small> </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(3)</small> </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(2)</small> </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox">
-                              <label class="form-check-label"> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(1)</small> </label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="star_rank_5" {{ request('ranking') == '5' ? 'checked' : '' }} name="ranking" value="5" onchange="this.form.submit();">
+                                    <label class="form-check-label {{ request('ranking') == '5' ? 'active' : '' }}" for="star_rank_5"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <small>(5)</small> </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="star_rank_4" {{ request('ranking') == '4' ? 'checked' : '' }} name="ranking" value="4" onchange="this.form.submit();">
+                                    <label class="form-check-label {{ request('ranking') == '4' ? 'active' : '' }}" for="star_rank_4"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <small>(4)</small> </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="star_rank_3" {{ request('ranking') == '3' ? 'checked' : '' }} name="ranking" value="3" onchange="this.form.submit();">
+                                    <label class="form-check-label {{ request('ranking') == '3' ? 'active' : '' }}" for="star_rank_3"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(3)</small> </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="star_rank_2" {{ request('ranking') == '2' ? 'checked' : '' }} name="ranking" value="2" onchange="this.form.submit();">
+                                    <label class="form-check-label {{ request('ranking') == '2' ? 'active' : '' }}" for="star_rank_2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(2)</small> </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="star_rank_1" {{ request('ranking') == '1' ? 'checked' : '' }} name="ranking" value="1" onchange="this.form.submit();">
+                                    <label class="form-check-label {{ request('ranking') == '1' ? 'active' : '' }}" for="star_rank_1"> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(1)</small> </label>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -165,7 +164,6 @@
                       <div id="collapseOne3-m" class="collapse show mt-10" aria-labelledby="headingOne3-d">
                         <div class="card-body">
                           <div class="filter-checkbox-widget">
-                              <form action="{{ request()->segment(2) == 'hotels' ? 'destinations' : '' }}">
                               @foreach($destinations as $district)
                                   <div class="bc-item">
                                       <label for="bc-{{ $district->id }}">
@@ -178,7 +176,6 @@
                                       </label>
                                   </div>
                               @endforeach
-                              </form>
                           </div>
                         </div>
                       </div>
@@ -186,6 +183,7 @@
                   </div>
                 </div>
                 <!-- filter widget end -->
+              </form>
             <!-- help us -->
             <div class="help-us mb-30">
               <h3>How can we help you?</h3>
@@ -212,7 +210,15 @@
                     <i class="fas fa-map-marker-alt"></i> {{ $hotel->description }}
                     </address>
                   </div>
-                  <div class="list-box-rating"> <span class="at-stars"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </span> <em>1000 review</em> </div>
+                  <div class="list-box-rating"> <span class="at-stars">
+                         @for($i=1; $i<=5; $i++)
+                              @if($i<=$hotel->star_ranking)
+                                  <i class=" fas  fa-star"></i>
+                              @else
+                                  <i class=" far  fa-star"></i>
+                              @endif
+                          @endfor
+                      </span> <em>{{ count($hotel->hotel_comments)}} review</em> </div>
                   <ul class="hotel-featured">
                       @foreach($hotel->hotel_amenities as $name)
                         <li><span><i class="fas fa-car"></i> {{ $name->amenities_name }} </span></li>
