@@ -156,7 +156,7 @@
                                     <!-- review item -->
                                     @foreach($hotel->hotel_comments as $hotelComment)
                                         <div class="media review-item avatar-pic"><img src="front/img/user/{{ $hotelComment->user->avatar ?? 'default-avatar.jpg' }}" class="mr-3" alt="...">
-                                            <div class="media-body">
+                                            <div class="media-body col-md-10">
                                                 <div class="at-rating">
                                                     @for($i = 1; $i <= 5; $i++)
                                                         @if($i <= $hotelComment->rating)
@@ -166,28 +166,36 @@
                                                         @endif
                                                     @endfor
                                                 </div>
-                                                <h5 class="mt-0">{{ $hotelComment->user->name }}<span>{{ date('M d, Y', strtotime($hotelComment->created_at)) }}</span></h5>
+                                                <h5 class="mt-0">{{ $hotelComment->name }}<span>{{ date('M d, Y', strtotime($hotelComment->created_at)) }}</span></h5>
                                                 <p class="mb-0">{{ $hotelComment->messages }}</p>
                                             </div>
+                                            @can('delete-comment')
+                                            <div class="col-md-auto pt-1">
+                                                <button class="btn btn-danger mt-0"><i class="fas fa-trash-alt"></i></button>
+                                            </div>
+                                            @endcan
                                         </div>
                                     @endforeach
-                                    <!-- review item end -->
                                 </div>
+
+                                <!-- review item end -->
+                                @can('post-comment')
                                     <div class="leave-comment mt-5">
                                         <h4>Leave A Comment as {{ \Illuminate\Support\Facades\Auth::user()->name }}</h4>
                                         <form action="" method="post" class="comment-form">
                                             @csrf
                                             <input type="hidden" name="hotel_id" value="{{ $hotel->id }}">
                                             <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id ?? null }}">
+                                            <input type="hidden" name="name" value="{{ \Illuminate\Support\Facades\Auth::user()->name ?? null }}">
 
                                             <div class="row">
                                                 <div class="col-lg-12">
-                                                    <textarea class="form-control mt-2" rows="5" placeholder="Messages" name="messages"></textarea>
+                                                    <textarea class="form-control mt-2" rows="5" placeholder="Messages" name="messages" required></textarea>
 
                                                     <div class="personal-rating mt-5">
                                                         <h6>Your Rating</h6>
                                                         <div class="rate">
-                                                            <input type="radio" id="star5" name="rating" value="5" />
+                                                            <input type="radio" id="star5" name="rating" value="5" checked />
                                                             <label for="star5" title="text">5 stars</label>
                                                             <input type="radio" id="star4" name="rating" value="4" />
                                                             <label for="star4" title="text">4 stars</label>
@@ -204,6 +212,7 @@
                                             </div>
                                         </form>
                                     </div>
+                                @endcan
                                 <!-- reviews end -->
                             </div>
                         </div>

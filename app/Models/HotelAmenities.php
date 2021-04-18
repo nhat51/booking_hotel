@@ -13,6 +13,6 @@ class HotelAmenities extends Model
     protected $guarded = [];
 
     public function hotels(){
-        return $this->belongsTo(Hotels::class,'hotel_id','id');
+        return $this->hasMany(Hotels::class,'hotel_id','id');
     }
 }

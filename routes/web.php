@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
 ////Destination-Nhật
 //    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
@@ -33,25 +33,6 @@ Route::get('/hotel',[Front\HotelController::class,'index']);
 //Traveler Information
     Route::get('/traveler',function (){
         return view('traveler-information');
-    });
-
-//Register-Nhật
-    Route::get('/register', function () {
-        return view('register');
-    });
-
-//Sign In-Nhật
-    Route::get('/signin', function () {
-        return view('signin');
-    });
-////Register-Nhật
-//    Route::get('/register', function () {
-//        return view('register');
-//    });
-//
-////Sign In-Nhật
-    Route::get('/signin', function () {
-        return view('login');
     });
 
 //About-Nhật
@@ -92,21 +73,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::prefix('admin')->name('admin.')->middleware(['can:manage-users', 'can:manage-hotels'])->group(function (){
+Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function (){
     Route::resource('/users', UsersController::class, ['except'=>['show', 'create', 'store']]);
+});
+Route::prefix('admin')->name('admin.')->middleware('can:manage-hotels')->group(function (){
     Route::resource('/hotels', HotelsController::class, ['except'=>['show', 'create', 'store']]);
 });
+
 //end vuong Routes
 
-
-//User Sign Up and Sign In
-//Route::get('/user/login', [UsersController::class, 'login'])->name('user.login');
-//Route::get('/user/register', [UsersController::class, 'register'])->name('user.register');
-//Route::post('/user/save', [UsersController::class, 'save'])->name('user.save');
-//Route::post('/user/check', [UsersController::class, 'check'])->name('user.check');
-
-// Chưa có temp
-//Route::get('/admin/dashboard', [UsersController::class, 'dashboard'])->name('user.dashboard');
 
 
 

@@ -16,7 +16,8 @@
                     <!-- breadcrumb -->
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('admin.hotels.index') }}">Hotels Management</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.hotels.index') }}">Hotels Management</a>
+                        </li>
                         <li class="breadcrumb-item active">Hotels Edit</li>
                     </ol>
                     <!-- breadcrumb end -->
@@ -30,31 +31,19 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Edit user {{ $user->name }}</div>
+                        <div class="card-header">Edit Hotel {{ $hotel->name }}</div>
 
                         <div class="card-body">
-                            <form action="{{ route('admin.users.update', $user) }}" method="POST">
+                            <form action="{{ route('admin.hotels.update', $hotel) }}" method="POST">
+                                @csrf
+                                {{method_field('PUT')}}
+                                {{--                                hotel name input--}}
                                 <div class="form-group row">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
-                                    <div class="col-md-6">
-                                        <input id="email" type="email"
-                                               class="form-control  @error('email') is-invalid @enderror" name="email"
-                                               value="{{ $user->email }}" required autocomplete="email"
-                                               autofocus>
-
-                                        @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
-                                    <div class="col-md-6">
+                                    <label for="name" class="col-md-2 col-form-label">Name</label>
+                                    <div class="col-md-8">
                                         <input id="name" type="text"
                                                class="form-control @error('name') is-invalid @enderror" name="name"
-                                               value="{{ $user->name }}" required autofocus>
+                                               value="{{ $hotel->name }}" required autofocus>
 
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
@@ -63,24 +52,118 @@
                                         @enderror
                                     </div>
                                 </div>
-
-                                @csrf
-                                {{method_field('PUT')}}
+                                {{--                                hotel name input end--}}
+                                {{--                                destination input--}}
                                 <div class="form-group row">
-                                    <label for="roles" class="col-md-4 col-form-label text-md-right">Roles</label>
-                                    <div class="col-md-6">
-                                        @foreach($roles as $role)
-                                            <div class="form-check pt-1">
-                                                <input class="form-check-input" type="checkbox"
-                                                       id="flexCheckDefault{{$role->id}}" name="roles[]"
-                                                       value="{{ $role->id }}"
-                                                       @if($user->roles->pluck('id')->contains($role->id)) checked @endif>
-                                                <label class="form-check-label"
-                                                       for="flexCheckDefault{{$role->id}}"> {{ $role->name }}</label>
+                                    <label for="destination" class="col-md-2 col-form-label">Destination</label>
+                                    <div class="col-md-8">
+                                        <select name="destination" id="destination" class="form-control" required
+                                                autofocus>
+                                            @foreach($destinations as  $destination)
+                                                <option value="{{ $destination->id }}"
+                                                        @if(($hotel->destination_id) == ($destination->id)) selected @endif >{{ $destination->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                {{--                                destination input end--}}
+                                {{--                                address input--}}
+                                <div class="form-group row">
+                                    <label for="address" class="col-md-2 col-form-label">Address</label>
+                                    <div class="col-md-8">
+                                        <input id="address" type="text"
+                                               class="form-control @error('address') is-invalid @enderror"
+                                               name="address"
+                                               value="{{ $hotel->address }}" required autofocus>
+
+                                        @error('address')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                {{--                                addresss input end--}}
+                                {{--                                district input--}}
+                                <div class="form-group row">
+                                    <label for="district" class="col-md-2 col-form-label">District</label>
+                                    <div class="col-md-8">
+                                        <input id="district" type="text"
+                                               class="form-control @error('district') is-invalid @enderror"
+                                               name="district"
+                                               value="{{ $hotel->district }}" required autofocus>
+
+                                        @error('district')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                {{--                                district input end--}}
+                                {{--                                city input--}}
+                                <div class="form-group row">
+                                    <label for="city" class="col-md-2 col-form-label">City</label>
+                                    <div class="col-md-8">
+                                        <input id="city" type="text"
+                                               class="form-control @error('city') is-invalid @enderror" name="city"
+                                               value="{{ $hotel->city }}" required autofocus>
+
+                                        @error('city')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                {{--                                city input end--}}
+                                {{--                                star ranking--}}
+                                <div class="form-group row">
+                                    <label for="star_ranking" class="col-md-2 col-form-label">Ranking</label>
+                                    <div class="col-md-8">
+                                        <div class="personal-rating">
+                                            <div class="rate">
+                                                @for($i=5; $i>=1; $i--)
+                                                    <input type="radio" id="star{{$i}}" name="star_ranking"
+                                                           value="{{$i}}"
+                                                           @if(($hotel->star_ranking) == ($i)) checked @endif />
+                                                    <label for="star{{$i}}" title="text">{{$i}} stars</label>
+                                                @endfor
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--                                star ranking end--}}
+                                {{--                                amenities--}}
+                                <div class="form-group row">
+                                    <p class="col-md-2 col-form-label">Amenities</p>
+                                    <div class="form-check form-check-inline col-md-8">
+                                        @foreach($hotel-> hotel_amenities as $amenities)
+                                            <div class="col-md-6">
+                                            <input class="form-check-input " type="checkbox" value="" id="amenities{{$amenities->id}}"
+                                                   name="amenities{{$amenities->id}}">
+                                            <label class="form-check-label" for="amenities{{$amenities->id}}">
+                                                {{ $amenities->amenities_name }}
+                                            </label>
                                             </div>
                                         @endforeach
                                     </div>
+
+                                    {{--                                    --}}
+                                    {{--                                        <p >{{$amenities->name}}</p>--}}
+                                    {{--                                        <input type="checkbox" name="amenities" id="amenities">--}}
+
                                 </div>
+                                {{--                                amenities end--}}
+                                {{--                                description--}}
+                                <div class="form-group row">
+                                    <label for="description" class="col-md-2 col-form-label">Description</label>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" name="description" id="description">{{$hotel->description}}</textarea>
+                                    </div>
+                                </div>
+                                {{--                                description end--}}
+
                                 <button type="submit" class="btn-style-1 w-100">Update</button>
                             </form>
                         </div>

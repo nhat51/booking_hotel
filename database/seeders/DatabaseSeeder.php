@@ -462,18 +462,21 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'user_id'=>1,
+                'name' =>'Admin User',
                 'messages'=>'Tôi đã chọn Mường Thanh Grand hotel cho chuyến nghĩ dưỡng vừa rồi trong 5 ngày. Tôi đặt loại phòng deluxe nhưng vì do chính sách đặt trong Agoda nên phòng tôi đc up lên Vip room. Tất cả mọi thứ đều tốt tại ks này. Tôi rất hài lòng. Có dịp trở lại Nha Trang du lịch. Tôi sẽ tiếp tục chọn Mường Thanh Grand Hotel',
                 'rating'=>4
             ],
             [
                 'hotel_id'=>1,
                 'user_id'=>2,
+                'name' => 'Author User',
                 'messages'=>'Hai đứa mình book phòng Deluxe Ocean View nhưng được up free lên Executive Suite !! Các chị lễ tân ai cũng thân thiện hết nè. View biển quá đẹp nhưng hơi xa bên khu đông đúc Trần Phú, việc đi taxi sẽ hơi tốn kém đôi chút. Buffet sáng đầy đủ món, tối t7 mình ở có seafood buffet 280k/người. Điều duy nhất mình không hài lòng là đa số khách đều là người Trung nên lúc nào cũng ồn ào bừa bộn và lộn xộn vô cùng, nhân viên cũng phải chạy liên tục để dọn bàn. Nếu có quay lại Nha Trang mình vẫn chọn Mường Thanh Grand Nha Trang nhé !',
                 'rating'=>5
             ],
             [
                 'hotel_id'=>1,
-                'user_id'=>5,
+                'user_id'=>3,
+                'name' => 'Generic User',
                 'messages'=>'Tháng 6 vừa rồi tôi đã có chuyến nghỉ dưỡng thật tuyệt vời nhờ Mường Thanh Grand. Đầu tiền thì khi tôi vào là phòng tôi đặt đang hư máy lạnh nên đã đc đổi cho 1 căn khác bự hơn tốt hơn, view nhìn ra biển như tôi muốn. Rất đẹp! Vừa bước vào nhân viên đã rất nhiệt tình từ chị quản lí và có 1 anh hướng dẫn cho tôi. Anh ấy thật sự rất nhiệt tình chỉ tôi chỗ nào có thể đi ăn hải sản ngon, và dặn rất kĩ về tài xế taxi. Thật sự rất thích từ cách bài biện trang trí của phòng ngủ, phòng khách, phòng tắm toàn bộ đều có thể nhìn ra biển rất thích. Đặc biệt trong phòng có két nên an tâm để vật dụng cá nhân quan trọng vào đấy và đi chơi thỏa thích. Rất hài lòng và sẽ quay lại Mường Thanh Grand Nha Trang vào 1 dịp không xa.',
                 'rating'=>3
             ],

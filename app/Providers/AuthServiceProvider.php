@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use http\Client\Curl\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -45,6 +46,12 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('create-hotels', function ($user){
             return $user->hasAnyRoles(['admin', 'author']);
+        });
+        Gate::define('post-comment', function ($user){
+           return $user->hasRole('user');
+        });
+        Gate::define('delete-comment', function ($user){
+            return $user->hasRole('admin');
         });
     }
 }

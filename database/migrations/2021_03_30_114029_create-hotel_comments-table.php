@@ -18,6 +18,7 @@ class CreateHotelCommentsTable extends Migration
 
             $table->integer('hotel_id');
             $table->integer('user_id');
+            $table->string('name');
             $table->text('messages')->nullable();
             $table->integer('rating');
 

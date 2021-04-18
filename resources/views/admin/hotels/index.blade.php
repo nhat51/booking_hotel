@@ -37,11 +37,12 @@
                             @endcan
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped table-dark">
+                            <table class="table table-responsive table-striped table-dark">
                                 <thead>
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Destination</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">District</th>
                                     <th scope="col">City</th>
@@ -63,10 +64,11 @@
                                     <tr>
                                         <th scope="row">{{ $hotel->id }}</th>
                                         <td>{{ $hotel->name }}</td>
+                                        <td>{{ $hotel->destination_id }}</td>
                                         <td>{{ $hotel->address }}</td>
                                         <td>{{ $hotel->district }}</td>
                                         <td>{{ $hotel->city }}</td>
-                                        <td>
+                                        <td class="d-inline-block">
                                             @for($i=1; $i<=5; $i++)
                                                 @if($i<=$hotel->star_ranking)
                                                     <i class="fas fa-star"></i>
@@ -75,7 +77,7 @@
                                                 @endif
                                             @endfor
                                         </td>
-                                        <td>{{count($hotel->rooms)}}</td>
+                                        <td>{{count($hotel->rooms)}} Rooms</td>
                                         <td>
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hotelDescription{{$hotel->id}}">
