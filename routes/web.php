@@ -18,66 +18,75 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+
+//Authenticates routes
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Admin manage users routes
+Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function () {
+    Route::resource('/users', UsersController::class, ['except' => ['show', 'create', 'store']]);
+});
+
+// Admin manage hotels
+Route::prefix('admin')->name('admin.')->middleware('can:manage-hotels')->group(function () {
+    Route::resource('/hotels', HotelsController::class, ['except' => ['show', 'create', 'store']]);
+});
 
 ////Destination-Nhật
 //    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
 //List Hotel-Nhật
-Route::get('/hotel',[Front\HotelController::class,'index']);
+Route::get('/hotel', [Front\HotelController::class, 'index']);
 
 //Destination-detail
-    Route::get('/destination-detail',function (){
-        return view('destination-detail');
-    });
+Route::get('/destination-detail', function () {
+    return view('destination-detail');
+});
 
 //Traveler Information
-    Route::get('/traveler',function (){
-        return view('traveler-information');
-    });
+Route::get('/traveler', function () {
+    return view('traveler-information');
+});
 
 //About-Nhật
-    Route::get('/about', function () {
-        return view('about');
-    });
+Route::get('/about', function () {
+    return view('about');
+});
 
 //Contact-Nhật
-    Route::get('/contact', function () {
-        return view('contact-us');
-    });
+Route::get('/contact', function () {
+    return view('contact-us');
+});
 
 //Blog-Nhật
-    Route::get('/blog', function () {
-        return view('blog');
-    });
-
+Route::get('/blog', function () {
+    return view('blog');
+});
 
 
 //Payment Information-Nhật
-    Route::get('/payment', function () {
-        return view('payment');
-    });
+Route::get('/payment', function () {
+    return view('payment');
+});
 
 //Traveler information
-    Route::get('/traveler-information', function () {
-        return view('traveler-information');
-    });
-
-    //vuong routes
-    Route::prefix('hotel')->group(function (){
-        Route::get('/{id}', [Front\HotelController::class, 'hotel']);
-        Route::post('/{id}', [Front\HotelController::class, 'postComment']);
-    });
-    Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
-    Route::get('/destinations/{id}', [Front\DestinationController::class, 'destinationDetail']);
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function (){
-    Route::resource('/users', UsersController::class, ['except'=>['show', 'create', 'store']]);
+Route::get('/traveler-information', function () {
+    return view('traveler-information');
 });
-Route::prefix('admin')->name('admin.')->middleware('can:manage-hotels')->group(function (){
-    Route::resource('/hotels', HotelsController::class, ['except'=>['show', 'create', 'store']]);
+
+//vuong routes
+
+//hotel routes
+Route::prefix('hotel')->group(function () {
+    Route::get('/{id}', [Front\HotelController::class, 'hotel']);
+    Route::post('/{id}', [Front\HotelController::class, 'postComment']);
+});
+
+// destination routes
+Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
+Route::prefix('destination')->group(function () {
+    Route::get('/{id}', [Front\DestinationController::class, 'destinationDetail']);
 });
 
 //end vuong Routes

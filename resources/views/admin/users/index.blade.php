@@ -33,7 +33,7 @@
                     <div class="card">
                         <div class="card-header">List users</div>
                         <div class="card-body">
-                            <table class="table table-responsive table-striped table-dark">
+                            <table class="table table-bordered table-striped table-responsive-lg ">
                                 <thead>
                                 <tr>
                                     <th scope="col">Id</th>
