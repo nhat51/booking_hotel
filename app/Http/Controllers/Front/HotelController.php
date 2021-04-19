@@ -48,8 +48,7 @@ class HotelController extends Controller
         //Star ranking filter
         $ranking = $request->ranking ;
         $star_ranking = is_integer($ranking);
-        $hotels = $star_ranking != null ? $hotels->select('star_ranking',$star_ranking) : $hotels;
-
+        $hotels = $star_ranking != null ? $hotels->whereIn('star_ranking',$star_ranking) : $hotels;
 
 
         return $hotels;

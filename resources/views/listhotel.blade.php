@@ -164,15 +164,14 @@
                       <div id="collapseOne3-m" class="collapse show mt-10" aria-labelledby="headingOne3-d">
                         <div class="card-body">
                           <div class="filter-checkbox-widget">
-                              @foreach($destinations as $district)
+                              @foreach($destinations as $destination)
                                   <div class="bc-item">
-                                      <label for="bc-{{ $district->id }}">
+                                      <label for="bc-{{ $destination->id }}">
                                           <input type="checkbox"
-                                                 {{ (request("destinations")[$district->id]?? '') == 'on' ? 'checked' : '' }}
-                                                 id="bc-{{ $district->id }}"
-                                                 name="destinations[{{ $district->id }}]" onchange="this.form.submit();">
-                                          {{ $district->name }}
-                                          <span class="checkmark"></span>
+                                                 {{ (request("destinations")[$destination->id]?? '') == 'on' ? 'checked' : '' }}
+                                                 id="bc-{{ $destination->id }}"
+                                                 name="destinations[{{ $destination->id }}]" onchange="this.form.submit();">
+                                          {{ $destination->name }}
                                       </label>
                                   </div>
                               @endforeach
@@ -206,9 +205,7 @@
                 <div class="list-box-content">
                   <div class="list-box-title">
                     <h3> {{ $hotel->name }} <span> {{ $hotel->rooms[0]->price }} <em>/ night</em></span></h3>
-                    <address>
-                    <i class="fas fa-map-marker-alt"></i> {{ $hotel->description }}
-                    </address>
+                     {{ $hotel->description }}
                   </div>
                   <div class="list-box-rating"> <span class="at-stars">
                          @for($i=1; $i<=5; $i++)
@@ -221,7 +218,7 @@
                       </span> <em>{{ count($hotel->hotel_comments)}} review</em> </div>
                   <ul class="hotel-featured">
                       @foreach($hotel->hotel_amenities as $name)
-                        <li><span><i class="fas fa-car"></i> {{ $name->amenities_name }} </span></li>
+                        <li><span><i class="fas fa-{{$name->code}}"></i> {{ $name->amenities_name }} </span></li>
                       @endforeach
                   </ul>
                   <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="./hotel/{{ $hotel->id }}">View Details</a> <a class="book-now-btn ml-6" href="./traveler">Book Now</a> </div>
