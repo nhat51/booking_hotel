@@ -15,7 +15,7 @@
                 <div class="col-lg-4 col-md-4 mb-30">
                     <!-- breadcrumb -->
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                         <li class="breadcrumb-item"><a href="{{ route('admin.users.index') }}">Users Management</a></li>
                         <li class="breadcrumb-item active">User Edit</li>
                     </ol>
@@ -34,6 +34,8 @@
 
                         <div class="card-body">
                             <form action="{{ route('admin.users.update', $user) }}" method="POST">
+                                @csrf
+                                {{method_field('PUT')}}
                                 <div class="form-group row">
                                     <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
                                     <div class="col-md-6">
@@ -64,8 +66,7 @@
                                     </div>
                                 </div>
 
-                                @csrf
-                                {{method_field('PUT')}}
+
                                 <div class="form-group row">
                                     <label for="roles" class="col-md-4 col-form-label text-md-right">Roles</label>
                                     <div class="col-md-6">

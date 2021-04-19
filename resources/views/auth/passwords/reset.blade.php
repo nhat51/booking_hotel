@@ -8,15 +8,15 @@
                 <div class="col-lg-8 col-md-8 mb-30">
                     <!-- page-title -->
                     <div class="page-title">
-                        <h1>{{ __('Reset Password') }}</h1>
+                        <h1>Reset Password</h1>
                     </div>
                     <!-- page-title end -->
                 </div>
                 <div class="col-lg-4 col-md-4 mb-30">
                     <!-- breadcrumb -->
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">{{ __('Reset Password') }}</li>
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="breadcrumb-item active">Reset Password</li>
                     </ol>
                     <!-- breadcrumb end -->
                 </div>
@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                             </div>
-                            <button type="submit" class="btn-style-1 w-100">{{ __('Reset Password') }}</button>
+                            <button type="submit" class="btn-style-1 w-100">Reset Password</button>
                         </form>
                     </div>
                     <!-- Reset Password box end -->

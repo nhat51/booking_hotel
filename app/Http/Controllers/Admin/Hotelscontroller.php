@@ -8,6 +8,7 @@ use App\Models\HotelAmenities;
 use App\Models\HotelImages;
 use App\Models\Hotels;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
 class HotelsController extends Controller
@@ -31,11 +32,13 @@ class HotelsController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $hotels = $request::all();
+
+        return redirect()->route('admin.hotels.index');
     }
 
 
@@ -95,17 +98,20 @@ class HotelsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Hotels  $hotels
-     * @return  \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
+     * @return  \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Hotels $hotels)
+    public function destroy(Hotels $hotels, Request $request)
     {
         if (Gate::denies('delete-hotels')){
             return redirect(route('admin.hotels.index'));
         }
-
-
-
-        dd($hotels);
-
+        Hotels::truncate();
+        if ($hotels->delete()){
+            $request->session()->flash('success','Hotel "'. $hotels->name . '" has been deleted!');
+        }
+        else {
+            $request->session()->flash('error', 'There was an error deleting hotel!');
+        }
+        return redirect()->route('admin.hotels.index');
     }
 }

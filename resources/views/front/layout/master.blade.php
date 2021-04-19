@@ -112,7 +112,7 @@
                                 </li>
                             @endguest
                             <li class="nav-item">
-                                <a style="text-transform: none" href="contact-us.html" class="nav-link header-request">Request a Quote</a></li>
+                                <a style="text-transform: none" href="./contact" class="nav-link header-request">Request a Quote</a></li>
                         </ul>
                     </div>
                     <!-- header right link end -->
