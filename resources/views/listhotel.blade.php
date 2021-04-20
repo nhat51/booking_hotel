@@ -18,7 +18,7 @@
       <div class="col-lg-4 col-md-4 mb-30">
         <!-- breadcrumb -->
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
           <li class="breadcrumb-item active">Hotel Result</li>
         </ol>
         <!-- breadcrumb end -->
@@ -77,7 +77,7 @@
             </div>
             <!-- filter widget end -->
                 <!-- filter widget -->
-              <form action="{{ request()->segment(2) == '' ? 'hotel' : '' }}">
+              <form class="form" action="./hotel" method="get">
                 <div class="filter-widget mb-20">
                   <div class="accordion filter-accordion" id="filter-widget-accordion-d">
                     <div class="card">
@@ -91,17 +91,14 @@
                       <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
                         <div class="card-body">
                             <select class="form-control" >
-                                <option {{ request('sortby') == 'range1' ? 'selected' : '' }}>1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
-                                <option {{ request('sortby') == 'range2' ? 'selected' : '' }}>2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
-                                <option {{ request('sortby') == 'range3' ? 'selected' : '' }}>3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
-                                <option {{ request('sortby') == 'range4' ? 'selected' : '' }}>4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
-                                <option {{ request('sortby') == 'range5' ? 'selected' : '' }}>5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
-                                <option {{ request('sortby') == 'range6' ? 'selected' : '' }}> >6.000.000<sup>₫</sup> </option>
+                                <option class="form-check" {{ request("pricefilter") == 'range1' ? 'active' : '' }} name="pricefilter" value="range1" onchange="this.form.submit()">1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ request("pricefilter") == 'range2' ? 'active' : '' }} name="pricefilter" value="range2" onchange="this.form.submit()">2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ request("pricefilter") == 'range3' ? 'active' : '' }} name="pricefilter" value="range3" onchange="this.form.submit()">3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ request("pricefilter") == 'range4' ? 'active' : '' }} name="pricefilter" value="range4" onchange="this.form.submit()">4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ request("pricefilter") == 'range5' ? 'active' : '' }} name="pricefilter" value="range5" onchange="this.form.submit()">5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ request("pricefilter") == 'range6' ? 'active' : '' }} name="pricefilter" value="range6" onchange="this.form.submit()"> >6.000.000<sup>₫</sup> </option>
                             </select>
                         </div>
-                          <div class="mt-1">
-                              <button type="submit" class="btn-style-1">Filter</button>
-                          </div>
                       </div>
                     </div>
                   </div>
@@ -123,23 +120,23 @@
                           <div class="filter-checkbox-widget">
                             <div class="form-check">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="star_rank_5" {{ request('ranking') == '5' ? 'checked' : '' }} name="ranking" value="5" onchange="this.form.submit();">
+                                    <input class="form-check-input" type="radio" id="star_rank_5" {{ request('ranking') == '5' ? 'checked' : '' }} name="ranking" value="5" onchange="this.form.submit();">
                                     <label class="form-check-label {{ request('ranking') == '5' ? 'active' : '' }}" for="star_rank_5"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <small>(5)</small> </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="star_rank_4" {{ request('ranking') == '4' ? 'checked' : '' }} name="ranking" value="4" onchange="this.form.submit();">
+                                    <input class="form-check-input" type="radio" id="star_rank_4" {{ request('ranking') == '4' ? 'checked' : '' }} name="ranking" value="4" onchange="this.form.submit();">
                                     <label class="form-check-label {{ request('ranking') == '4' ? 'active' : '' }}" for="star_rank_4"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <small>(4)</small> </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="star_rank_3" {{ request('ranking') == '3' ? 'checked' : '' }} name="ranking" value="3" onchange="this.form.submit();">
+                                    <input class="form-check-input" type="radio" id="star_rank_3" {{ request('ranking') == '3' ? 'checked' : '' }} name="ranking" value="3" onchange="this.form.submit();">
                                     <label class="form-check-label {{ request('ranking') == '3' ? 'active' : '' }}" for="star_rank_3"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(3)</small> </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="star_rank_2" {{ request('ranking') == '2' ? 'checked' : '' }} name="ranking" value="2" onchange="this.form.submit();">
+                                    <input class="form-check-input" type="radio" id="star_rank_2" {{ request('ranking') == '2' ? 'checked' : '' }} name="ranking" value="2" onchange="this.form.submit();">
                                     <label class="form-check-label {{ request('ranking') == '2' ? 'active' : '' }}" for="star_rank_2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(2)</small> </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="star_rank_1" {{ request('ranking') == '1' ? 'checked' : '' }} name="ranking" value="1" onchange="this.form.submit();">
+                                    <input class="form-check-input" type="radio" id="star_rank_1" {{ request('ranking') == '1' ? 'checked' : '' }} name="ranking" value="1" onchange="this.form.submit();">
                                     <label class="form-check-label {{ request('ranking') == '1' ? 'active' : '' }}" for="star_rank_1"> <i class="fas fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i> <small>(1)</small> </label>
                                 </div>
                             </div>
