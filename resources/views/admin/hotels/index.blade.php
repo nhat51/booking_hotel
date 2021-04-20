@@ -24,21 +24,39 @@
             </div>
         </div>
     </div>
-    <!-- ================ Users page ================ -->
+    <!-- ================ Hotels page ================ -->
     <div class="pt-70 pb-70">
         <div class="container-fluid">
+            @include('alerts.alerts')
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    @include('alerts.alerts')
+                <div class="col-md-3">
+                    <div class="list-group">
+                        @can('manage-users')
+                            <a href="{{route('admin.users.index')}}"
+                               class="list-group-item list-group-item-action ">
+                                <span class="fas fa-users"></span> User Management
+                            </a>
+                        @endcan
+                        @can('manage-hotels')
+                            <a href="{{ route('admin.hotels.index') }}" class="list-group-item list-group-item-action list-group-item-success active">
+                                <span class="fas fa-hotel"></span> Hotel Management
+                            </a>
+                        @endcan
+                        <a href="#" class="list-group-item list-group-item-action disabled"><span class="fas fa-splotch"></span> Destination management</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled"><span class="fas fa-file-invoice-dollar"></span> Billing History</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true"><span class="fas fa-chart-bar"></span>Reports</a>
+                    </div>
+                </div>
+                <div class="col-md-9">
                     <div class="card">
                         <div class="card-header">
                             @can('create-hotels')
-                            <button class="btn btn-success"><i class="fas fa-plus-square"></i> Add Hotel</button>
+                                <button class="btn btn-success"><i class="fas fa-plus-square"></i> Add Hotel</button>
                             @endcan
                         </div>
                         <div class="card-body">
-                            <table class="table table-responsive table-striped table-dark">
-                                <thead>
+                            <table class="table table-responsive table-striped">
+                                <thead class="text-white bg-dark">
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Name</th>
@@ -52,10 +70,10 @@
                                     <th scope="col">Added at</th>
                                     <th scope="col">Edited at</th>
                                     @can('edit-hotels')
-                                    <th scope="col">Edit</th>
+                                        <th scope="col">Edit</th>
                                     @endcan
                                     @can('delete-hotels')
-                                    <th scope="col">Delete</th>
+                                        <th scope="col">Delete</th>
                                     @endcan
                                 </tr>
                                 </thead>
@@ -77,10 +95,17 @@
                                                 @endif
                                             @endfor
                                         </td>
-                                        <td>{{count($hotel->rooms)}} Rooms</td>
+                                        <td class="w-auto">
+                                            <div class="row">
+                                                <div class="col-md-6">{{count($hotel->rooms)}}</div>
+                                                <div class="col-md-6">
+                                                    <button type="button" class="btn btn-success mr-3"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#hotelDescription{{$hotel->id}}">
+                                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#hotelDescription{{$hotel->id}}">
                                                 Description
                                             </button>
 
@@ -107,53 +132,53 @@
                                         <td>{{ $hotel->created_at }}</td>
                                         <td>{{ $hotel->updated_at }}</td>
                                         @can('edit-hotels')
-                                        <td>
+                                            <td>
                                                 <a href="{{ route('admin.hotels.edit', $hotel->id) }}">
-                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                    <button type="button" class="btn btn-primary">
                                                         <i class="fas fa-pen"></i>
                                                     </button>
                                                 </a>
                                             </td>
                                         @endcan
                                         @can('delete-hotels')
-                                        <td>
-                                            <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                                    data-target="#deleteHotel{{$hotel->id}}">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                                        data-target="#deleteHotel{{$hotel->id}}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="deleteHotel{{$hotel->id}}" tabindex="-1"
-                                                 aria-labelledby="deleteHotel{{$hotel->id}}" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <form action="{{ route('admin.hotels.destroy', $hotel) }}" method="POST">
-                                                            @csrf
-                                                            {{ method_field('DELETE') }}
-                                                            <div class="modal-header bg-warning progress-bar-animated progress-bar-striped">
-                                                                <h5 class="modal-title"
-                                                                    id="deleteHotel{{$hotel->id}}">Delete Confirmation</h5>
-                                                                <button type="button" class="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body text-dark ">
-                                                                <p>This action cannot be undone.</p>
-                                                                <p>Are you sure to delete {{ $hotel->name }} ?</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-success"
-                                                                        data-dismiss="modal">Cancel
-                                                                </button>
-                                                                <button type="submit" class="btn btn-danger">Delete
-                                                                </button>
-                                                            </div>
-                                                        </form>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deleteHotel{{$hotel->id}}" tabindex="-1"
+                                                     aria-labelledby="deleteHotel{{$hotel->id}}" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <form action="{{ route('admin.hotels.destroy', $hotel) }}" method="POST">
+                                                                @csrf
+                                                                {{ method_field('DELETE') }}
+                                                                <div class="modal-header bg-warning progress-bar-animated progress-bar-striped">
+                                                                    <h5 class="modal-title"
+                                                                        id="deleteHotel{{$hotel->id}}">Delete Confirmation</h5>
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body text-dark ">
+                                                                    <p>This action cannot be undone.</p>
+                                                                    <p>Are you sure to delete {{ $hotel->name }} ?</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-success"
+                                                                            data-dismiss="modal">Cancel
+                                                                    </button>
+                                                                    <button type="submit" class="btn btn-danger">Delete
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             </td>
                                         @endcan
                                     </tr>

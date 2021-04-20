@@ -18,7 +18,7 @@
       <div class="col-lg-4 col-md-4 mb-30">
         <!-- breadcrumb -->
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="./">Home</a></li>
+        
           <li class="breadcrumb-item active">Hotel Result</li>
         </ol>
         <!-- breadcrumb end -->

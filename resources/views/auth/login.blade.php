@@ -16,7 +16,7 @@
       <div class="col-lg-4 col-md-4 mb-30">
         <!-- breadcrumb -->
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
           <li class="breadcrumb-item active">Login</li>
         </ol>
         <!-- breadcrumb end -->
@@ -59,16 +59,14 @@
                 <div class="form-group form-check">
                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                    <label class="form-check-label font-size-14" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
+                    <label class="form-check-label font-size-14" for="remember"> Remember Me</label>
                 </div>
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="forgot-password text-right">
                     @if (Route::has('password.request'))
                         <a class="text-danger" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
+                            Forgot Your Password?
                         </a>
                     @endif
 
