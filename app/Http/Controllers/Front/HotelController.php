@@ -46,12 +46,49 @@ class HotelController extends Controller
         $hotels = $destination_id != null ? $hotels->whereIn('destination_id',$destination_id) : $hotels;
 
         //Star ranking filter
-        $ranking = $request->ranking ;
-        $star_ranking = is_integer($ranking);
-        $hotels = $star_ranking != null ? $hotels->whereIn('star_ranking',$star_ranking) : $hotels;
+        $ranking = $request->ranking;
+        $hotels = $ranking != null ? $hotels->whereIn('star_ranking',$ranking) : $hotels;
+
+        //Price filter
+        $price = $request->pricefilter;
+        switch ($price){
+            case 'range1':
+                $minPrice = 1000000;
+                $maxPrice = 2000000;
+                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                break;
+            case 'range2':
+                $minPrice = 2000000;
+                $maxPrice = 3000000;
+                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                break;
+            case 'range3':
+                $minPrice = 3000000;
+                $maxPrice = 4000000;
+                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                break;
+            case 'range4':
+                $minPrice = 4000000;
+                $maxPrice = 5000000;
+                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                break;
+            case 'range5':
+                $minPrice = 5000000;
+                $maxPrice = 6000000;
+                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                break;
+            case 'range6':
+                $hotels->where('price','>',6000000);
+                break;
+//            default:
+//                $hotels = $hotels->orderBy('price','ASC');
+//                break;
+        }
+
 
 
         return $hotels;
+
     }
 
 }
