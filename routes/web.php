@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\HotelsController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Front;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,10 +90,10 @@ Route::prefix('destination')->group(function () {
     Route::get('/{id}', [Front\DestinationController::class, 'destinationDetail']);
 });
 
+Route::get('/user/{id}/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 //end vuong Routes
 
-
-
+Route::post('search',[HomeController::class,'search']);
 
 
 

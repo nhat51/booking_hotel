@@ -91,6 +91,9 @@
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="userDropdown">
+                                        <a class="dropdown-item" href="user/{{ \Illuminate\Support\Facades\Auth::id()}}/profile">
+                                            <span class="fas fa-user"></span> My Profile
+                                        </a>
                                         @can('manage-users')
                                             <a class="dropdown-item" href="{{ route('admin.users.index') }}">
                                                 <span class="fas fa-users"></span>  User Management
@@ -128,7 +131,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-12">
                     <!-- brand -->
-                    <div class="logo"><a class="navbar-brand p-0" href="index-2.html"><img src="front/img/logo.png" alt=""></a></div>
+                    <div class="logo"><a class="navbar-brand p-0" href="./"><img src="front/img/logo.png" alt=""></a></div>
                     <!-- brand end -->
                 </div>
                 <div class="col-lg-9 col-md-12">

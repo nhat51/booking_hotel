@@ -43,6 +43,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function hotelComment(){
         return $this->hasMany(HotelComments::class,'user_id', 'id');
     }
+    public function traveler(){
+        return $this->hasOne(Travelers::class, 'user_id', 'id');
+    }
 
     public function roles()
     {

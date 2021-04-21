@@ -17,7 +17,8 @@ class CreateTravelersTable extends Migration
             $table->id();
 
             $table->integer('user_id');
-            $table->text('salutation')->nullable();
+            $table->text('avatar');
+            $table->string('salutation');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender');

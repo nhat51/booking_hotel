@@ -14,10 +14,11 @@
           <div class="center-search">
             <h1 class="text-white">Enjoy Your Holiday</h1>
             <p class="text-white">Search and Book Hotel</p>
-            <form class="form-style-1" action="hotel">
+            <form class="form-style-1" action="./search" method="post">
+                {{csrf_field()}}
               <div class="form-group">
                   <input type="hidden" name="available" value="1">
-                <input name="destination" type="text" class="form-control" placeholder="Search City">
+                <input name="search" type="text" class="form-control" placeholder="Search City">
               </div>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
