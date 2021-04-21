@@ -9,6 +9,7 @@ use App\Models\HotelComments;
 use App\Models\Hotels;
 use App\Models\Rooms;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Collection;
 
 class HotelController extends Controller
 {
@@ -27,14 +28,12 @@ class HotelController extends Controller
 
     public function index(Request $request)
     {
-        $hotels = Hotels::all();
+        $hotels = Hotels::paginate(2);
         $booking = Bookings::all();
         $destinations = Destinations::all();
 
 
-
         $hotels = $this->filter($hotels,$request);
-
 
         return view('listhotel',compact('hotels','booking','destinations'));
     }
@@ -55,40 +54,35 @@ class HotelController extends Controller
             case 'range1':
                 $minPrice = 1000000;
                 $maxPrice = 2000000;
-                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
                 break;
             case 'range2':
                 $minPrice = 2000000;
                 $maxPrice = 3000000;
-                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
                 break;
             case 'range3':
                 $minPrice = 3000000;
                 $maxPrice = 4000000;
-                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
                 break;
             case 'range4':
                 $minPrice = 4000000;
                 $maxPrice = 5000000;
-                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
                 break;
             case 'range5':
                 $minPrice = 5000000;
                 $maxPrice = 6000000;
-                $hotels->whereBetween('price',[$minPrice,$maxPrice]);
+                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
                 break;
             case 'range6':
-                $hotels->where('price','>',6000000);
+                $hotels = $price != null ? $hotels->where('price','>',6000000) : $hotels;
                 break;
-//            default:
-//                $hotels = $hotels->orderBy('price','ASC');
-//                break;
+            default:
+                $hotels =  $price != null ? $hotels->sortBy('price') : $hotels;
+                break;
         }
-
-
-
         return $hotels;
-
     }
-
 }

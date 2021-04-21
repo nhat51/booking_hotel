@@ -90,13 +90,13 @@
                         </a> </div>
                       <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
                         <div class="card-body">
-                            <select class="form-control" >
-                                <option class="form-check" {{ request("pricefilter") == 'range1' ? 'active' : '' }} name="pricefilter" value="range1" onchange="this.form.submit()">1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
-                                <option class="form-check" {{ request("pricefilter") == 'range2' ? 'active' : '' }} name="pricefilter" value="range2" onchange="this.form.submit()">2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
-                                <option class="form-check" {{ request("pricefilter") == 'range3' ? 'active' : '' }} name="pricefilter" value="range3" onchange="this.form.submit()">3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
-                                <option class="form-check" {{ request("pricefilter") == 'range4' ? 'active' : '' }} name="pricefilter" value="range4" onchange="this.form.submit()">4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
-                                <option class="form-check" {{ request("pricefilter") == 'range5' ? 'active' : '' }} name="pricefilter" value="range5" onchange="this.form.submit()">5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
-                                <option class="form-check" {{ request("pricefilter") == 'range6' ? 'active' : '' }} name="pricefilter" value="range6" onchange="this.form.submit()"> >6.000.000<sup>₫</sup> </option>
+                            <select class="form-control" name="pricefilter" onchange="this.form.submit()" >
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range1' ? 'selected' : '' }} name="pricefilter" value="range1">1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range2' ? 'selected' : '' }} name="pricefilter" value="range2">2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range3' ? 'selected' : '' }} name="pricefilter" value="range3">3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range4' ? 'selected' : '' }} name="pricefilter" value="range4">4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range5' ? 'selected' : '' }} name="pricefilter" value="range5">5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
+                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range6' ? 'selected' : '' }} name="pricefilter" value="range6"> >6.000.000<sup>₫</sup> </option>
                             </select>
                         </div>
                       </div>
@@ -226,13 +226,14 @@
         </div>
         <!-- hotel results list end -->
         <!-- pagination -->
-        <ul class="pagination pagination-box mb-30">
-          <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
-          <li class="page-item active"><a class="page-link" href="">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
-        </ul>
+{{--        <ul class="pagination pagination-box mb-30">--}}
+{{--          <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>--}}
+{{--          <li class="page-item active"><a class="page-link" href="">1</a></li>--}}
+{{--          <li class="page-item"><a class="page-link" href="#">2</a></li>--}}
+{{--          <li class="page-item"><a class="page-link" href="#">3</a></li>--}}
+{{--          <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>--}}
+{{--        </ul>--}}
+          {{ $hotels->links() }}
         <!-- pagination end -->
       </div>
     </div>
