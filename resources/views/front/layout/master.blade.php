@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from rainbowdesign.in/themes/Stetho/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 13:11:42 GMT -->
+
 <head>
     <base href="{{asset('/')}}">
 
@@ -296,6 +296,6 @@
 </script>
 </body>
 
-<!-- Mirrored from rainbowdesign.in/themes/Stetho/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 13:13:27 GMT -->
+
 </html>
 
