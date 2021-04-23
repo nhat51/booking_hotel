@@ -25,7 +25,7 @@
             </div>
         </div>
     </div>
-    <!-- ================ Users page ================ -->
+    <!-- ================ List Room page ================ -->
     <div class="pt-70 pb-70 m-60">
         <table class="table table-striped">
             <thead>
@@ -103,5 +103,5 @@
         {{ $rooms->links() }}
     </div>
     <!-- pagination end -->
-    <!-- ================ Users page end ================ -->
+    <!-- ================ List Room end ================ -->
 @endsection
