@@ -23,7 +23,8 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('admin.users.index')->with('users', $users);
+        $deletedUsers = User::onlyTrashed()->get();
+        return view('admin.users.index', compact('users', 'deletedUsers'));
     }
 
     /**
@@ -87,6 +88,18 @@ class UsersController extends Controller
         }
         else {
             $request->session()->flash('error', 'There was an error deleting user!');
+        }
+        return redirect()->route('admin.users.index');
+    }
+
+    public function restore(Request $request){
+
+        $user = User::withTrashed();
+        if ($user->restore()){
+            $request->session()->flash('success','User restored!');
+        }
+        else {
+            $request->session()->flash('error', 'There was an error, please try again later!');
         }
         return redirect()->route('admin.users.index');
     }

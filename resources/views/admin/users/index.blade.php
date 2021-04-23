@@ -48,91 +48,148 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <table class="table table-bordered table-striped table-responsive-lg ">
-                        <thead class="text-white bg-dark">
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Roles</th>
-                            <th scope="col">Signed up at</th>
-                            <th scope="col">Edited at</th>
-                            @can('edit-users')
-                                <th scope="col">Edit</th>
-                            @endcan
+                    <div class="card">
+                        <div class="card-header">
                             @can('delete-users')
-                                <th scope="col">Delete</th>
-                            @endcan
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($users as $user)
-                            <tr>
-                                <th scope="row">{{ $user->id }}</th>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ implode(',', $user->roles()->get()->pluck('name')->toArray()) }}</td>
-                                <td>{{ date_format($user->created_at, 'd - M - Y')}}</td>
-                                <td>{{ $user->updated_at }}</td>
-                                @can('edit-users')
-                                    <td>
-                                        <a href="{{ route('admin.users.edit', $user->id) }}">
-                                            <button type="button" class="btn btn-primary btn-sm">
-                                                <i class="fas fa-pen"></i>
-                                            </button>
-                                        </a>
-                                    </td>
-                                @endcan
-                                @can('delete-users')
-                                    <td>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                                data-target="#deleteUser{{$user->id}}">
-                                            <i class="fas fa-user-minus"></i>
-                                        </button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#deletedUsers"><i class="fas fa-user"></i> Deleted Users</button>
 
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="deleteUser{{$user->id}}" tabindex="-1"
-                                             aria-labelledby="deleteUser{{$user->id}}" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <form action="{{ route('admin.users.destroy', $user) }}"
-                                                          method="POST">
-                                                        @csrf
-                                                        {{ method_field('DELETE') }}
-                                                        <div
-                                                            class="modal-header bg-warning progress-bar-animated progress-bar-striped">
-                                                            <h5 class="modal-title"
-                                                                id="deleteUser{{$user->id}}">Delete
-                                                                Confirmation</h5>
-                                                            <button type="button" class="close"
-                                                                    data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body text-dark ">
-                                                            <p>This action cannot be undone.</p>
-                                                            <p>Are you sure to delete {{ $user->name }} ?</p>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success"
-                                                                    data-dismiss="modal">Cancel
-                                                            </button>
-                                                            <button type="submit" class="btn btn-danger">Delete
-                                                            </button>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="deletedUsers" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <table class="table table-bordered table-striped table-responsive-lg ">
+                                                    <thead class="text-white bg-dark">
+                                                    <tr>
+                                                        <th scope="col">Id</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Deleted at</th>
+                                                        <th scope="col">Restore</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @foreach($deletedUsers as $user)
+                                                        <tr>
+                                                            <th scope="row">{{ $user->id }}</th>
+                                                            <td>{{ $user->name }}</td>
+                                                            <td>{{ $user->email }}</td>
+                                                            <td>{{ $user->deleted_at }}</td>
+                                                            <td>
+                                                                <form action="{{route('admin.restore', $user)}}" method="GET">
+                                                                    @csrf
+                                                                    <button class="btn btn-success"><i class="fas fa-user-plus"></i></button>
+                                                                </form>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                    </tbody>
+
+                                                </table>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                             </div>
                                         </div>
-                                    </td>
-                                @endcan
-                            </tr>
-                        @endforeach
-                        </tbody>
+                                    </div>
+                                </div>
+                            @endcan
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-striped table-responsive-lg ">
+                                <thead class="text-white bg-dark">
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Roles</th>
+                                    <th scope="col">Signed up at</th>
+                                    <th scope="col">Edited at</th>
+                                    @can('edit-users')
+                                        <th scope="col">Edit</th>
+                                    @endcan
+                                    @can('delete-users')
+                                        <th scope="col">Delete</th>
+                                    @endcan
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($users as $user)
+                                    <tr>
+                                        <th scope="row">{{ $user->id }}</th>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ implode(',', $user->roles()->get()->pluck('name')->toArray()) }}</td>
+                                        <td>{{ date_format($user->created_at, 'd - M - Y')}}</td>
+                                        <td>{{ $user->updated_at }}</td>
+                                        @can('edit-users')
+                                            <td>
+                                                <a href="{{ route('admin.users.edit', $user->id) }}">
+                                                    <button type="button" class="btn btn-primary btn-sm">
+                                                        <i class="fas fa-pen"></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        @endcan
+                                        @can('delete-users')
+                                            <td>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                                                        data-target="#deleteUser{{$user->id}}">
+                                                    <i class="fas fa-user-minus"></i>
+                                                </button>
 
-                    </table>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deleteUser{{$user->id}}" tabindex="-1"
+                                                     aria-labelledby="deleteUser{{$user->id}}" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <form action="{{ route('admin.users.destroy', $user) }}"
+                                                                  method="POST">
+                                                                @csrf
+                                                                {{ method_field('DELETE') }}
+                                                                <div
+                                                                    class="modal-header bg-warning progress-bar-animated progress-bar-striped">
+                                                                    <h5 class="modal-title"
+                                                                        id="deleteUser{{$user->id}}">Delete
+                                                                        Confirmation</h5>
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body text-dark ">
+                                                                    <p>This action cannot be undone.</p>
+                                                                    <p>Are you sure to delete {{ $user->name }} ?</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-success"
+                                                                            data-dismiss="modal">Cancel
+                                                                    </button>
+                                                                    <button type="submit" class="btn btn-danger">Delete
+                                                                    </button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        @endcan
+                                    </tr>
+                                @endforeach
+                                </tbody>
 
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -28,6 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Admin manage users routes
 Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function () {
     Route::resource('/users', UsersController::class, ['except' => ['show', 'create', 'store']]);
+    Route::get('/users/{id}/restore', [UsersController::class, 'restore'])->name('restore');
 });
 
 // Admin manage hotels
