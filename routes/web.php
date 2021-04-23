@@ -96,5 +96,8 @@ Route::get('/user/{id}/profile', [ProfileController::class, 'index'])->name('pro
 
 Route::post('search',[HomeController::class,'search']);
 
+Route::prefix('/roomdetail')->group(function (){
+    Route::get('/{id}',[Front\RoomController::class,'listroom']);
+});
 
 
