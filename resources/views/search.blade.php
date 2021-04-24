@@ -32,16 +32,16 @@
                                                     <table class="table table-bordered bg-gray w-100 border-0">
                                                         <tr>
                                                             <td>Check In</td>
-                                                            <td></td>
+                                                            <td>{{session('checkinday')}}</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Check Out</td>
-                                                            <td></td>
+                                                            <td>{{session('checkoutday')}}</td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>Room 1</td>
-                                                            <td>1  Adult(s)</td>
-                                                        </tr>
+{{--                                                        <tr>--}}
+{{--                                                            <td>Room 1</td>--}}
+{{--                                                            <td>1  Adult(s)</td>--}}
+{{--                                                        </tr>--}}
                                                     </table>
                                                 </div>
                                                 <button type="button" class="btn-style-1" data-toggle="modal" data-target="#modify-search-Modal"><i class="fas fa-search"></i> Modify Search </button>

@@ -85,12 +85,30 @@ class HotelController extends Controller
         }
         return $hotels;
     }
+    public function search(Request $request)
+    {
+        $keysearch = $request-> search;
+
+        $checkinDate = $request-> checkin;
+        $checkoutDate = $request-> checkout;
+
+        session(['checkinday' => $checkinDate,'checkoutday'=>$checkoutDate]);
+
+        $hotels = Hotels::all();
+        $destinations = Destinations::all();
+
+        $search_all = Hotels::where('name','like','%' . $keysearch . '%')
+            ->orwhere('city','like','%' . $keysearch . '%')
+            ->get();
+
+        return view('search',compact('search_all','hotels','destinations'));
+    }
+
     public function checkin(Request $request){
         $roomType = $request -> roomtype;
         $roomPrice = $request -> roomprice;
 
-
-        return back()->with('roomType',$roomType)
-            ->with('roomPrice',$roomPrice);
+        return back()->with(session(['roomType' => $roomType]))
+            ->with(session(['roomPrice'=>$roomPrice]));
     }
 }

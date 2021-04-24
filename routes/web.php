@@ -74,7 +74,7 @@ Route::get('/payment', function () {
 
 //Traveler information
 Route::get('/traveler-information', function () {
-    return view('traveler-information');
+    return view('checkout');
 });
 
 //vuong routes
@@ -94,7 +94,7 @@ Route::prefix('destination')->group(function () {
 Route::get('/user/{id}/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
 //end vuong Routes
 
-Route::post('search',[HomeController::class,'search']);
+Route::post('search',[Front\HotelController::class,'search']);
 
 Route::prefix('/roomdetail')->group(function (){
     Route::get('/{id}',[Front\RoomController::class,'listroom']);

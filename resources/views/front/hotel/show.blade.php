@@ -254,11 +254,11 @@
                                                 <table class="table table-bordered bg-gray w-100 border-0">
                                                     <tr>
                                                         <td>Check In</td>
-                                                        <td>Jan 01, 2020 Wed</td>
+                                                        <td>{{session('checkinday')}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Check Out</td>
-                                                        <td>Jan 01, 2020 Fri</td>
+                                                        <td>{{session('checkoutday')}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Room </td>
@@ -270,7 +270,7 @@
                                                     </tr>
                                                 </table>
                                             </div>
-                                            <a class="btn-style-1" href="#">Book Selected Rooms</a></div>
+                                            <a class="btn-style-1" href="./traveler-information">Book Selected Rooms</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -289,5 +289,4 @@
         </div>
     </div>
     <!-- ================ Detail page end ================ -->
-
 @endsection
