@@ -112,39 +112,46 @@
                                     <!-- list box -->
                                     @foreach($hotel->rooms as $room)
                                         @if($room->is_available == 1)
-                                            @foreach($room->room_images as $roomImages)
-                                        <div class="list-box mb-30">
-                                            <div class="list-box-img">
-                                                    <a href="front/img/rooms-image/{{ $roomImages->path }}" class="venobox" data-gall="gallery1">
-                                                        <img src="front/img/rooms/{{ $roomImages->path }}" alt=""> </a>
-                                                <div class="form-check">
-                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                    <label class="form-check-label" for="exampleCheck1">Select Room</label>
+                                            <div class="list-box mb-30">
+                                                <div class="list-box-img">
+                                                    @foreach($room->room_images as $roomImages)
+                                                        @for($i = 0; $i<= 4; $i++)
+                                                            <a href="front/img/rooms-image/{{ $roomImages->path[$i] }}" class="venobox" data-gall="gallery1">
+                                                                <img src="front/img/rooms/{{ $roomImages->path[$i] }}" alt=""> </a>
+                                                        @endfor
+                                                    @endforeach
                                                 </div>
+                                                <form action="./checkin" method="post">
+                                                    {{csrf_field()}}
+                                                    <div class="list-box-content">
+                                                        <div class="list-box-title">
+
+                                                            <h3>{{ $room->room_type }} Room <span>{{number_format( $room->price )}}<sup>₫</sup> <em>/ night</em></span>
+                                                            </h3>
+                                                            <input type="hidden"name="roomtype"  value="{{ $room->room_type }}">
+                                                            <input type="hidden"name="roomprice"  value="{{ $room->price }}">
+
+                                                            <address>
+                                                                Max : 2 Persons
+                                                            </address>
+                                                        </div>
+                                                        <ul class="hotel-featured">
+                                                            <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
+                                                            <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
+                                                            <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
+                                                            <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="btn-wrapper mt-20 d-inline-block w-100">
+                                                            {{--                                                    <a class="view-detail-btn" href="#">View Details</a> --}}
+{{--                                                            <a class="book-now-btn ml-6" type="su" >Select Room</a>--}}
+                                                            <button class="book-now-btn ml-6" type="submit">Select Room</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="list-box-content">
-                                                <div class="list-box-title">
-                                                    <h3>{{ $room->room_type }} Room <span>{{number_format( $room->price )}}<sup>₫</sup> <em>/ night</em></span>
-                                                    </h3>
-                                                    <address>
-                                                        Max : 2 Persons
-                                                    </address>
-                                                </div>
-                                                <ul class="hotel-featured">
-                                                    <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                                                    <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                                                    <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                                                    <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span>
-                                                    </li>
-                                                </ul>
-                                                <div class="btn-wrapper mt-20 d-inline-block w-100"><a
-                                                        class="view-detail-btn" href="#">View Details</a> <a
-                                                        class="book-now-btn ml-6" href="#">Book Now</a></div>
-                                            </div>
-                                        </div>
-                                            @endforeach
-                                        @endif
-                                    @endforeach
+                                    @endif
+                                @endforeach
                                 <!-- list box end -->
                                 </div>
                                 <!-- rooms -->
@@ -254,8 +261,12 @@
                                                         <td>Jan 01, 2020 Fri</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Room 1</td>
-                                                        <td>1 Adult(s)</td>
+                                                        <td>Room </td>
+                                                        <td>{{session('roomType')}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Price </td>
+                                                        <td>{{session('roomPrice')}}</td>
                                                     </tr>
                                                 </table>
                                             </div>

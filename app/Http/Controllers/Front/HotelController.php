@@ -85,4 +85,12 @@ class HotelController extends Controller
         }
         return $hotels;
     }
+    public function checkin(Request $request){
+        $roomType = $request -> roomtype;
+        $roomPrice = $request -> roomprice;
+
+
+        return back()->with('roomType',$roomType)
+            ->with('roomPrice',$roomPrice);
+    }
 }

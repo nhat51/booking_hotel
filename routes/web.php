@@ -100,4 +100,5 @@ Route::prefix('/roomdetail')->group(function (){
     Route::get('/{id}',[Front\RoomController::class,'listroom']);
 });
 
+Route::post('/checkin',[Front\HotelController::class,'checkin']);
 

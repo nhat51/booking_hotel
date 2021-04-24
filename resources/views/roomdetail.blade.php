@@ -39,7 +39,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($rooms as $room)
+            @foreach($hotel->rooms as $room)
             <tr>
                 <th scope="row">
                     <label class="skype-color">{{ $room->room_type }}</label>
@@ -99,7 +99,6 @@
     </div>
     <!-- pagination -->
     <div class="">
-
         {{ $rooms->links() }}
     </div>
     <!-- pagination end -->

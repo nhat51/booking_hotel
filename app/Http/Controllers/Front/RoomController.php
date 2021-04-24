@@ -12,7 +12,7 @@ class RoomController extends Controller
 {
     public function listroom($id){
         $hotel = Hotels::findOrFail($id);
-        $rooms = Rooms::paginate(5);
+        $rooms = Rooms::findOrFail($id)->paginate(5);
 
 
         return view('roomdetail',compact('hotel', 'rooms'));
