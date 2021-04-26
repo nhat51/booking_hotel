@@ -71,10 +71,7 @@ Route::get('/payment', function () {
     return view('payment');
 });
 
-//Traveler information
-Route::get('/traveler-information', function () {
-    return view('checkout');
-});
+
 
 //vuong routes
 
@@ -101,3 +98,15 @@ Route::prefix('/roomdetail')->group(function (){
 
 Route::post('/checkin',[Front\HotelController::class,'checkin']);
 
+//Route::prefix('checkout')->group(function (){
+//    Route::get('/traveler-information',[Front\CheckOutController::class,'index']);
+//});
+
+//Traveler information
+//Route::get('/traveler-information', function () {
+//    return view('checkout');
+//});
+
+Route::get('/traveler-information',[Front\CheckOutController::class,'index']);
+
+Route::post('/traveler-information',[Front\CheckOutController::class,'addBooking']);

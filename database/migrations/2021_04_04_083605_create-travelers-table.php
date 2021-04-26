@@ -24,7 +24,9 @@ class CreateTravelersTable extends Migration
             $table->string('gender');
             $table->string('email');
             $table->date('date_of_birth');
+            $table->string('country');
             $table->string('phone');
+
 
             $table->timestamps();
         });

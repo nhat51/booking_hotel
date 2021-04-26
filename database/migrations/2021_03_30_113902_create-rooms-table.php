@@ -23,7 +23,7 @@ class CreateRoomsTable extends Migration
             $table->double('price');
             $table->integer('discount')->nullable();
             $table->boolean('is_available');
-
+            $table->tinyinteger('max_person');
             $table->timestamps();
         });
     }

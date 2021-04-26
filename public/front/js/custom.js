@@ -57,7 +57,8 @@ $('#check-out').datepicker({
 
 /* Date of Birth */
 $('#datepickerdob').datepicker({
-	uiLibrary: 'bootstrap4'
+	uiLibrary: 'bootstrap4',
+    format:'yyyy/mm/dd'
 });
 
 /* ----------------------------

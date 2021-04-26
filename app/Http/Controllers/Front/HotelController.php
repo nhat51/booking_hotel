@@ -106,7 +106,8 @@ class HotelController extends Controller
         $roomType = $request -> roomtype;
         $roomPrice = $request -> roomprice;
 
-        return back()->with(session(['roomType' => $roomType]))
-            ->with(session(['roomPrice'=>$roomPrice]));
+//        session(['roomType' => $roomType,'roomPrice'=>$roomPrice]);
+
+        return back()->with(['roomType',$roomType],['roomPrice',$roomPrice]);
     }
 }
