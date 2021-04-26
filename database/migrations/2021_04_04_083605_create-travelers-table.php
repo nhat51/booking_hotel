@@ -16,8 +16,6 @@ class CreateTravelersTable extends Migration
         Schema::create('traverlers', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('user_id');
-            $table->text('avatar');
             $table->string('salutation');
             $table->string('first_name');
             $table->string('last_name');

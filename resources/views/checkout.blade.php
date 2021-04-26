@@ -32,12 +32,7 @@
     <div class="row">
       <div class="col-lg-7 col-md-6">
         <form class="form-style-1" method="post" action="">
-
             @csrf
-
-            <input type="hidden"  value=" {{Auth::user()->id}}" name="user_id">
-            <input type="hidden" @if(\Illuminate\Support\Facades\Auth::user()->traveler->avatar = null) value="default-avatar.jpg" @else value="{{\Illuminate\Support\Facades\Auth::user()->traveler->avatar}}" @endif>
-{{--            {{Auth::user()->user_id}}--}}
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
