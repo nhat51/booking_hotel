@@ -172,7 +172,7 @@
 {{--                        </tr>--}}
                         <tr>
                           <th>Pay Amount</th>
-                          <th>{{session(number_format('roomPrice'))}}<sup>₫</sup></th>
+                          <th>{{session(('roomPrice'))}}<sup>₫</sup></th>
                         </tr>
                       </table>
                     </div>

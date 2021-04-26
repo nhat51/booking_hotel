@@ -40,6 +40,8 @@
             </thead>
             <tbody>
             @foreach($hotel->rooms as $room)
+               @if($room->is_available == 0)
+               @else
             <tr>
                 <th scope="row">
                     <label class="skype-color">{{ $room->room_type }}</label>
@@ -93,14 +95,13 @@
                     <a class="btn-danger btn-style-1" href="./traveler-information">Book</a>
                 </td>
             </tr>
+            @endif
             @endforeach
             </tbody>
         </table>
     </div>
     <!-- pagination -->
-    <div class="">
-        {{ $rooms->links() }}
-    </div>
+ =
     <!-- pagination end -->
     <!-- ================ List Room end ================ -->
 @endsection

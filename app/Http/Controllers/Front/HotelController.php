@@ -28,8 +28,8 @@ class HotelController extends Controller
 
     public function index(Request $request)
     {
-        $hotels = Hotels::paginate(2);
-        $booking = Bookings::all();
+        $hotels = Hotels::all();
+        $booking = Rooms::all();
         $destinations = Destinations::all();
 
 
@@ -50,39 +50,37 @@ class HotelController extends Controller
 
         //Price filter
         $price = $request->pricefilter;
-        switch ($price){
-            case 'range1':
-                $minPrice = 1000000;
-                $maxPrice = 2000000;
-                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
-                break;
-            case 'range2':
-                $minPrice = 2000000;
-                $maxPrice = 3000000;
-                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
-                break;
-            case 'range3':
-                $minPrice = 3000000;
-                $maxPrice = 4000000;
-                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
-                break;
-            case 'range4':
-                $minPrice = 4000000;
-                $maxPrice = 5000000;
-                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
-                break;
-            case 'range5':
-                $minPrice = 5000000;
-                $maxPrice = 6000000;
-                $hotels = $price != null ?  $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
-                break;
-            case 'range6':
-                $hotels = $price != null ? $hotels->where('price','>',6000000) : $hotels;
-                break;
-            default:
-                $hotels =  $price != null ? $hotels->sortBy('price') : $hotels;
-                break;
+
+        if ($price == 'range1'){
+            $minPrice = 1000000;
+            $maxPrice = 2000000;
+            $hotels = $price != null ? $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
         }
+        elseif ($price == 'range2'){
+            $minPrice = 2000000;
+            $maxPrice = 3000000;
+            $hotels = $price != null ? $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
+        }
+        elseif ($price == 'range3'){
+            $minPrice = 3000000;
+            $maxPrice = 4000000;
+            $hotels = $price != null ? $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
+        }
+        elseif ($price == 'range4'){
+            $minPrice = 4000000;
+            $maxPrice = 5000000;
+            $hotels = $price != null ? $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
+        }
+        elseif ($price == 'range5'){
+            $minPrice = 5000000;
+            $maxPrice = 6000000;
+            $hotels = $price != null ? $hotels->whereBetween('price',[$minPrice,$maxPrice]) : $hotels;
+        }
+        elseif ($price == 'range6'){
+            $hotels = $price != null ? $hotels->where('price','>',6000000) : $hotels;
+        }
+
+
         return $hotels;
     }
     public function search(Request $request)
