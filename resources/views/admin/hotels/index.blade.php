@@ -153,7 +153,7 @@
                                                      aria-labelledby="deleteHotel{{$hotel->id}}" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
-                                                            <form action="{{ route('admin.hotels.destroy', $hotel) }}" method="POST">
+                                                            <form action="{{ route('admin.hotels.destroy', $hotel->id) }}" method="POST">
                                                                 @csrf
                                                                 {{ method_field('DELETE') }}
                                                                 <div class="modal-header bg-warning progress-bar-animated progress-bar-striped">

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\HotelsController;
+use App\Http\Controllers\Admin\Hotelscontroller;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Front;
 use App\Http\Controllers\HomeController;
@@ -28,12 +28,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Admin manage users routes
 Route::prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function () {
     Route::resource('/users', UsersController::class, ['except' => ['show', 'create', 'store']]);
-    Route::get('/users/{id}/restore', [UsersController::class, 'restore'])->name('restore');
 });
 
 // Admin manage hotels
 Route::prefix('admin')->name('admin.')->middleware('can:manage-hotels')->group(function () {
-    Route::resource('/hotels', HotelsController::class, ['except' => ['show', 'create', 'store']]);
+    Route::resource('/hotels', Hotelscontroller::class, ['except' => ['show', 'create', 'store']]);
 });
 
 ////Destination-Nhật
@@ -63,7 +62,7 @@ Route::get('/contact', function () {
 
 //Blog-Nhật
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog.blog');
 });
 
 

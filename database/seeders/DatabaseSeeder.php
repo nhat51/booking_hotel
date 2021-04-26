@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id'=>1,
                 'room_type'=>'Deluxe',
-                'thumb'=>'img-thum-01.jpg',
+                'thumb'=>'MuongThanh-Room-1.jpg',
                 'description'=>null,
                 'price'=>4931000.00,
                 'discount'=>45,
@@ -481,201 +481,42 @@ class DatabaseSeeder extends Seeder
                 'rating'=>3
             ],
         ]);
-        DB::table('hotel_amenities')->insert([
+        DB::table('amenities')->insert([
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Free Wi-Fi',
                 'code'=>'wifi'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'2 Signal Beads',
                 'code'=>'bed'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Shower and Bathtub',
                 'code'=>'shower'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Pet Friendly',
                 'code'=>'paw'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Wheelchair Friendly',
                 'code'=>'wheelchair'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Fitness Center',
                 'code'=>'dumbbell'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Hot Water',
                 'code'=>'hot-tub'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Swimming Pool',
                 'code'=>'swimmer'
             ],
             [
-                'hotel_id'=>1,
                 'amenities_name'=>'Security Cameras',
                 'code'=>'camera-retro'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Free Wi-Fi',
-                'code'=>'wifi'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'2 Signal Beads',
-                'code'=>'bed'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Shower and Bathtub',
-                'code'=>'shower'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Wheelchair Friendly',
-                'code'=>'wheelchair'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Fitness Center',
-                'code'=>'dumbbell'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Hot Water',
-                'code'=>'hot-tub'
-            ],
-            [
-                'hotel_id'=>2,
-                'amenities_name'=>'Security Cameras',
-                'code'=>'camera-retro'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Free Wi-Fi',
-                'code'=>'wifi'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'2 Signal Beads',
-                'code'=>'bed'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Shower and Bathtub',
-                'code'=>'shower'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Pet Friendly',
-                'code'=>'paw'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Wheelchair Friendly',
-                'code'=>'wheelchair'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Fitness Center',
-                'code'=>'dumbbell'
-            ],
-            [
-                'hotel_id'=>3,
-                'amenities_name'=>'Security Cameras',
-                'code'=>'camera-retro'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Free Wi-Fi',
-                'code'=>'wifi'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'2 Signal Beads',
-                'code'=>'bed'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Shower and Bathtub',
-                'code'=>'shower'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Pet Friendly',
-                'code'=>'paw'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Wheelchair Friendly',
-                'code'=>'wheelchair'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Fitness Center',
-                'code'=>'dumbbell'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Hot Water',
-                'code'=>'hot-tub'
-            ],
-            [
-                'hotel_id'=>4,
-                'amenities_name'=>'Swimming Pool',
-                'code'=>'swimmer'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Free Wi-Fi',
-                'code'=>'wifi'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'2 Signal Beads',
-                'code'=>'bed'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Shower and Bathtub',
-                'code'=>'shower'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Pet Friendly',
-                'code'=>'paw'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Wheelchair Friendly',
-                'code'=>'wheelchair'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Fitness Center',
-                'code'=>'dumbbell'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Hot Water',
-                'code'=>'hot-tub'
-            ],
-            [
-                'hotel_id'=>5,
-                'amenities_name'=>'Swimming Pool',
-                'code'=>'swimmer'
             ],
         ]);
         DB::table('hotel_images')->insert([

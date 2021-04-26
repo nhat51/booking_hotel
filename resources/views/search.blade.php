@@ -192,7 +192,7 @@
                                             @endfor
                       </span> <em>{{ count($hotel->hotel_comments)}} review</em> </div>
                                     <ul class="hotel-featured">
-                                        @foreach($hotel->hotel_amenities as $name)
+                                        @foreach($hotel->amenities as $name)
                                             <li><span><i class="fas fa-{{$name->code}}"></i> {{ $name->amenities_name }} </span></li>
                                         @endforeach
                                     </ul>

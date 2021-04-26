@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Amenities;
 use App\Models\Destinations;
-use App\Models\HotelAmenities;
 use App\Models\HotelImages;
 use App\Models\Hotels;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Gate;
+use Gate;
 
-class HotelsController extends Controller
+class Hotelscontroller extends Controller
 {
     public function __construct()
     {
@@ -30,23 +29,10 @@ class HotelsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function create(Request $request)
-    {
-        $hotels = $request::all();
-
-        return redirect()->route('admin.hotels.index');
-    }
-
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Hotels  $hotel
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Routing\Redirector
+     * @return \Illuminate\Contracts\Foundation\Application
      */
     public function edit(Hotels $hotel)
     {
@@ -55,12 +41,12 @@ class HotelsController extends Controller
         }
 
         $destinations = Destinations::all();
-        $amenities = HotelAmenities::all();
+        $amenities = Amenities::all();
         $hotelImages = HotelImages::all();
         return view('admin.hotels.edit')->with([
             'hotel' => $hotel,
             'destinations' => $destinations,
-            'hotelAmenities' => $amenities,
+            'amenities' => $amenities,
             'hotelImages' => $hotelImages
         ]);
     }
@@ -74,7 +60,7 @@ class HotelsController extends Controller
      */
     public function update(Request $request, Hotels $hotels)
     {
-//        $hotels->hotel_amenities()->sync($request->amenities);
+        $hotels->amenities()->sync($request->amenities);
 
         $hotels->name = $request->name;
         $hotels->destination_id = $request ->destination;
@@ -95,17 +81,30 @@ class HotelsController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function create(array $data): \Illuminate\Http\RedirectResponse
+    {
+       //
+    }
+
+
+
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Hotels  $hotels
      * @return  \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Hotels $hotels, Request $request)
+    public function destroy(Hotels $hotels, Request $request): \Illuminate\Http\RedirectResponse
     {
         if (Gate::denies('delete-hotels')){
             return redirect(route('admin.hotels.index'));
         }
-        Hotels::truncate();
+        $hotels->amenities()->detach();
         if ($hotels->delete()){
             $request->session()->flash('success','Hotel "'. $hotels->name . '" has been deleted!');
         }

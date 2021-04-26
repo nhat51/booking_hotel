@@ -137,13 +137,15 @@
                                 {{--                                amenities--}}
                                 <div class="form-group row">
                                     <p class="col-md-2 col-form-label">Amenities</p>
-                                    <div class="form-check form-check-inline col-md-8">
-                                        @foreach($hotel-> hotel_amenities as $amenities)
+                                    <div class="form-check col-md-8">
+                                        @foreach($amenities as $amenity)
                                             <div class="col-md-6">
-                                            <input class="form-check-input " type="checkbox" value="" id="amenities{{$amenities->id}}"
-                                                   name="amenities{{$amenities->id}}">
-                                            <label class="form-check-label" for="amenities{{$amenities->id}}">
-                                                {{ $amenities->amenities_name }}
+                                            <input class="form-check-input " type="checkbox" value="" id="amenities{{$amenity->id}}"
+                                                   name="amenities{{$amenity->id}}"
+                                            @if($hotel->id == $amenity->hotel_id)checked
+                                                @endif>
+                                            <label class="form-check-label" for="amenities{{$amenity->id}}">
+                                                {{ $amenity->amenities_name }}
                                             </label>
                                             </div>
                                         @endforeach

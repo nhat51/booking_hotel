@@ -8,9 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Hotels extends Model
 {
     use HasFactory;
-    protected $table = 'hotels';
-    protected $primaryKey = 'id';
-    protected $guarded = [];
 
     public function destinations(){
         return $this->belongsTo(Destinations::class,'destination_id','id');
@@ -20,8 +17,8 @@ class Hotels extends Model
         return $this->hasMany(HotelImages::class,'hotel_id','id');
     }
 
-    public function hotel_amenities(){
-        return $this->hasMany(HotelAmenities::class,'hotel_id','id');
+    public function amenities(){
+        return $this->belongsToMany('App\Models\Amenities');
     }
 
     public function hotel_comments(){
