@@ -36,7 +36,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Salutation<span class="text-danger">*</span></label>
-                <select class="form-control">
+                <select class="form-control" required>
                   <option value="0">- Select -</option>
                   <option value="MR">Mr.</option>
                   <option value="MRS">Mrs.</option>
@@ -49,7 +49,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Gender<span class="text-danger">*</span></label>
-                <select class="form-control">
+                <select class="form-control" required>
                   <option value="0">- Select -</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -62,14 +62,14 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>First Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Last Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
           </div>
@@ -77,13 +77,13 @@
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label>Email Address<span class="text-danger">*</span></label>
-                            <input type="text" value="info@exampal.com" class="form-control">
+                            <input type="text" value="info@exampal.com" class="form-control" required>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label>Date of Birth<span class="text-danger">*</span></label>
-                            <input type="text" id="datepickerdob" class="form-control">
+                            <input type="text" id="datepickerdob" class="form-control" required>
                           </div>
                         </div>
           </div>
@@ -101,7 +101,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Mobile Number<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" value="1234567899">
+                <input type="text" class="form-control" value="1234567899" required>
               </div>
             </div>
           </div>
