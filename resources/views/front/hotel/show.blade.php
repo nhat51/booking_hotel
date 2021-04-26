@@ -106,59 +106,7 @@
                                 <!-- ameneties end -->
                             </div>
                             <div class="tab-pane fade p-15" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-<<<<<<< Updated upstream
-                                <!-- rooms -->
-                                <h4 class="mb-6">Rooms</h4>
-                                <div class="room-type-wrapper">
-                                    <!-- list box -->
-                                    @foreach($hotel->rooms as $room)
-                                        @if($room->is_available == 1)
-                                            <div class="list-box mb-30">
-                                                <div class="list-box-img">
-                                                    @foreach($room->room_images as $roomImages)
-                                                        @for($i = 0; $i<= 4; $i++)
-                                                            <a href="front/img/rooms-image/{{ $roomImages->path[$i] }}" class="venobox" data-gall="gallery1">
-                                                                <img src="front/img/rooms/{{ $roomImages->path[$i] }}" alt=""> </a>
-                                                        @endfor
-                                                    @endforeach
-                                                </div>
-                                                <form action="./checkin" method="post">
-                                                    {{csrf_field()}}
-                                                    <div class="list-box-content">
-                                                        <div class="list-box-title">
-
-                                                            <h3>{{ $room->room_type }} Room <span>{{number_format( $room->price )}}<sup>₫</sup> <em>/ night</em></span>
-                                                            </h3>
-                                                            <input type="hidden"name="roomtype"  value="{{ $room->room_type }}">
-                                                            <input type="hidden"name="roomprice"  value="{{ $room->price }}">
-
-                                                            <address>
-                                                                Max : 2 Persons
-                                                            </address>
-                                                        </div>
-                                                        <ul class="hotel-featured">
-                                                            <li><span><i class="fas fa-car"></i> Parking Facility</span></li>
-                                                            <li><span><i class="fas fa-bath"></i> Attached Bathroom</span></li>
-                                                            <li><span><i class="fas fa-home"></i> Daily Housekeeping</span></li>
-                                                            <li><span><i class="fas fa-swimming-pool"></i> Swimming Pool</span>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="btn-wrapper mt-20 d-inline-block w-100">
-                                                            {{--                                                    <a class="view-detail-btn" href="#">View Details</a> --}}
-{{--                                                            <a class="book-now-btn ml-6" type="su" >Select Room</a>--}}
-                                                            <button class="book-now-btn ml-6" type="submit">Select Room</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                    @endif
-                                @endforeach
-                                <!-- list box end -->
-                                </div>
-                                <!-- rooms -->
-=======
                                 @include('front.hotel.components.room-loader')
->>>>>>> Stashed changes
                             </div>
                             <div class="tab-pane fade p-15" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                                 <!-- reviews -->
