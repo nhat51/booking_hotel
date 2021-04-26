@@ -38,7 +38,7 @@
                                 <label class="btn mt-3" for="avatar">Change Avatar</label>
                                 <form action="{{ url('front\img\user') }}" enctype="multipart/form-data" method="POST">
                                     {{ csrf_field() }}
-                                    <input type="file" name="filesTest" required="true">
+                                    <input type="file" name="avatar" required>
                                     <br/>
                                     <input type="submit" value="upload">
                                 </form>
