@@ -106,6 +106,7 @@
                                 <!-- ameneties end -->
                             </div>
                             <div class="tab-pane fade p-15" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+<<<<<<< Updated upstream
                                 <!-- rooms -->
                                 <h4 class="mb-6">Rooms</h4>
                                 <div class="room-type-wrapper">
@@ -155,6 +156,9 @@
                                 <!-- list box end -->
                                 </div>
                                 <!-- rooms -->
+=======
+                                @include('front.hotel.components.room-loader')
+>>>>>>> Stashed changes
                             </div>
                             <div class="tab-pane fade p-15" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                                 <!-- reviews -->
