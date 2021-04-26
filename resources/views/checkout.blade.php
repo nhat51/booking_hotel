@@ -31,29 +31,36 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-7 col-md-6">
-        <form class="form-style-1">
+        <form class="form-style-1" method="post" action="">
+
+            @csrf
+
+            <input type="hidden"  value=" {{Auth::user()->id}}" name="user_id">
+            <input type="hidden" @if(\Illuminate\Support\Facades\Auth::user()->traveler->avatar = null) value="default-avatar.jpg" @else value="{{\Illuminate\Support\Facades\Auth::user()->traveler->avatar}}" @endif>
+{{--            {{Auth::user()->user_id}}--}}
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Salutation<span class="text-danger">*</span></label>
-                <select class="form-control" required>
-                  <option value="0">- Select -</option>
-                  <option value="MR">Mr.</option>
-                  <option value="MRS">Mrs.</option>
-                  <option value="MIS">Miss</option>
-                  <option value="MS">Ms.</option>
-                  <option value="MST">Master</option>
-                </select>
+                  <select class="form-control" name="salutation">
+                      <option value="0">- Select -</option>
+                      <option value="MR">Mr.</option>
+                      <option value="MRS">Mrs.</option>
+                      <option value="MIS">Miss</option>
+                      <option value="MS">Ms.</option>
+                      <option value="MST">Master</option>
+                  </select>
+
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Gender<span class="text-danger">*</span></label>
-                <select class="form-control" required>
-                  <option value="0">- Select -</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                </select>
+                  <select class="form-control" name="gender">
+                      <option value="0">- Select -</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                  </select>
               </div>
             </div>
 
@@ -62,14 +69,14 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>First Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="first_name">
               </div>
             </div>
 
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Last Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" required>
+                <input type="text" class="form-control" name="last_name">
               </div>
             </div>
           </div>
@@ -77,34 +84,31 @@
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label>Email Address<span class="text-danger">*</span></label>
-                            <input type="text" value="info@exampal.com" class="form-control" required>
+                            <input type="text" @if(\Illuminate\Support\Facades\Auth::check()) value="{{Auth::user()->email}}" @endif class="form-control" name="email" >
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
                             <label>Date of Birth<span class="text-danger">*</span></label>
-                            <input type="text" id="datepickerdob" class="form-control" required>
+                            <input type="text" id="datepickerdob" class="form-control" name="date_of_birth">
                           </div>
                         </div>
           </div>
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <label>Country Code<span class="text-danger">*</span></label>
-                <select class="form-control">
-                  <option value="0">- Select -</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
+                <label>Country <span class="text-danger">*</span></label>
+                  <input type="text"  class="form-control" name="country">
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Mobile Number<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" value="1234567899" required>
+                <input type="text" class="form-control" value="1234567899" name="phone">
               </div>
             </div>
           </div>
+
           <button type="submit" class="btn-style-1">Continue with payment</button>
         </form>
       </div>
