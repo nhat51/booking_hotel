@@ -33,40 +33,40 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                  <div class="form-group">
-                    <select name="adult" class="form-control">
-                      <option>Adult(s)(18+)</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                  <div class="form-group">
-                    <select name="child" class="form-control">
-                      <option>Children(0-17)</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+{{--              <div class="row">--}}
+{{--                <div class="col-lg-6 col-md-6 col-sm-6 col-6">--}}
+{{--                  <div class="form-group">--}}
+{{--                    <select name="adult" class="form-control">--}}
+{{--                      <option>Adult(s)(18+)</option>--}}
+{{--                      <option value="1">1</option>--}}
+{{--                      <option value="2">2</option>--}}
+{{--                      <option value="3">3</option>--}}
+{{--                      <option value="4">4</option>--}}
+{{--                    </select>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-6 col-md-6 col-sm-6 col-6">--}}
+{{--                  <div class="form-group">--}}
+{{--                    <select name="child" class="form-control">--}}
+{{--                      <option>Children(0-17)</option>--}}
+{{--                      <option value="1">1</option>--}}
+{{--                      <option value="2">2</option>--}}
+{{--                      <option value="3">3</option>--}}
+{{--                      <option value="4">4</option>--}}
+{{--                    </select>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
 
-              <div class="form-group">
-                <select class="form-control">
-                  <option>Rooms</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
-              </div>
+{{--              <div class="form-group">--}}
+{{--                <select class="form-control">--}}
+{{--                  <option>Rooms</option>--}}
+{{--                  <option value="1">1</option>--}}
+{{--                  <option value="2">2</option>--}}
+{{--                  <option value="3">3</option>--}}
+{{--                  <option value="4">4</option>--}}
+{{--                </select>--}}
+{{--              </div>--}}
 
               <button type="submit" class="btn-style-1 w-100">Search</button>
             </form>
