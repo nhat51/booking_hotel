@@ -106,8 +106,30 @@ class HotelController extends Controller
         $roomType = $request -> roomtype;
         $roomPrice = $request -> roomprice;
 
-//        session(['roomType' => $roomType,'roomPrice'=>$roomPrice]);
+        if (session('type') != null && session('price') != null){
+        $type = session('type');
+        $price = session('price');
+        array_push($type,$roomType);
+        array_push($price,$roomPrice);
+        session(['type'=>$type,'price'=>$price]);
+        dd(session('type'),session('price'));
 
-        return back()->with(['roomType',$roomType],['roomPrice',$roomPrice]);
+        }
+        else{
+
+            $type = array();
+            $price = array();
+
+            array_push($type,$roomType);
+            array_push($price,$roomPrice);
+
+            session(['type'=>$type,'price'=>$price]);
+            }
+
+        return back();
+
+//        session(['roomType' => $roomType,'roomPrice'=>$roomPrice]);
+//
+//        return back()->with(['roomType',$roomType],['roomPrice',$roomPrice]);
     }
 }
