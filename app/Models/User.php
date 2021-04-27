@@ -47,6 +47,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function traveler(){
         return $this->hasOne(Travelers::class, 'user_id', 'id');
     }
+    public function userInformation(){
+        return $this->belongsTo(UserInformation::class,'user_id', 'id');
+    }
 
     public function roles()
     {
