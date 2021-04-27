@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AddressSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class AddressSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $path = public_path('front/sql/local.sql');
+        $sql = file_get_contents($path);
+        DB::statement($sql);
     }
 }
