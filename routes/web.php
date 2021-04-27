@@ -110,3 +110,7 @@ Route::post('/checkin',[Front\HotelController::class,'checkin']);
 Route::get('/traveler-information',[Front\CheckOutController::class,'index']);
 
 Route::post('/traveler-information',[Front\CheckOutController::class,'addBooking']);
+
+Route::get('/email',function (){
+    return view('checkout.email');
+});
