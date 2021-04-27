@@ -214,11 +214,11 @@
                                                     </tr>
                                                     <tr>
                                                         <td>Room </td>
-                                                        <td>{{session('roomType')}}</td>
+                                                        <td>{{session('roomtype')}}</td>
                                                     </tr>
                                                     <tr>
                                                         <td>Price </td>
-                                                        <td>{{session('roomPrice')}}</td>
+                                                        <td>{{session('roomprice')}}</td>
                                                     </tr>
                                                 </table>
                                             </div>

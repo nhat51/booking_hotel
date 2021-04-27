@@ -207,10 +207,7 @@
                     <ul class="footer-link">
                         <li><i class="fas fa-caret-right"></i> <a href="#">Home</a> </li>
                         <li><i class="fas fa-caret-right"></i> <a href="#">About Us</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Services</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Projects</a> </li>
                         <li><i class="fas fa-caret-right"></i> <a href="#">Blog</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Faq</a> </li>
                         <li><i class="fas fa-caret-right"></i> <a href="#">Contact</a> </li>
                     </ul>
                     <!-- footer link end -->
