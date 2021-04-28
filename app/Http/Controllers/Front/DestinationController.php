@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blogs;
 use App\Models\Bookings;
 use App\Models\Destinations;
 use App\Models\Hotels;
@@ -15,8 +16,9 @@ class DestinationController extends Controller
 
        $destinations = Destinations::all();
        $hotels = Hotels::all();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
-       return view('front.destination.destinations',compact('destinations','hotels'));
+       return view('front.destination.destinations',compact('destinations','hotels', 'recentPost'));
     }
     public function destinationDetail($id){
         $destinationDetail = Destinations::findOrFail($id);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blogs;
 use App\Models\Bookings;
 use App\Models\Travelers;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class CheckOutController extends Controller
 {
     //
     public function index(){
-        return view('checkout');
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
+        return view('checkout', compact('recentPost'));
     }
 
     public function addBooking(Request $request){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Amenities;
+use App\Models\Blogs;
 use App\Models\Destinations;
 use App\Models\HotelImages;
 use App\Models\Hotels;
@@ -25,7 +26,8 @@ class Hotelscontroller extends Controller
     public function index()
     {
         $hotels = Hotels::all();
-        return view('admin.hotels.index')->with('hotels', $hotels);
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
+        return view('admin.hotels.index',compact('hotels','recentPost'));
     }
 
     /**

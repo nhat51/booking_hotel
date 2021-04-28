@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use App\Models\Travelers;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,8 +18,9 @@ class ProfileController extends Controller
     {
         $travelers = Travelers::all();
         $user = User::all();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
-        return view('user.profile', compact('user', 'travelers'));
+        return view('user.profile', compact('user', 'travelers','recentPost'));
     }
 
     /**

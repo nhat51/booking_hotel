@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Hotelscontroller;
 use App\Http\Controllers\Admin\UsersController;
+use App\Http\Controllers\Blog\BlogController;
 use App\Http\Controllers\Front;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -61,8 +62,11 @@ Route::get('/contact', function () {
 });
 
 //Blog-Nhật
-Route::get('/blog', function () {
-    return view('blog.blog');
+
+Route::prefix('blog')->name('blog.')->group(function (){
+    Route::get('/',[ BlogController::class, 'index'])->name('index');
+    Route::get('/{id}',[ BlogController::class, 'blog'])->name('blog-detail');
+    Route::post('/{id}', [BlogController::class, 'postComment']);
 });
 
 

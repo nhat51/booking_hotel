@@ -17,9 +17,7 @@ class CreateBlogCommentsTable extends Migration
             $table->id();
 
             $table->integer('blog_id');
-            $table->integer('user_id')->nullable();
-            $table->string('email');
-            $table->string('name');
+            $table->integer('user_id');
             $table->text('messages');
             $table->integer('rating');
 

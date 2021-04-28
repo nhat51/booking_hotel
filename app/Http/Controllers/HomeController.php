@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use App\Models\Destinations;
 use App\Models\Hotels;
 use Illuminate\Http\Request;
@@ -27,8 +28,12 @@ class HomeController extends Controller
     {
         $popularhotels = Hotels::all();
         $populardestinations = Destinations::all();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
-        return view('index',compact('popularhotels','populardestinations'));
+        return view('index',compact('popularhotels','populardestinations', 'recentPost'));
+    }
+    public function master(){
+
     }
 
 //    public function search(Request $request)
