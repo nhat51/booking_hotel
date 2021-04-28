@@ -32,7 +32,7 @@
 <div class="listing-page pt-70 pb-40">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <aside>
           <!-- sidebar -->
           <div class="desktop-filter-sidebar">
@@ -54,19 +54,14 @@
                         <table class="table table-bordered bg-gray w-100 border-0">
                           <tr>
                             <td>Check In</td>
-                            <td>{{ date('M d, y'),strtotime($booking) }}</td>
+                            <td><input name="checkin" type="text" class="form-control" id="check-in" placeholder="Check In" value="{{ date('M d, y'),strtotime($booking) }}"></td>
                           </tr>
                           <tr>
                             <td>Check Out</td>
-                            <td>{{ date('M d, y'),strtotime($booking)}}</td>
-                          </tr>
-                          <tr>
-                            <td>Room 1</td>
-                            <td>1  Adult(s)</td>
+                              <td><input name="checkout" type="text" class="form-control" id="check-out" placeholder="Check Out" value="{{ date('M d, y'),strtotime($booking)}}"></td>
                           </tr>
                         </table>
                       </div>
-                      <button type="button" class="btn-style-1" data-toggle="modal" data-target="#modify-search-Modal"><i class="fas fa-search"></i> Modify Search </button>
                     </div>
                   </div>
                 </div>
@@ -215,7 +210,7 @@
           <!-- sidebar end -->
         </aside>
       </div>
-      <div class="col-lg-9">
+      <div class="col-lg-8">
         <!-- hotel results list -->
         <div class="hotel-results-list">
             @foreach($hotels as $hotel)

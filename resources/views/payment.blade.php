@@ -53,13 +53,13 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Card Holder Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Card Number<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
           </div>
@@ -67,27 +67,27 @@
             <div class="col-lg-4">
               <div class="form-group">
                 <label>Expiry Mounth<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="form-group">
                 <label>Expiry Year<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
             <div class="col-lg-4">
               <div class="form-group">
                 <label>CVC<span class="text-danger">*</span></label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
               </div>
             </div>
           </div>
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" >
             <label class="form-check-label font-size-14" for="exampleCheck1">By continuing, you agree to the <a href="#">Terms and Conditions.</a></label>
           </div>
-          <button type="submit" class="btn-style-1">Confirm Booking</button>
+          <button class="btn-style-1"><a class="btn-style-1" href="/success">Confirm Booking</a></button>
         </form>
       </div>
       <div class="col-lg-4 col-md-4">

@@ -17,8 +17,9 @@ class CreateBookingsTable extends Migration
             $table->id();
 
             $table->integer('room_id');
-            $table->integer('traveler_id');
-            $table->string('status');
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
             $table->date('date_from');
             $table->date('date_to');
             $table->double('total');

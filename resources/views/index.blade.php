@@ -32,9 +32,6 @@
                   </div>
                 </div>
               </div>
-
-
-
               <button type="submit" class="btn-style-1 w-100">Search</button>
             </form>
           </div>

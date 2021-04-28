@@ -22,6 +22,7 @@
                         </h3>
                         <input type="hidden" name="roomtype" value="{{ $room->room_type }}" >
                         <input type="hidden" name="roomprice" value="{{ $room->price }}">
+                        <input type="hidden" name="roomId" value="{{ $room->id }}">
                         <address>
                             Max : {{$room->max_person}} Persons
                         </address>

@@ -74,6 +74,9 @@ Route::prefix('blog')->name('blog.')->group(function (){
 Route::get('/payment', function () {
     return view('payment');
 });
+Route::get('/success',function (){
+    return view('success');
+});
 
 //vuong routes
 
@@ -111,9 +114,13 @@ Route::post('/booking',[Front\HotelController::class,'booking']);
 //});
 
 Route::get('/traveler-information',[Front\CheckOutController::class,'index']);
-
 Route::post('/traveler-information',[Front\CheckOutController::class,'addBooking']);
+
+//Route::post('/traveler-information',[\App\Http\Controllers\BookingController::class,'booking']);
+//Route::get('/traveler-information',[\App\Http\Controllers\BookingController::class,'index']);
+
 
 Route::get('/email',function (){
     return view('checkout.email');
 });
+

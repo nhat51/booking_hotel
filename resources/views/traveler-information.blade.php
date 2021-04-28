@@ -87,11 +87,7 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>Country Code<span class="text-danger">*</span></label>
-                <select class="form-control">
-                  <option value="0">- Select -</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
+
               </div>
             </div>
             <div class="col-lg-6">
@@ -101,7 +97,7 @@
               </div>
             </div>
           </div>
-          <a href="./payment" class="btn-style-1">Continue with payment</a>
+          <a href="./personal/{{ $travelers }}" class="btn-style-1">Continue with payment</a>
         </form>
       </div>
       <div class="col-lg-4 col-md-4">
