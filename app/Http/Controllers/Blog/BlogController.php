@@ -10,16 +10,16 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $blogs = Blogs::all();
-        $recentPost = Blogs::OrderByDesc('created_at')->take(5)->get();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
         return view('blog.blog', compact('blogs', 'recentPost'));
     }
     public function blog($id){
         $blogs = Blogs::findOrFail($id);
-        $recentPost = Blogs::OrderByDesc('created_at')->take(5)->get();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
         return view('blog.blog-single', compact('blogs', 'recentPost'));
     }

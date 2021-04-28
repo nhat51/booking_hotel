@@ -175,87 +175,27 @@
       <span class="dashed-border"></span> </div>
     <!-- section title -->
     <div class="row">
+        @foreach($recentPost as $recent)
       <div class="col-lg-4 col-md-6 mb-30">
         <!-- blog box -->
         <div class="blog-box shadow">
-          <div class="blog_img mb-20"><img src="front/img/blog/blog-1.jpg" alt=""></div>
+          <div class="blog_img mb-20"><img src="front/img/blog/{{ $recent->image }}" alt=""></div>
           <div class="blog-des">
-            <h6 class="blog_date font-weight-normal text-muted"><span>business</span> January 01, 2020</h6>
-            <h5 class="mt-10 mb-6"><a href="#" class="text-dark">The Most Advance Business Plan</a></h5>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.</p>
+            <h6 class="blog_date font-weight-normal text-muted"><span>{{ $recent->category }}</span> {{ date('M d/ Y', strtotime($recent->created_at)) }}</h6>
+            <h5 class="mt-10 mb-6"><a href="{{ route('blog.blog-detail', $recent) }}" class="text-dark">{{ \Illuminate\Support\Str::limit($recent->title, 50) }}</a></h5>
+            <p class="text-muted">{{ \Illuminate\Support\Str::limit($recent->content, 200) }}</p>
             <div class="read_more">
               <div class="blog_border"></div>
-              <a href="#" class="text-dark text-uppercase"> Read More</a> </div>
+              <a href="{{ route('blog.blog-detail', $recent) }}" class="text-dark text-uppercase"> Read More</a> </div>
           </div>
         </div>
         <!-- blog box end -->
       </div>
-      <div class="col-lg-4 col-md-6 mb-30">
-        <!-- blog box -->
-        <div class="blog-box shadow">
-          <div class="blog_img mb-20"><img src="front/img/blog/blog-2.jpg" alt=""></div>
-          <div class="blog-des">
-            <h6 class="blog_date font-weight-normal text-muted"><span>business</span> January 01, 2020</h6>
-            <h5 class="mt-10 mb-6"><a href="#" class="text-dark">Beautiful Home Page</a></h5>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.</p>
-            <div class="read_more">
-              <div class="blog_border"></div>
-              <a href="#" class="text-dark text-uppercase"> Read More</a> </div>
-          </div>
-        </div>
-        <!-- blog box end -->
-      </div>
-      <div class="col-lg-4 col-md-6 mb-30">
-        <!-- blog box -->
-        <div class="blog-box shadow">
-          <div class="blog_img mb-20"><img src="front/img/blog/blog-3.jpg" alt=""></div>
-          <div class="blog-des">
-            <h6 class="blog_date font-weight-normal text-muted"><span>business</span> January 01, 2020</h6>
-            <h5 class="mt-10 mb-6"><a href="#" class="text-dark">Modern Design Concept</a></h5>
-            <p class="text-muted">Lorem ipsum dolor sit amet consectetur ipiscing elit amet consectetur piscing elit consectetur adipiscing elit sed et eletum.</p>
-            <div class="read_more">
-              <div class="blog_border"></div>
-              <a href="#" class="text-dark text-uppercase"> Read More</a> </div>
-          </div>
-        </div>
-        <!-- blog box end -->
-      </div>
+        @endforeach
     </div>
   </div>
 </div>
 <!-- ================ Blog area end ================ -->
-
-<!-- ================ Download app are ================ -->
-<div class="download-app-area pt-70 pb-40">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-8 mb-30">
-        <!-- app text -->
-        <div class="app-text">
-          <h5 class="text-white">Download our app</h5>
-          <h2 class="mb-10 text-white">Wow! Get This Templete App For Your Mobile</h2>
-          <ul class="text-white">
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> Find nearby hotel in your network with templete</li>
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> Get paperless confirmation</li>
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> Make changes whenever, wherever</li>
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> 24/7 customer service in more than 40 languages</li>
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> No booking or credit card fees</li>
-            <li class="pb-6"><i class="fas fa-check pr-6"></i> No booking or credit card fees</li>
-            <li><i class="fas fa-check pr-6"></i> Add your own reviews and photos</li>
-          </ul>
-          <div class="app-download-btn mt-20"> <a href="#"><img src="front/img/appstore-button.png" alt=""></a> <a href="#"><img src="front/img/google-play-button.png" alt=""></a> </div>
-        </div>
-        <!-- app text end -->
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-4">
-        <!-- app img -->
-        <div class="app-img"> <img src="front/img/app-image-1.png" alt=""> </div>
-        <!-- app img end -->
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ================ Download app are end ================ -->
 
 <!-- ================ How it works ================ -->
 <div class="how-it-works pt-70 pb-40 position-relative">

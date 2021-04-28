@@ -42,7 +42,7 @@
         <aside>
           <!-- search form -->
           <form class="search-form mb-50">
-            <input type="text" class="form-control" placeholder="Search" value="">
+            <input type="text" class="form-control" placeholder="Search" value="{{ request('search') }}">
             <button class="search-submit"><i class="fas fa-search"></i></button>
           </form>
           <!-- search form end -->

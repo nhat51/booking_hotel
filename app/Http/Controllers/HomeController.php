@@ -28,8 +28,9 @@ class HomeController extends Controller
     {
         $popularhotels = Hotels::all();
         $populardestinations = Destinations::all();
+        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
-        return view('index',compact('popularhotels','populardestinations'));
+        return view('index',compact('popularhotels','populardestinations', 'recentPost'));
     }
 
 

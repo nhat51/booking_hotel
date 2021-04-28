@@ -15,7 +15,7 @@
     <!-- page title -->
     <title>Stetho - @yield('title')</title>
     <!-- favicon -->
-    <link rel="icon" href="front/favicon.ico"/>
+    <link rel="icon" href="front/favicon.ico" />
     <!-- bootstrap core CSS -->
     <link rel="stylesheet" href="front/css/bootstrap.min.css">
     <!-- font awesome -->
@@ -37,7 +37,7 @@
 <body>
 <!-- ================ Preloader ================ -->
 <div id="preloader">
-    <div class="spinner-grow" role="status"><span class="sr-only">Loading...</span></div>
+    <div class="spinner-grow" role="status"> <span class="sr-only">Loading...</span> </div>
 </div>
 <!-- ================ Preloader end ================ -->
 
@@ -51,25 +51,17 @@
                     <!-- header navigation -->
                     <nav class="navbar header-navigation navbar-expand-lg p-0">
                         <!-- mobile Toggle -->
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTheme"
-                                aria-controls="navbarTheme" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span> <span></span> <span></span></button>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTheme" aria-controls="navbarTheme" aria-expanded="false" aria-label="Toggle navigation"> <span></span> <span></span> <span></span> </button>
                         <!-- mobile toggle end -->
                         <!-- top Menu -->
                         <div class="collapse navbar-collapse" id="navbarTheme">
                             <ul class="navbar-nav align-items-start align-items-lg-center">
-                                <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a
-                                        class="nav-link" href="./">Home</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'destination') ? 'active' : '' }}"><a
-                                        class="nav-link " href="./destination">Destinations</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'hotel') ? 'active' : '' }}"><a
-                                        class="nav-link " href="./hotel">Hotels</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a
-                                        class="nav-link " href="{{ route('blog.index') }}">Blog</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a
-                                        class="nav-link " href="./about">About Us</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a
-                                        class="nav-link" href="./contact">Contact Us</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'destination') ? 'active' : '' }}"><a class="nav-link " href="./destination">Destinations</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'hotel') ? 'active' : '' }}"><a class="nav-link " href="./hotel">Hotels</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link " href="{{ route('blog.index') }}">Blog</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a class="nav-link " href="./about">About Us</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a class="nav-link" href="./contact">Contact Us</a></li>
                             </ul>
                         </div>
                         <!-- top menu end -->
@@ -95,41 +87,36 @@
                                 @endif
                             @else
                                 <li class="dropdown">
-                                    <a style="text-transform: none" class="dropdown-toggle" href="#" id="userDropdown"
-                                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                       v-pre>
+                                    <a style="text-transform: none" class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }}
                                     </a>
                                     <div class="dropdown-menu bg-dark" aria-labelledby="userDropdown">
-                                        <a class="dropdown-item"
-                                           href="user/{{ \Illuminate\Support\Facades\Auth::id()}}/profile">
+                                        <a class="dropdown-item" href="user/{{ \Illuminate\Support\Facades\Auth::id()}}/profile">
                                             <span class="fas fa-user"></span> My Profile
                                         </a>
                                         @can('manage-users')
                                             <a class="dropdown-item" href="{{ route('admin.users.index') }}">
-                                                <span class="fas fa-users"></span> User Management
+                                                <span class="fas fa-users"></span>  User Management
                                             </a>
                                         @endcan
                                         @can('manage-hotels')
                                             <a class="dropdown-item" href="{{ route('admin.hotels.index') }}">
-                                                <span class="fas fa-hotel"></span> Hotel Management
+                                                <span class="fas fa-hotel"></span>  Hotel Management
                                             </a>
                                         @endcan
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                              class="d-none">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                             @csrf
                                         </form>
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            <span class="fas fa-sign-out-alt"></span> Sign Out
-                                        </a>
+                                                <span class="fas fa-sign-out-alt"></span> Sign Out
+                                            </a>
                                     </div>
                                 </li>
                             @endguest
                             <li class="nav-item">
-                                <a style="text-transform: none" href="./contact" class="nav-link header-request">Request
-                                    a Quote</a></li>
+                                <a style="text-transform: none" href="./contact" class="nav-link header-request">Request a Quote</a></li>
                         </ul>
                     </div>
                     <!-- header right link end -->
@@ -144,8 +131,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-12">
                     <!-- brand -->
-                    <div class="logo"><a class="navbar-brand p-0" href="./"><img src="front/img/logo.png" alt=""></a>
-                    </div>
+                    <div class="logo"><a class="navbar-brand p-0" href="./"><img src="front/img/logo.png" alt=""></a></div>
                     <!-- brand end -->
                 </div>
                 <div class="col-lg-9 col-md-12">
@@ -195,7 +181,7 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-30">
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
                     <!-- title -->
                     <div class="title mb-10">
                         <h3>About Us</h3>
@@ -203,18 +189,14 @@
                     <!-- title end -->
                     <!-- text -->
                     <div class="text">
-                        <p>Stetho is an online booking site that makes it easy for anyone to book overnight, short days
-                            or travel. </p>
+                        <p>Stetho is an online booking site that makes it easy for anyone to book overnight, short days or travel. </p>
                     </div>
                     <!-- end text -->
                     <!-- footer social -->
-                    <div class="footer-social"><a href="#"><i class="fab fa-facebook-square"></i></a> <a href="#"><i
-                                class="fab fa-twitter-square"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-square"></i></a> <a href="#"><i
-                                class="fab fa-google-plus-square"></i></a></div>
+                    <div class="footer-social"> <a href="#"><i class="fab fa-facebook-square"></i></a> <a href="#"><i class="fab fa-twitter-square"></i></a> <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-pinterest-square"></i></a> <a href="#"><i class="fab fa-google-plus-square"></i></a> </div>
                     <!-- footer social end -->
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-30">
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
                     <!-- title -->
                     <div class="title mb-10">
                         <h3>Navigation</h3>
@@ -222,30 +204,14 @@
                     <!-- title end -->
                     <!-- footer link -->
                     <ul class="footer-link">
-                        <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link"
-                                                                                                   href="./">Home</a>
-                        </li>
-                        <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a
-                                class="nav-link " href="./about">About Us</a></li>
-                        <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a
-                                class="nav-link" href="./contact">Contact Us</a></li>
-                        <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link "
-                                                                                                       href="./blog">Blog</a>
-                        </li>
+                        <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a class="nav-link " href="./about">About Us</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a class="nav-link" href="./contact">Contact Us</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link " href="./blog">Blog</a></li>
                     </ul>
                     <!-- footer link end -->
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-30">
-                    <!-- title -->
-                    <div class="title mb-10">
-                        <h3>Recent posts</h3>
-                    </div>
-                    <!-- title end -->
-                    <!-- recent-posts -->
-                   @include('blog.components.footer-recent-post')
-                    <!-- recent-posts end -->
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 mb-30">
+                <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
                     <!-- title -->
                     <div class="title mb-10">
                         <h3>Newsletter</h3>
@@ -253,8 +219,7 @@
                     <!-- title end -->
                     <!-- footer newsletter text -->
                     <div class="footer-newsletter-text">
-                        <p>Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit sed et
-                            eletum.</p>
+                        <p>Subscribe to receive the latest news and attractive coupons.</p>
                     </div>
                     <!-- footer newsletter text end -->
                     <!-- footer newsletter form -->
@@ -270,7 +235,7 @@
         </div>
     </div>
     <!-- footer copyright -->
-    <div class="copyright text-center mt-20">© <span class="current-year"></span> All Rights Reserved.</div>
+    <div class="copyright text-center mt-20">Stetho© <span class="current-year"></span> All Rights Reserved.</div>
     <!-- footer copyright end -->
 </footer>
 <!-- ================ Footer area end ================ -->

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Blogs;
 use App\Models\Bookings;
 use App\Models\Destinations;
 use App\Models\HotelComments;
@@ -32,12 +31,11 @@ class HotelController extends Controller
         $hotels = Hotels::all();
         $booking = Rooms::all();
         $destinations = Destinations::all();
-        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
 
         $hotels = $this->filter($hotels,$request);
 
-        return view('listhotel',compact('hotels','booking','destinations', 'recentPost'));
+        return view('listhotel',compact('hotels','booking','destinations'));
     }
     public function filter($hotels,Request $request)
     {
