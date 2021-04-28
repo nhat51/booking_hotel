@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Blogs;
 use App\Models\Role;
 use Gate;
 use App\Models\User;
@@ -24,8 +23,7 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
-        return view('admin.users.index', compact('users', 'recentPost'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**

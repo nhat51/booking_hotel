@@ -23,6 +23,7 @@ class BlogController extends Controller
 
         return view('blog.blog-single', compact('blogs', 'recentPost'));
     }
+
     public function postComment(Request $request)
     {
         BlogComments::create($request->all());

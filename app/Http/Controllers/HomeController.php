@@ -28,13 +28,10 @@ class HomeController extends Controller
     {
         $popularhotels = Hotels::all();
         $populardestinations = Destinations::all();
-        $recentPost = Blogs::OrderByDesc('created_at')->take(3)->get();
 
-        return view('index',compact('popularhotels','populardestinations', 'recentPost'));
+        return view('index',compact('popularhotels','populardestinations'));
     }
-    public function master(){
 
-    }
 
 //    public function search(Request $request)
 //    {
