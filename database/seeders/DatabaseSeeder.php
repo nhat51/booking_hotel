@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RolesTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-//        $this->call(AddressSeeder::class);
+        $this->call(DestinationTableSeeder::class);
         DB::table('hotels')->insert([
             [
                 'destination_id' => 1,

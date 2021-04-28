@@ -94,8 +94,9 @@
                                 </div>
                                 <div class="row pt-2">
                                     <div class="col-lg-4"><strong>Email:</strong></div>
-                                    <div class="col-lg-8">{{\Illuminate\Support\Facades\Auth::user()->email}} <span class="badge badge-danger">Not Verified</span>
+                                    <div class="col-lg-8">{{\Illuminate\Support\Facades\Auth::user()->email}}
                                     @if(\Illuminate\Support\Facades\Auth::user()->email_verified_at == null)
+                                            <span class="badge badge-danger">Not Verified</span>
                                             <div class="alert alert-warning" role="alert">
                                                 Email is not verified. Request to resend verification email <a
                                                     href="{{route('verification.notice')}}">here</a>.

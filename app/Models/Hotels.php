@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Location\Province;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +12,9 @@ class Hotels extends Model
 
     public function destinations(){
         return $this->belongsTo(Destinations::class,'destination_id','id');
+    }
+    public function province(){
+        return $this->belongsTo(Province::class, 'city', 'id');
     }
 
     public function hotel_images(){
