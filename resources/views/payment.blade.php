@@ -105,56 +105,34 @@
                   </a> </div>
                 <div id="collapseOne4-m" class="collapse show mt-10" aria-labelledby="headingOne4-d" data-parent="#filter-widget-accordion4-d">
                   <div class="card-body">
-                    <ul class="list-inline select-all mb-10">
-                      <li class="list-inline-item">Hilton Miami Downtown</li>
-                    </ul>
+{{--                    <ul class="list-inline select-all mb-10">--}}
+{{--                      <li class="list-inline-item">Hilton Miami Downtown</li>--}}
+{{--                    </ul>--}}
                     <div class="table-responsive">
                       <table class="table table-bordered bg-gray w-100 border-0">
                         <tr>
                           <td>Check In</td>
-                          <td>Jan 01, 2020 Wed</td>
+                          <td>{{session('checkinday')}}</td>
                         </tr>
                         <tr>
                           <td>Check Out</td>
-                          <td>Jan 01, 2020 Fri</td>
+                          <td>{{session('checkoutday')}}</td>
                         </tr>
                         <tr>
-                          <td>Room 1</td>
-                          <td>1  Adult(s)</td>
+                          <td>Room</td>
+                          <td>{{session('roomType')}}</td>
                         </tr>
-                        <tr>
-                          <td><form class="form-style-1">
-                              <input type="text" class="form-control" placeholder="Coupon Code">
-                            </form></td>
-                          <td><button type="submit" class="btn-style-1">Apply</button></td>
-                        </tr>
+                          <tr>
+                              <td>Room</td>
+                              <td>{{session('roomPrice')}}</td>
+                          </tr>
                       </table>
                     </div>
                     <div class="table-responsive">
                       <table class="table table-bordered bg-gray mb-0 w-100 border-0">
                         <tr>
-                          <td>Adult Price</td>
-                          <td>$900</td>
-                        </tr>
-                        <tr>
-                          <td>Children Price</td>
-                          <td>$0</td>
-                        </tr>
-                        <tr>
-                          <td>Infant Price</td>
-                          <td>$0</td>
-                        </tr>
-                        <tr>
-                          <td>Subtotal</td>
-                          <td>$0</td>
-                        </tr>
-                        <tr>
-                          <td>Tex</td>
-                          <td>0%</td>
-                        </tr>
-                        <tr>
                           <th>Pay Amount</th>
-                          <th>$900</th>
+                          <th>{{session('roomPrice')}}</th>
                         </tr>
                       </table>
                     </div>

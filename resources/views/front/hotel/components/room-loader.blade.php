@@ -2,11 +2,11 @@
 <h4 class="mb-6">Rooms</h4>
 <div class="room-type-wrapper">
     <!-- list box -->
-    <form action="./checkin" method="post">
-        {{csrf_field()}}
+
     @foreach($hotel->rooms as $room)
         @if($room->is_available == 1)
-
+            <form action="./booking" method="post">
+                {{csrf_field()}}
                 <div class="list-box mb-30">
                 <div class="list-box-img">
                     <a href="front/img/rooms-image/{{$room->room_images[0]->path }}" class="venobox" data-gall="gallery1">
@@ -40,10 +40,10 @@
                     </div>
                 </div>
             </div>
-
+            </form>
     @endif
 @endforeach
-            </form>
+
 <!-- list box end -->
 </div>
 <!-- rooms -->

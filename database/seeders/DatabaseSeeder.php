@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Với hồ bơi ngoài trời và trung tâm thể dục rộng rãi, Muong Thanh Nha Trang nằm cách Bến Xe Nha Trang chỉ 500 m. Truy cập Wi-Fi miễn phí có sẵn ở tất cả các khu vực. Các phòng được bài trí sang trọng tại đây đặc trưng với sàn trải thảm toàn bộ, truyền hình cáp màn hình phẳng, tiện nghi pha trà/cà phê và khu vực tiếp khách. Phòng tắm riêng đi kèm bồn tắm và áo choàng tắm mềm mại. Du khách có thể tận hưởng các liệu pháp spa và mát-xa xoa dịu cũng như tận dụng dịch vụ cho thuê xe hơi cùng trung tâm dịch vụ doanh nhân. Các tiện nghi khác bao gồm lễ tân 24 giờ và chỗ giữ hành lý. Muong Thanh Nha Trang Hotel nằm cách trung tâm thành phố Nha Trang và Ga Nha Trang 5 km. Sân bay Cam Ranh cách nơi nghỉ này 50 km và tại đây có dịch vụ đưa đón sân bay kèm phụ phí. Khách sạn trang nhã này có 2 nhà hàng – Ngoc Thao Restaurant phục vụ ẩm thực Châu Á và Phương Tây suốt 24 giờ trong khi Yang Bay Restaurant được dành cho các buổi yến tiệc cũng như sự kiện. Các lựa chọn ăn uống trong phòng cũng được cung cấp.',
             ],
             [
-                'destination_id' => 4,
+                'destination_id' => 1,
                 'name' => 'New Sun Hotel',
                 'address' => '2/3 Hùng Vương',
                 'district' => 'Lộc Thọ',
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Với sân hiên phơi nắng và tầm nhìn ra biển, New Sun Hotel nằm ở thành phố Nha Trang thuộc Tỉnh Khánh Hòa và cách Tháp Trầm Hương 4 phút đi bộ. Khách có thể dùng bữa ở nhà hàng tại nơi nghỉ. Bãi đỗ xe riêng có sẵn miễn phí ngay trong khuôn viên. Mỗi phòng tại khách sạn này đều được trang bị máy lạnh và truyền hình vệ tinh màn hình phẳng. Ấm đun nước có sẵn trong phòng. Tất cả các phòng còn đi kèm phòng tắm riêng. Những tiện nghi khác bao gồm dép, đồ vệ sinh cá nhân miễn phí cùng máy sấy tóc. New Sun Hotel cung cấp Wi-Fi miễn phí trong toàn khuôn viên. Khách sạn có lễ tân làm việc 24 giờ. Khách sạn cung cấp dịch vụ cho thuê xe hơi. Quảng trường 2/4 Square cách New Sun Hotel 4 phút đi bộ trong khi Bãi biển Nha Trang cách đó 5 phút đi bộ. Sân bay gần nhất là Sân bay Quốc tế Cam Ranh, cách nơi nghỉ 30 km. Đây là khu vực ở Nha Trang mà khách yêu thích, theo các đánh giá độc lập. Các cặp đôi đặc biệt thích địa điểm này — họ cho điểm 8,9 cho kỳ nghỉ dành cho 2 người.',
             ],
             [
-                'destination_id' => 5,
+                'destination_id' => 1,
                 'name' => 'V Hotel',
                 'address' => '8 Hùng Vương',
                 'district' => 'Lộc Thọ',
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Nằm trong khu vực Lộc Thọ, Khách sạn V Nha Trang tọa lạc tại vị trí chủ chốt gần các danh lam thắng cảnh, cho khách yêu thích du lịch biển, cho du khách yêu thích ẩm thực ở Nha Trang. Trung tâm thành phố náo nhiệt chỉ cách bạn khoảng 0.5 km. Chỗ nghỉ có vị trí rất thuận tiện, du khách có thể thoải mái tham quan, khám phá các điểm du lịch nổi tiếng. Các tiện nghi và dịch vụ do Khách sạn V Nha Trang cung cấp đảm bảo sẽ mang lại cho du khách một kỳ nghỉ vừa ý nhất. Chỗ nghỉ này được trang bị nhiều tiện nghi đa dạng, hứa hẹn sẽ làm hài lòng ngay cả những khách hàng khó tính nhất. Du khách có thể chọn lựa trong số 100 phòng với không gian yên bình, thư giãn. Bên cạnh đó, các khu vực vui chơi giải trí như phòng thể dục, hồ bơi ngoài trời, spa, massage cũng là nơi thư giãn tuyệt vời. Khách sạn V Nha Trang là điểm đến cung cấp chỗ nghỉ chất lượng cao tại Nha Trang.',
             ],
             [
-                'destination_id' => 3,
+                'destination_id' => 2,
                 'name' => 'Hai Bảy Hotel',
                 'address' => '27 Hàng Bông',
                 'district' => 'Quận Hoàn Kiếm',
@@ -57,13 +57,131 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'destination_id' => 2,
-                'name' => 'Mường Thanh Luxury Sài Gòn',
+                'name' => 'Seraton',
+                'address' => 'Nghi Tàm',
+                'district' => 'Quận Tay Hồ',
+                'city' => 'Hà Nội',
+                'star_ranking' => 3,
+                'description' => 'Nằm trong khu vực Quận Hoàn Kiếm, Khách sạn Hai Bảy tọa lạc tại vị trí chủ chốt gần các danh lam thắng cảnh, gần nhiều nơi mua sắm, để khám phá nét đẹp văn hóa ở Hà Nội. Cách thành phố nhộn nhịp khoảng 0.1 km, chỗ nghỉ4 sao này có vị trí vô cùng thuận lợi để đi đến các điểm nóng du lịch trong thành phố. Chỗ nghỉ có vị trí rất thuận tiện, du khách có thể thoải mái tham quan, khám phá các điểm du lịch nổi tiếng. Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Chỗ nghỉ cung cấp các tiện nghi như Wifi miễn phí cho mọi phòng, bảo vệ 24 giờ, dọn phòng hằng ngày, dịch vụ bưu điện, nhận/trả phòng riêng, đảm bảo mang đến cho du khách sự thoải mái tối đa. Mọi phòng nghỉ đều được trang bị tiện nghi chu đáo, mang đến cho du khách cảm giác thoải mái không gì sánh được. Cho dù là một tín đồ thể thao hay chỉ muốn thư giãn sau một ngày dài bận rộn, bạn sẽ được tiêu khiển với các hoạt động vui chơi giải trí nhưspa, massage. Hãy khám phá sự kết hợp hoàn hảo giữa cung cách phục vụ chuyên nghiệp và vô số tiện nghi đa dạng ở Khách sạn Hai Bảy.',
+            ],
+            [
+                'destination_id' => 2,
+                'name' => 'Melia',
+                'address' => '44B Lý Thường Kiệt',
+                'district' => 'Quận Hoàn Kiếm',
+                'city' => 'Hà Nội',
+                'star_ranking' => 3,
+                'description' => 'Nằm trong khu vực Quận Hoàn Kiếm, Khách sạn Hai Bảy tọa lạc tại vị trí chủ chốt gần các danh lam thắng cảnh, gần nhiều nơi mua sắm, để khám phá nét đẹp văn hóa ở Hà Nội. Cách thành phố nhộn nhịp khoảng 0.1 km, chỗ nghỉ4 sao này có vị trí vô cùng thuận lợi để đi đến các điểm nóng du lịch trong thành phố. Chỗ nghỉ có vị trí rất thuận tiện, du khách có thể thoải mái tham quan, khám phá các điểm du lịch nổi tiếng. Mọi nỗ lực đều nhằm mang lại sự thoải mái tối đa cho du khách. Chính vì vậy, chỗ nghỉ cung cấp các dịch vụ và tiện nghi tốt nhất. Chỗ nghỉ cung cấp các tiện nghi như Wifi miễn phí cho mọi phòng, bảo vệ 24 giờ, dọn phòng hằng ngày, dịch vụ bưu điện, nhận/trả phòng riêng, đảm bảo mang đến cho du khách sự thoải mái tối đa. Mọi phòng nghỉ đều được trang bị tiện nghi chu đáo, mang đến cho du khách cảm giác thoải mái không gì sánh được. Cho dù là một tín đồ thể thao hay chỉ muốn thư giãn sau một ngày dài bận rộn, bạn sẽ được tiêu khiển với các hoạt động vui chơi giải trí nhưspa, massage. Hãy khám phá sự kết hợp hoàn hảo giữa cung cách phục vụ chuyên nghiệp và vô số tiện nghi đa dạng ở Khách sạn Hai Bảy.',
+            ],
+            [
+                'destination_id' => 3,
+                'name' => 'Mường Thanh Luxury',
                 'address' => '261C Nguyễn Văn Trỗi',
                 'district' => 'Phường 10, Phú Nhuận',
-                'city' => 'Hồ Chí Minh',
+                'city' => 'Sapa',
                 'star_ranking' => 5,
                 'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
             ],
+            [
+                'destination_id' => 3,
+                'name' => 'BamBoo Sapa',
+                'address' => '18 Mường Hoa',
+                'district' => 'TT Sapa',
+                'city' => 'Sapa',
+                'star_ranking' => 5,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 3,
+                'name' => 'Sapa Charm',
+                'address' => '32 Mường Hoa',
+                'district' => 'TT Sapa',
+                'city' => 'Sapa',
+                'star_ranking' => 5,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 4,
+                'name' => 'LaDaLat',
+                'address' => '106A Mai Anh Đào',
+                'district' => 'Đà Lạt',
+                'city' => 'Đà Lạt',
+                'star_ranking' => 3,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 4,
+                'name' => 'Mường Thanh Holiday',
+                'address' => '42 Phan Bội Châu',
+                'district' => 'Đà Lạt',
+                'city' => 'Đà Lạt',
+                'star_ranking' => 5,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 4,
+                'name' => 'La Sapinete',
+                'address' => 'Số 1 Phan Chu Trinh',
+                'district' => 'Đà Lạt',
+                'city' => 'Đà Lạt',
+                'star_ranking' => 3,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 5,
+                'name' => 'Golden Bay',
+                'address' => '01 Lê Văn Duyệt',
+                'district' => 'Đà Nẵng',
+                'city' => 'Đà Nẵng',
+                'star_ranking' => 2,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 5,
+                'name' => 'Hùng Anh',
+                'address' => '25 Võ Văn Kiệt',
+                'district' => 'Đà Nẵng',
+                'city' => 'Đà Nẵng',
+                'star_ranking' => 5,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 5,
+                'name' => 'Dana Maria',
+                'address' => '47-49 Võ Văn Kiệt',
+                'district' => 'Đà Nẵng',
+                'city' => 'Đà Nẵng',
+                'star_ranking' => 1,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 6,
+                'name' => 'Hạ Long DC',
+                'address' => 'Đường 25/4 Hồng Gai',
+                'district' => 'Hạ Long',
+                'city' => 'Hạ Long',
+                'star_ranking' => 5,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 6,
+                'name' => 'Hạ Long Plaza',
+                'address' => 'Số 8 Hạ Long',
+                'district' => 'Hạ Long',
+                'city' => 'Hạ Long',
+                'star_ranking' => 3,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+            [
+                'destination_id' => 6,
+                'name' => 'Haliot Ha Long',
+                'address' => '38 Nguyễn Du',
+                'district' => 'Hạ Long',
+                'city' => 'Hạ Long',
+                'star_ranking' => 4,
+                'description' => 'Khách sạn Mường Thanh Luxury Sài Gòn được xây dựng theo tiêu chuẩn 5 sao với 239 phòng nghỉ sang trọng cùng với hệ thống tiện ích đẳng cấp, là điểm dừng chân không thể thiếu của du khách trong hành trình trải nghiệm Sài Gòn.',
+            ],
+
         ]);
         DB::table('rooms')->insert([
             [
@@ -385,6 +503,666 @@ class DatabaseSeeder extends Seeder
                 'max_person' => 2
 
             ],
+            [
+                'hotel_id' => 7,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 7,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 7,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 7,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 7,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 8,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 8,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 8,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 8,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 8,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 9,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 9,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 9,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 9,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 9,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 10,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 10,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 10,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 10,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 10,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 11,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 11,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 11,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 11,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 11,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 12,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 12,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 12,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 12,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 12,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 13,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 13,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 13,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 13,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 13,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 14,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 14,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 14,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 14,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 14,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 15,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 15,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 15,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 15,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 15,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 16,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 16,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 16,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 16,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 16,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 17,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 17,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 17,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 17,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 17,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 18,
+                'room_type' => 'Deluxe',
+                'thumb' => 'MuongThanh-Room-1.jpg',
+                'description' => null,
+                'price' => 4931000.00,
+                'discount' => 45,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 18,
+                'room_type' => 'Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 5257000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 18,
+                'room_type' => 'Grand Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 6399000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 18,
+                'room_type' => 'The Level Premium',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 7704000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
+            [
+                'hotel_id' => 18,
+                'room_type' => 'The Level Executive Suite',
+                'thumb' => 'img-thum-01.jpg',
+                'description' => null,
+                'price' => 8846000.00,
+                'discount' => 0,
+                'is_available' => 1,
+                'max_person' => 2
+
+            ],
         ]);
         DB::table('room_images')->insert([
             [
@@ -392,59 +1170,11 @@ class DatabaseSeeder extends Seeder
                 'path' => 'img-big-01.jpg'
             ],
             [
-                'room_id' => 1,
-                'path' => 'img-big-02.jpg'
-            ],
-            [
-                'room_id' => 1,
-                'path' => 'img-big-03.jpg'
-            ],
-            [
-                'room_id' => 1,
-                'path' => 'img-big-04.jpg'
-            ],
-            [
-                'room_id' => 2,
-                'path' => 'img-big-01.jpg'
-            ],
-            [
                 'room_id' => 2,
                 'path' => 'img-big-02.jpg'
             ],
             [
-                'room_id' => 2,
-                'path' => 'img-big-03.jpg'
-            ],
-            [
-                'room_id' => 2,
-                'path' => 'img-big-04.jpg'
-            ],
-            [
                 'room_id' => 3,
-                'path' => 'img-big-01.jpg'
-            ],
-            [
-                'room_id' => 3,
-                'path' => 'img-big-02.jpg'
-            ],
-            [
-                'room_id' => 3,
-                'path' => 'img-big-03.jpg'
-            ],
-            [
-                'room_id' => 3,
-                'path' => 'img-big-04.jpg'
-            ],
-            [
-                'room_id' => 4,
-                'path' => 'img-big-01.jpg'
-            ],
-            [
-                'room_id' => 4,
-                'path' => 'img-big-02.jpg'
-            ],
-            [
-                'room_id' => 4,
                 'path' => 'img-big-03.jpg'
             ],
             [
@@ -456,31 +1186,280 @@ class DatabaseSeeder extends Seeder
                 'path' => 'img-big-01.jpg'
             ],
             [
-                'room_id' => 5,
+                'room_id' => 6,
                 'path' => 'img-big-02.jpg'
             ],
             [
-                'room_id' => 5,
+                'room_id' => 7,
                 'path' => 'img-big-03.jpg'
             ],
             [
-                'room_id' => 5,
+                'room_id' => 8,
                 'path' => 'img-big-04.jpg'
             ],
             [
-                'room_id' => 6,
+                'room_id' => 9,
                 'path' => 'img-big-01.jpg'
             ],
             [
-                'room_id' => 6,
+                'room_id' => 10,
                 'path' => 'img-big-02.jpg'
             ],
             [
-                'room_id' => 6,
+                'room_id' => 11,
                 'path' => 'img-big-03.jpg'
             ],
             [
-                'room_id' => 6,
+                'room_id' => 12,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 13,
+                'path' => 'img-big-01.jpg'
+            ],
+            [
+                'room_id' => 14,
+                'path' => 'img-big-02.jpg'
+            ],
+            [
+                'room_id' => 15,
+                'path' => 'img-big-03.jpg'
+            ],
+            [
+                'room_id' => 16,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 17,
+                'path' => 'img-big-01.jpg'
+            ],
+            [
+                'room_id' => 18,
+                'path' => 'img-big-02.jpg'
+            ],
+            [
+                'room_id' => 19,
+                'path' => 'img-big-03.jpg'
+            ],
+            [
+                'room_id' => 20,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 21,
+                'path' => 'img-big-01.jpg'
+            ],
+            [
+                'room_id' => 22,
+                'path' => 'img-big-02.jpg'
+            ],
+            [
+                'room_id' => 23,
+                'path' => 'img-big-03.jpg'
+            ],
+            [
+                'room_id' => 24,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 25,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 26,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 27,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 28,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 29,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 30,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 31,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 32,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 33,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 34,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 35,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 36,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 37,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 38,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 39,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 40,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 41,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 42,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 43,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 44,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 45,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 46,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 47,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 48,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 49,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 50,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 51,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 52,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 53,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 54,
+                'path' => 'img-big-04.jpg'
+            ],
+            [
+                'room_id' => 55,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 56,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 57,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 58,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 59,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 60,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 61,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 62,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 63,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 64,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 65,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 66,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 67,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 68,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 69,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 70,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 71,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 72,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 73,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 74,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 75,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 76,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 77,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 78,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 79,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 80,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 81,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 82,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 83,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 84,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 85,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 86,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 87,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 88,
+                'path' => 'img-big-04.jpg'
+            ], [
+                'room_id' => 89,
                 'path' => 'img-big-04.jpg'
             ],
         ]);
@@ -572,7 +1551,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id' => 7,
-                'path' => 'ChauLong-Hotel-1.jpg'
+                'path' => 'KK-Hotel-1.jpg'
             ],
             [
                 'hotel_id' => 8,
@@ -580,7 +1559,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'hotel_id' => 9,
-                'path' => 'Unique-Hotel-5.jpg'
+                'path' => 'KK-Hotel-5.jpg'
             ],
             [
                 'hotel_id' => 10,
@@ -601,6 +1580,22 @@ class DatabaseSeeder extends Seeder
             [
                 'hotel_id' => 14,
                 'path' => 'Marina-Hotel-5.jpg'
+            ],
+            [
+                'hotel_id' => 15,
+                'path' => 'MuongThanh-Hotel-6.jpg'
+            ],
+            [
+                'hotel_id' => 16,
+                'path' => 'MuongThanh-Hotel-4.jpg'
+            ],
+            [
+                'hotel_id' => 17,
+                'path' => 'MuongThanh-Hotel-3.jpg'
+            ],
+            [
+                'hotel_id' => 18,
+                'path' => 'MuongThanh-Hotel-2.jpg'
             ],
         ]);
         DB::table('destinations')->insert([

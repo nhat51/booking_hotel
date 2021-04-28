@@ -50,9 +50,6 @@
                     </a> </div>
                   <div id="collapseOne4-m" class="collapse show mt-10" aria-labelledby="headingOne4-d" data-parent="#filter-widget-accordion4-d">
                     <div class="card-body">
-                      <ul class="list-inline select-all mb-10">
-                        <li class="list-inline-item">{{ count($hotels) }} Hotels on screen</li>
-                      </ul>
                       <div class="table-responsive">
                         <table class="table table-bordered bg-gray w-100 border-0">
                           <tr>
@@ -78,46 +75,46 @@
             <!-- filter widget end -->
                 <!-- filter widget -->
               <form class="form" action="./hotel" method="get">
-                <div class="filter-widget mb-20">
-                  <div class="accordion filter-accordion" id="filter-widget-accordion-d">
-                    <div class="card">
-                      <div class="card-header" id="headingOne-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne-m" aria-expanded="true" aria-controls="collapseOne-m">
-                        <!-- title widget -->
-                        <div class="filter-title-widget">
-                          <h3>Price <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>
-                        </div>
-                        <!-- title widget end -->
-                        </a> </div>
-                      <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
-                        <div class="card-body">
-                            <div class="filter-checkbox-widget">
-                                <div class="form-check">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range1" {{ request('pricefilter') == 'range1' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'range1' ? 'active' : '' }}" for="range1"> 1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range2" {{ request('pricefilter') == 'range2' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'range2' ? 'active' : '' }}" for="range2"> 2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range3" {{ request('pricefilter') == 'range3' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'range3' ? 'active' : '' }}" for="range3"> 3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range4" {{ request('pricefilter') == 'range4' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'rang4' ? 'active' : '' }}" for="range4"> 4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range5" {{ request('pricefilter') == 'range5' ? 'checked' : '' }} name="pricefilter" onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'rang5' ? 'active' : '' }}" for="range5"> 5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="range6" {{ request('pricefilter') == 'range6' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">
-                                        <label class="form-check-label {{ request('pricefilter') == 'range6' ? 'active' : '' }}" for="range6"> >6.000.000 <sup>₫</sup></label>
-                                    </div>
-                                </div>
-                            </div>
+{{--                <div class="filter-widget mb-20">--}}
+{{--                  <div class="accordion filter-accordion" id="filter-widget-accordion-d">--}}
+{{--                    <div class="card">--}}
+{{--                      <div class="card-header" id="headingOne-d"> <a class="btn btn-link w-100 text-left" href="#" data-toggle="collapse" data-target="#collapseOne-m" aria-expanded="true" aria-controls="collapseOne-m">--}}
+{{--                        <!-- title widget -->--}}
+{{--                        <div class="filter-title-widget">--}}
+{{--                          <h3>Price <i class="fas fa-plus-square float-right"></i> <i class="fas fa-minus-square float-right"></i></h3>--}}
+{{--                        </div>--}}
+{{--                        <!-- title widget end -->--}}
+{{--                        </a> </div>--}}
+{{--                      <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div class="filter-checkbox-widget">--}}
+{{--                                <div class="form-check">--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range1" {{ request('pricefilter') == 'range1' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'range1' ? 'active' : '' }}" for="range1"> 1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range2" {{ request('pricefilter') == 'range2' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'range2' ? 'active' : '' }}" for="range2"> 2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range3" {{ request('pricefilter') == 'range3' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'range3' ? 'active' : '' }}" for="range3"> 3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range4" {{ request('pricefilter') == 'range4' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'rang4' ? 'active' : '' }}" for="range4"> 4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range5" {{ request('pricefilter') == 'range5' ? 'checked' : '' }} name="pricefilter" onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'rang5' ? 'active' : '' }}" for="range5"> 5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-check">--}}
+{{--                                        <input class="form-check-input" type="checkbox" id="range6" {{ request('pricefilter') == 'range6' ? 'checked' : '' }} name="pricefilter"  onchange="this.form.submit();">--}}
+{{--                                        <label class="form-check-label {{ request('pricefilter') == 'range6' ? 'active' : '' }}" for="range6"> >6.000.000 <sup>₫</sup></label>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 {{--                            <select class="form-control" name="pricefilter" >--}}
 {{--                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range1' ? 'selected' : '' }} name="pricefilter" value="range1">1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup> </option>--}}
 {{--                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range2' ? 'selected' : '' }} name="pricefilter" value="range2">2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>--}}
@@ -126,11 +123,11 @@
 {{--                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range5' ? 'selected' : '' }} name="pricefilter" value="range5">5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>--}}
 {{--                                <option class="form-check" {{ (request("pricefilter")?? '') == 'range6' ? 'selected' : '' }} name="pricefilter" value="range6"> >6.000.000<sup>₫</sup> </option>--}}
 {{--                            </select>--}}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+{{--                        </div>--}}
+{{--                      </div>--}}
+{{--                    </div>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
                 <!-- filter widget end -->
                 <!-- filter widget -->
                 <div class="filter-widget mb-20">
@@ -246,7 +243,7 @@
                         <li><span><i class="fas fa-{{$name->code}}"></i> {{ $name->amenities_name }} </span></li>
                       @endforeach
                   </ul>
-                  <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="./hotel/{{ $hotel->id }}">View Details</a> <a class="book-now-btn ml-6" href="./roomdetail/{{ $hotel->id }}">Book Now</a> </div>
+                  <div class="btn-wrapper mt-20 d-inline-block w-100"> <a class="view-detail-btn" href="./hotel/{{ $hotel->id }}">View Details</a>   </div>
                 </div>
               </div>
               <!-- list box end -->

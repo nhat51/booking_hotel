@@ -33,40 +33,7 @@
                 </div>
               </div>
 
-{{--              <div class="row">--}}
-{{--                <div class="col-lg-6 col-md-6 col-sm-6 col-6">--}}
-{{--                  <div class="form-group">--}}
-{{--                    <select name="adult" class="form-control">--}}
-{{--                      <option>Adult(s)(18+)</option>--}}
-{{--                      <option value="1">1</option>--}}
-{{--                      <option value="2">2</option>--}}
-{{--                      <option value="3">3</option>--}}
-{{--                      <option value="4">4</option>--}}
-{{--                    </select>--}}
-{{--                  </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-6 col-md-6 col-sm-6 col-6">--}}
-{{--                  <div class="form-group">--}}
-{{--                    <select name="child" class="form-control">--}}
-{{--                      <option>Children(0-17)</option>--}}
-{{--                      <option value="1">1</option>--}}
-{{--                      <option value="2">2</option>--}}
-{{--                      <option value="3">3</option>--}}
-{{--                      <option value="4">4</option>--}}
-{{--                    </select>--}}
-{{--                  </div>--}}
-{{--                </div>--}}
-{{--              </div>--}}
 
-{{--              <div class="form-group">--}}
-{{--                <select class="form-control">--}}
-{{--                  <option>Rooms</option>--}}
-{{--                  <option value="1">1</option>--}}
-{{--                  <option value="2">2</option>--}}
-{{--                  <option value="3">3</option>--}}
-{{--                  <option value="4">4</option>--}}
-{{--                </select>--}}
-{{--              </div>--}}
 
               <button type="submit" class="btn-style-1 w-100">Search</button>
             </form>
@@ -175,17 +142,16 @@
       <span class="dashed-border"></span> </div>
     <!-- section title -->
     <div class="row">
-
         @foreach($populardestinations as $populardestination)
       <div class="col-lg-4 col-md-6 col-sm-6 mb-30">
         <!-- popular destination box -->
         <div class="popular-destination-box">
           <div class="img-holder-overlay">
             <div class="img-holder"><img src="front/img/popular-destination/{{$populardestination->image_path}}" alt=""></div>
-            <div class="overlay"><a href="./destination"><i class="fas fa-share"></i></a></div>
+              <div class="overlay"><a href="./destiantion/{{ $populardestination->id }}"><i class="fas fa-share"></i></a></div>
           </div>
           <div class="title">
-            <h3><a href="./listhotel/{{ $populardestination->id }}">{{$populardestination->name}}</a></h3>
+            <h3><a href="./destiantion/{{ $populardestination->id }}">{{$populardestination->name}}</a></h3>
           </div>
         </div>
         <!-- popular destination box end -->
@@ -197,51 +163,6 @@
 <!-- ================ Popular destinations end ================ -->
 
 <!-- ================ Testimonials ================ -->
-<div class="testimonials-area testimonial-bg  pt-70 pb-70">
-  <div class="container">
-    <div class="testimonial-carousel owl-carousel owl-theme">
-      <div class="item">
-        <!-- testimonial box -->
-        <div class="testimonial-box position-relative shadow rounded">
-          <p class="text-muted border-bottom font-italic pb-3">" Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum. "</p>
-          <div class="reviewer d-inline-block"> <img src="front/img/testimonial/01.jpg" class="float-left mr-3 rounded" alt="">
-            <div class="content d-block overflow-hidden">
-              <h4 class="name mb-0 text-uppercase">Kevin Marthin</h4>
-              <small class="designation text-muted">Developer</small> </div>
-          </div>
-          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-        </div>
-        <!-- testimonial box end -->
-      </div>
-      <div class="item">
-        <!-- testimonial box -->
-        <div class="testimonial-box position-relative shadow rounded">
-          <p class="text-muted border-bottom font-italic pb-3">" Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum. "</p>
-          <div class="reviewer d-inline-block"> <img src="front/img/testimonial/02.jpg" class="float-left mr-3 rounded" alt="">
-            <div class="content d-block overflow-hidden">
-              <h4 class="name mb-0 text-uppercase">Joe Gabriel</h4>
-              <small class="designation text-muted">Designer</small> </div>
-          </div>
-          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-        </div>
-        <!-- testimonial box end -->
-      </div>
-      <div class="item">
-        <!-- testimonial box -->
-        <div class="testimonial-box position-relative shadow rounded">
-          <p class="text-muted border-bottom font-italic pb-3">" Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum orem ipsum dolor sit amet consectetur adipiscing elit amet consectetur piscing elit amet consectetur adipiscing elit sed et eletum. "</p>
-          <div class="reviewer d-inline-block"> <img src="front/img/testimonial/03.jpg" class="float-left mr-3 rounded" alt="">
-            <div class="content d-block overflow-hidden">
-              <h4 class="name mb-0 text-uppercase">Join Mansoor</h4>
-              <small class="designation text-muted">Support-Marketing</small> </div>
-          </div>
-          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-        </div>
-        <!-- testimonial box end -->
-      </div>
-    </div>
-  </div>
-</div>
 <!-- ================ Testimonials end ================ -->
 
 <!-- ================ Blog area ================ -->

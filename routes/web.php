@@ -71,8 +71,6 @@ Route::get('/payment', function () {
     return view('payment');
 });
 
-
-
 //vuong routes
 
 //hotel routes
@@ -82,9 +80,10 @@ Route::prefix('hotel')->group(function () {
 });
 
 // destination routes
-Route::get('/destinations', [Front\DestinationController::class, 'destinations']);
+
 Route::prefix('destination')->group(function () {
-    Route::get('/{id}', [Front\DestinationController::class, 'destinationDetail']);
+    Route::get('/', [Front\DestinationController::class, 'destinations']);
+    Route::get('/{id}', [Front\DestinationController::class, 'hotelInDestination']);
 });
 
 Route::get('/user/{id}/profile', [ProfileController::class, 'index'])->name('profile')->middleware('auth');
@@ -96,7 +95,7 @@ Route::prefix('/roomdetail')->group(function (){
     Route::get('/{id}',[Front\RoomController::class,'listroom']);
 });
 
-Route::post('/checkin',[Front\HotelController::class,'checkin']);
+Route::post('/booking',[Front\HotelController::class,'booking']);
 
 //Route::prefix('checkout')->group(function (){
 //    Route::get('/traveler-information',[Front\CheckOutController::class,'index']);

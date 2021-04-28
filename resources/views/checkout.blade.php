@@ -123,7 +123,7 @@
                 <div id="collapseOne4-m" class="collapse show mt-10" aria-labelledby="headingOne4-d" data-parent="#filter-widget-accordion4-d">
                   <div class="card-body">
                     <ul class="list-inline select-all mb-10">
-                      <li class="list-inline-item">Hilton Miami Downtown</li>
+                      <li class="list-inline-item">{{ session('HotelName') }}</li>
                     </ul>
                     <div class="table-responsive">
                       <table class="table table-bordered bg-gray w-100 border-0">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bookings;
 use App\Models\Destinations;
 use App\Models\Hotels;
 use Illuminate\Http\Request;
@@ -22,10 +23,11 @@ class DestinationController extends Controller
 
         return view('front.destination.destination-detail', compact('destinationDetail'));
     }
-    public function hotelInDestination($destinationId, Request $request){
+    public function hotelInDestination($destinationId){
         $destinations = Destinations::all();
-        $hotel = Destinations::where('id', $destinationId)->first()->hotels->toQuery()->paginate();
+        $hotels = Hotels::where('destination_id', $destinationId)->get();
+        $booking = Bookings::all();
 
-        return view('front.hotel.listhotel', compact('destinations', $hotel));
+        return view('listhotel', compact('destinations', 'hotels','booking'));
     }
 }

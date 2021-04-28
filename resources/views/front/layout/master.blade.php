@@ -57,7 +57,7 @@
                         <div class="collapse navbar-collapse" id="navbarTheme">
                             <ul class="navbar-nav align-items-start align-items-lg-center">
                                 <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
-                                <li class="nav-item {{ (request()->segment(1)== 'destinations') ? 'active' : '' }}"><a class="nav-link " href="./destinations">Destinations</a></li>
+                                <li class="nav-item {{ (request()->segment(1)== 'destination') ? 'active' : '' }}"><a class="nav-link " href="./destination">Destinations</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'hotel') ? 'active' : '' }}"><a class="nav-link " href="./hotel">Hotels</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link " href="./blog">Blog</a></li>
                                 <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a class="nav-link " href="./about">About Us</a></li>
@@ -156,7 +156,7 @@
                                 <div class="iocn-holder"><i class="far fa-envelope"></i></div>
                                 <div class="text-holder">
                                     <h6>Mail Us</h6>
-                                    <p class="mb-0"><a href="mailto:info@exampal.com">info@exampal.com</a></p>
+                                    <p class="mb-0"><a href="mailto:info@exampal.com">stetho@gmail.com</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -189,8 +189,7 @@
                     <!-- title end -->
                     <!-- text -->
                     <div class="text">
-                        <p>Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit amet consectetur adipiscing elit sed et eletum.</p>
-                        <p>Lorem ipsum dolor sit amet sectetur adipiscing elit amet consectetur scing elit amet.</p>
+                        <p>Stetho is an online booking site that makes it easy for anyone to book overnight, short days or travel. </p>
                     </div>
                     <!-- end text -->
                     <!-- footer social -->
@@ -205,10 +204,10 @@
                     <!-- title end -->
                     <!-- footer link -->
                     <ul class="footer-link">
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Home</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">About Us</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Blog</a> </li>
-                        <li><i class="fas fa-caret-right"></i> <a href="#">Contact</a> </li>
+                        <li class="nav-item {{ (request()->segment(1)== '') ? 'active' : '' }}"><a class="nav-link" href="./">Home</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'about') ? 'active' : '' }}"><a class="nav-link " href="./about">About Us</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'contact') ? 'active' : '' }}"><a class="nav-link" href="./contact">Contact Us</a></li>
+                        <li class="nav-item {{ (request()->segment(1)== 'blog') ? 'active' : '' }}"><a class="nav-link " href="./blog">Blog</a></li>
                     </ul>
                     <!-- footer link end -->
                 </div>

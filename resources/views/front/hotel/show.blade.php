@@ -2,8 +2,10 @@
 
 @section('title', 'Hotel')
 @section('body')
-
-
+<?php
+//    session()->forget('roomType');
+//    session()->forget('roomPrice');
+////   ?>
     <!-- ================ Inner banner ================ -->
     <div class="inner-banner inner-banner-bg pt-70 pb-40">
         <div class="container">
@@ -114,7 +116,9 @@
                                 <div class="reviews-wrapper">
                                     <!-- review item -->
                                     @foreach($hotel->hotel_comments as $hotelComment)
-                                        <div class="media review-item avatar-pic"><img src="front/img/user/{{ $hotelComment->user->avatar ?? 'default-avatar.jpg' }}" class="mr-3" alt="...">
+                                        <div class="media review-item avatar-pic"><img
+                                                src="front/img/user/{{ $hotelComment->user->avatar ?? 'default-avatar.jpg' }}"
+                                                class="mr-3" alt="...">
                                             <div class="media-body col-md-10">
                                                 <div class="at-rating">
                                                     @for($i = 1; $i <= 5; $i++)
@@ -125,13 +129,16 @@
                                                         @endif
                                                     @endfor
                                                 </div>
-                                                <h5 class="mt-0">{{ $hotelComment->name }}<span>{{ date('M d, Y', strtotime($hotelComment->created_at)) }}</span></h5>
+                                                <h5 class="mt-0">{{ $hotelComment->name }}
+                                                    <span>{{ date('M d, Y', strtotime($hotelComment->created_at)) }}</span>
+                                                </h5>
                                                 <p class="mb-0">{{ $hotelComment->messages }}</p>
                                             </div>
                                             @can('delete-comment')
-                                            <div class="col-md-auto pt-1">
-                                                <button class="btn btn-danger mt-0"><i class="fas fa-trash-alt"></i></button>
-                                            </div>
+                                                <div class="col-md-auto pt-1">
+                                                    <button class="btn btn-danger mt-0"><i class="fas fa-trash-alt"></i>
+                                                    </button>
+                                                </div>
                                             @endcan
                                         </div>
                                     @endforeach
@@ -144,25 +151,29 @@
                                         <form action="" method="post" class="comment-form">
                                             @csrf
                                             <input type="hidden" name="hotel_id" value="{{ $hotel->id }}">
-                                            <input type="hidden" name="user_id" value="{{ \Illuminate\Support\Facades\Auth::user()->id ?? null }}">
-                                            <input type="hidden" name="name" value="{{ \Illuminate\Support\Facades\Auth::user()->name ?? null }}">
+                                            <input type="hidden" name="user_id"
+                                                   value="{{ \Illuminate\Support\Facades\Auth::user()->id ?? null }}">
+                                            <input type="hidden" name="name"
+                                                   value="{{ \Illuminate\Support\Facades\Auth::user()->name ?? null }}">
 
                                             <div class="row">
                                                 <div class="col-lg-12">
-                                                    <textarea class="form-control mt-2" rows="5" placeholder="Messages" name="messages" required></textarea>
+                                                    <textarea class="form-control mt-2" rows="5" placeholder="Messages"
+                                                              name="messages" required></textarea>
 
                                                     <div class="personal-rating mt-5">
                                                         <h6>Your Rating</h6>
                                                         <div class="rate">
-                                                            <input type="radio" id="star5" name="rating" value="5" checked />
+                                                            <input type="radio" id="star5" name="rating" value="5"
+                                                                   checked/>
                                                             <label for="star5" title="text">5 stars</label>
-                                                            <input type="radio" id="star4" name="rating" value="4" />
+                                                            <input type="radio" id="star4" name="rating" value="4"/>
                                                             <label for="star4" title="text">4 stars</label>
-                                                            <input type="radio" id="star3" name="rating" value="3" />
+                                                            <input type="radio" id="star3" name="rating" value="3"/>
                                                             <label for="star3" title="text">3 stars</label>
-                                                            <input type="radio" id="star2" name="rating" value="2" />
+                                                            <input type="radio" id="star2" name="rating" value="2"/>
                                                             <label for="star2" title="text">2 stars</label>
-                                                            <input type="radio" id="star1" name="rating" value="1" />
+                                                            <input type="radio" id="star1" name="rating" value="1"/>
                                                             <label for="star1" title="text">1 star</label>
                                                         </div>
                                                     </div>
@@ -171,8 +182,8 @@
                                             </div>
                                         </form>
                                     </div>
-                                @endcan
-                                <!-- reviews end -->
+                            @endcan
+                            <!-- reviews end -->
                             </div>
                         </div>
                     </div>
@@ -199,9 +210,13 @@
                                     <div id="collapseOne4-m" class="collapse show mt-10" aria-labelledby="headingOne4-d"
                                          data-parent="#filter-widget-accordion4-d">
                                         <div class="card-body">
+                                            <form action="./booking" method="post">
+                                                {{ csrf_field() }}
                                             <ul class="list-inline select-all mb-10">
+                                                <input type="hidden" name="hotelname" value="{{$hotel->name}}">
                                                 <li class="list-inline-item">{{$hotel->name}}</li>
                                             </ul>
+
                                             <div class="table-responsive">
                                                 <table class="table table-bordered bg-gray w-100 border-0">
                                                     <tr>
@@ -213,16 +228,18 @@
                                                         <td>{{session('checkoutday')}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Room </td>
-                                                        <td>{{session('roomtype')}}</td>
+                                                        <td>Room</td>
+                                                        <td>{{session('roomType')}}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Price </td>
-                                                        <td>{{session('roomprice')}}</td>
+                                                        <td>Price</td>
+                                                        <td>{{session('roomPrice')}}</td>
                                                     </tr>
                                                 </table>
                                             </div>
-                                            <a class="btn-style-1" href="./traveler-information">Book Selected Rooms</a></div>
+                                            <button type="submit"><a class="btn-style-1" href="./traveler-information">Book Selected Rooms</a></button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

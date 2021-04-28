@@ -102,34 +102,32 @@ class HotelController extends Controller
         return view('search',compact('search_all','hotels','destinations'));
     }
 
-    public function checkin(Request $request){
-        $roomType = $request -> roomtype;
-        $roomPrice = $request -> roomprice;
+    public function booking(Request $request){
+        $roomType = $request->roomtype;
+        $roomPrice = $request->roomprice;
+        $hotelName = $request->hotelname;
+        session(['roomType'=>$roomType,'roomPrice'=>$roomPrice,'HotelName'=>$hotelName]);
 
-        if (session('type') != null && session('price') != null){
-        $type = session('type');
-        $price = session('price');
-        array_push($type,$roomType);
-        array_push($price,$roomPrice);
-        session(['type'=>$type,'price'=>$price]);
-        dd(session('type'),session('price'));
-
-        }
-        else{
-
-            $type = array();
-            $price = array();
-
-            array_push($type,$roomType);
-            array_push($price,$roomPrice);
-
-            session(['type'=>$type,'price'=>$price]);
-            }
-
-        return back();
-
-//        session(['roomType' => $roomType,'roomPrice'=>$roomPrice]);
+//        if (session('type') != null && session('price') != null){
+//        $type = session('type');
+//        $price = session('price');
+//        array_push($type,$roomType);
+//        array_push($price,$roomPrice);
+//        session(['type'=>$type,'price'=>$price]);
+////        dd(session('type'),session('price'));
+//        }
+//        else{
 //
-//        return back()->with(['roomType',$roomType],['roomPrice',$roomPrice]);
+//            $type = array();
+//            $price = array();
+//
+//            array_push($type,$roomType);
+//            array_push($price,$roomPrice);
+//
+//            session(['type'=>$type,'price'=>$price]);
+//            }
+//        return back()-;
+//        dd(session('roomType'),session('roomPrice'),session('HotelName'));
+        return back();
     }
 }
