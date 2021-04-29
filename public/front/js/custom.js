@@ -41,19 +41,42 @@ var currentYear = (new Date).getFullYear();
 		$(".current-year").text((new Date).getFullYear());
 });
 
-/* ----------------------------
-    Datepicker
-    ------------------------------ */
+    /* ----------------------------
+            Datepicker
+            ------------------------------ */
+    var nowTemp = new Date();
+    var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    /* check in */
+    var checkin = $('#check-in').datepicker({
 
-/* check in */
-$('#check-in').datepicker({
-	uiLibrary: 'bootstrap4'
-});
+        beforeShowDay: function(date) {
+            return date.valueOf() >= now.valueOf();
+        },
+        autoclose: true
 
-/* check out */
-$('#check-out').datepicker({
-	uiLibrary: 'bootstrap4'
-});
+    }).on('changeDate', function(ev) {
+        if (ev.date.valueOf() > checkout.datepicker("getDate").valueOf() || !checkout.datepicker("getDate").valueOf()) {
+
+            var newDate = new Date(ev.date);
+            newDate.setDate(newDate.getDate() + 1);
+            checkout.datepicker("update", newDate);
+
+        }
+        $('#check-out')[0].focus();
+    });
+
+    /* check out */
+    var checkout = $('#check-out').datepicker({
+        beforeShowDay: function(date) {
+            if (!checkin.datepicker("getDate").valueOf()) {
+                return date.valueOf() >= new Date().valueOf();
+            } else {
+                return date.valueOf() > checkin.datepicker("getDate").valueOf();
+            }
+        },
+        autoclose: true
+
+    }).on('changeDate', function(ev) {});
 
 /* Date of Birth */
 $('#datepickerdob').datepicker({
@@ -203,3 +226,27 @@ $('.detail-page-gallery-carousel').owlCarousel({
 })
 
 })(jQuery);
+
+/* ----------------------------
+    range slider
+    ------------------------------ */
+var rangeSlider = $(".price-range"),
+    minamount = $("#minamount"),
+    maxamount = $("#maxamount"),
+    minPrice = rangeSlider.data('min'),
+    maxPrice = rangeSlider.data('max'),
+    minValue = rangeSlider.data('min-value') !== '' ? rangeSlider.data('min-value') : minPrice,
+    maxValue = rangeSlider.data('max-value') !== '' ? rangeSlider.data('max-value') : maxPrice;
+
+rangeSlider.slider({
+    range: true,
+    min: minPrice,
+    max: maxPrice,
+    values: [minValue, maxValue],
+    slide: function (event, ui) {
+        minamount.val('₫' + ui.values[0]);
+        maxamount.val('₫' + ui.values[1]);
+    }
+});
+minamount.val('₫' + rangeSlider.slider("values", 0));
+maxamount.val('₫' + rangeSlider.slider("values", 1));

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="front/css/venobox.css">
     <!-- datepicker css -->
     <link rel="stylesheet" href="front/css/datepicker.min.css">
+    <link rel="stylesheet" href="front/css/jquery-ui.min.css">
     <!-- custom styles for this template -->
     <link href="front/css/custom.css" rel="stylesheet">
     <link href="front/css/responsive.css" rel="stylesheet">
@@ -259,6 +260,7 @@
 <script src="front/js/jquery.mixitup.min.js"></script>
 <!-- datepicker js -->
 <script src="front/js/datepicker.min.js"></script>
+<script src="front/js/jquery-ui.min.js"></script>
 <!-- script js -->
 <script src="front/js/custom.js"></script>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"

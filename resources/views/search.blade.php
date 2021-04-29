@@ -65,14 +65,24 @@
                                                 </a> </div>
                                             <div id="collapseOne-m" class="collapse show mt-10" aria-labelledby="headingOne-d" data-parent="#filter-widget-accordion-d">
                                                 <div class="card-body">
-                                                    <select class="form-control" >
-                                                        <option {{ request('sortby') == 'range1' ? 'selected' : '' }}>1.000.000<sup>₫</sup> - 2.000.000<sup>₫</sup></option>
-                                                        <option {{ request('sortby') == 'range2' ? 'selected' : '' }}>2.000.000<sup>₫</sup> - 3.000.000<sup>₫</sup></option>
-                                                        <option {{ request('sortby') == 'range3' ? 'selected' : '' }}>3.000.000<sup>₫</sup> - 4.000.000<sup>₫</sup></option>
-                                                        <option {{ request('sortby') == 'range4' ? 'selected' : '' }}>4.000.000<sup>₫</sup> - 5.000.000<sup>₫</sup></option>
-                                                        <option {{ request('sortby') == 'range5' ? 'selected' : '' }}>5.000.000<sup>₫</sup> - 6.000.000<sup>₫</sup></option>
-                                                        <option {{ request('sortby') == 'range6' ? 'selected' : '' }}> >6.000.000<sup>₫</sup> </option>
-                                                    </select>
+                                                    <div class="filter-range-wrap">
+                                                        <div class="range-slider">
+                                                            <div class="price-input">
+                                                                <div class="row justify-content-center">
+                                                                    <div class="col-6"><input type="text" id="minamount" name="price_min"></div>
+                                                                    <div class="col-6 text-right"><input type="text" id="maxamount" name="price_max"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                                             data-min="1" data-max="999"
+                                                             data-min-value="{{ str_replace('', '₫', request('price_min')) }}"
+                                                             data-max-value="{{ str_replace('', '₫', request('price_max')) }}">
+                                                            <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                            <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="mt-1">
                                                     <button type="submit" class="btn-style-1">Filter</button>

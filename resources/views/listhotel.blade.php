@@ -37,7 +37,6 @@
           <!-- sidebar -->
           <div class="desktop-filter-sidebar">
             <!-- filter widget -->
-
             <div class="filter-widget mb-20">
               <div class="accordion filter-accordion" id="filter-widget-accordion4-d">
                 <div class="card">
